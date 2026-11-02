@@ -1,20 +1,17 @@
 import { useEffect, useState } from 'react'
 import { supabase } from './lib/supabase'
+import Login from './Login'
+import Home from './Home'
 
 export default function App() {
-  const [status, setStatus] = useState('Verificando conexão...')
+  const [sessao, setSessao] = useState(undefined)
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ error }) => {
-      setStatus(error ? 'Erro na conexão: ' + error.message : 'Conectado ao Supabase ✅')
-    })
+    supabase.auth.getSession().then(({ data }) => setSessao(data.session))
+    const { data: ouvinte } = supabase.auth.onAuthStateChange((_evento, nova) => setSessao(nova))
+    return () => ouvinte.subscription.unsubscribe()
   }, [])
 
-  return (
-    <div style={{ fontFamily: 'sans-serif', textAlign: 'center', marginTop: 80 }}>
-      <h1>IFPass</h1>
-      <p>Plataforma de estudos para o processo seletivo do IFAL</p>
-      <p>{status}</p>
-    </div>
-  )
+  if (sessao === undefined) return <p>Carregando...</p>
+  return sessao ? <Home usuario={sessao.user} /> : <Login />
 }

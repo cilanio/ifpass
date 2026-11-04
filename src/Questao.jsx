@@ -1,6 +1,20 @@
 import Texto, { Inline } from './Texto'
+import { LETRAS } from './data/letras'
 
-export default function Questao({ prova, questao, resposta, onResponder, revisao }) {
+// Junta o que foi colado em src/data/letras.js com a questão original
+function completar(prova, q) {
+  const c = LETRAS[prova.id] && LETRAS[prova.id][q.n]
+  if (!c) return q
+  let enunciado = q.enunciado
+  ;(c.trechos || []).forEach((t) => {
+    if (t && t.trim()) enunciado = enunciado.replace('[trecho da letra]', t.trim())
+  })
+  const texto = c.texto && c.texto.trim() ? c.texto.trim() : q.texto
+  return { ...q, texto, enunciado }
+}
+
+export default function Questao({ prova, questao: questaoOriginal, resposta, onResponder, revisao }) {
+  const questao = completar(prova, questaoOriginal)
   const bloco = prova.blocos.find((b) => questao.n >= b.de && questao.n <= b.ate)
   const anulada = questao.gabarito === 'NULA'
 

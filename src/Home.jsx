@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from './lib/supabase'
 import Hoje from './Hoje'
 import Plano from './Plano'
+import Simulados from './Simulados'
 
 export default function Home({ usuario }) {
   const [perfil, setPerfil] = useState(null)
@@ -16,8 +17,14 @@ export default function Home({ usuario }) {
       .then(({ data }) => setPerfil(data))
   }, [usuario.id])
 
+  const botao = (id, nome) => (
+    <button className={aba === id ? 'pequeno aba ativa' : 'pequeno aba'} onClick={() => setAba(id)}>
+      {nome}
+    </button>
+  )
+
   return (
-    <div className="painel">
+    <div className={aba === 'simulados' ? 'painel largo' : 'painel'}>
       <header className="topo">
         <div>
           <h1>IFPass</h1>
@@ -29,15 +36,14 @@ export default function Home({ usuario }) {
       </header>
 
       <nav className="abas">
-        <button className={aba === 'hoje' ? 'pequeno aba ativa' : 'pequeno aba'} onClick={() => setAba('hoje')}>
-          Hoje
-        </button>
-        <button className={aba === 'plano' ? 'pequeno aba ativa' : 'pequeno aba'} onClick={() => setAba('plano')}>
-          Meu plano
-        </button>
+        {botao('hoje', 'Hoje')}
+        {botao('plano', 'Meu plano')}
+        {botao('simulados', 'Simulados')}
       </nav>
 
-      {aba === 'hoje' ? <Hoje /> : <Plano />}
+      {aba === 'hoje' && <Hoje />}
+      {aba === 'plano' && <Plano />}
+      {aba === 'simulados' && <Simulados />}
     </div>
   )
 }

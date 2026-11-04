@@ -1,0 +1,576 @@
+{
+ "id": "ifal-2026-t1",
+ "titulo": "IFAL 2026.1.1 — Prova Tipo 1",
+ "subtitulo": "Cursos Técnicos Integrados ao Ensino Médio · COPEVE/UFAL",
+ "ano": 2026,
+ "tipo": 1,
+ "duracaoMin": 210,
+ "aplicadaEm": "2025-12-21",
+ "gabarito": "definitivo",
+ "blocos": [
+  {
+   "nome": "Língua Portuguesa",
+   "de": 1,
+   "ate": 18,
+   "cor": "#1D4ED8"
+  },
+  {
+   "nome": "Matemática",
+   "de": 19,
+   "ate": 36,
+   "cor": "#C2410C"
+  },
+  {
+   "nome": "Ciências da Natureza",
+   "de": 37,
+   "ate": 40,
+   "cor": "#15803D"
+  }
+ ],
+ "questoes": [
+  {
+   "n": 1,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "No processo comunicativo acima, existem palavras que exemplificam relações semânticas de",
+   "alternativas": {
+    "A": "sinonímia.",
+    "B": "antonímia.",
+    "C": "paronímia.",
+    "D": "hierarquia.",
+    "E": "homonímia."
+   },
+   "imagem": "q01.png"
+  },
+  {
+   "n": 2,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "A respeito da acentuação gráfica das palavras presentes no título acima, é correto afirmar que",
+   "alternativas": {
+    "A": "os vocábulos “publicitário”, “áudio” e “vídeo” levam acento por serem paroxítonos terminados em ditongo crescente.",
+    "B": "o uso de acento no vocábulo “publicitário” é facultativo, pois a palavra pode exercer também função de oxítona.",
+    "C": "somente o vocábulo “áudio” leva acento por ser uma palavra paroxítona terminada em ditongo decrescente.",
+    "D": "os vocábulos “publicitário”, “áudio” e “vídeo” levam acento por serem paroxítonos terminados em vogais.",
+    "E": "somente o vocábulo “vídeo” leva acento por ser paroxítono terminado em hiato."
+   },
+   "imagem": "q02.png"
+  },
+  {
+   "n": 3,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Baseando-se no tema da música *Fácil*, da banda brasileira Jota Quest, dadas as afirmativas,\nI. A letra da música representa uma ode à simplicidade e à leveza que o amor pode trazer para a vida das pessoas.\nII. A música fala sobre a sensação de mal-estar do eu-lírico e a busca imediata pela paz que deve acompanhar o estar apaixonado.\nIII. O refrão [trecho da letra] transmite a mensagem de que o amor, em sua essência, deveria ser simples e unificador, algo que todos possam entender e compartilhar.\nIV. Os versos [trecho da letra] sugerem um cenário em que tudo parece perfeito e azul, uma cor frequentemente associada à tranquilidade e à felicidade.\nverifica-se que estão corretas apenas",
+   "alternativas": {
+    "A": "I e II.",
+    "B": "I e III.",
+    "C": "II e IV.",
+    "D": "III e IV.",
+    "E": "I, III e IV."
+   },
+   "texto": “Fácil / Tudo é tão bom e azul / E calmo como sempre / Os olhos piscaram de repente / Um sonho / As coisas são assim / Quando se está amando / As bocas não se deixam / E o segundo não tem fim / Um dia feliz / Às vezes é muito raro / Falar é complicado / Quero uma canção / Fácil, extremamente fácil / Pra você, e eu e todo mundo cantar junto / Fácil, extremamente fácil / Pra você, e eu, e todo mundo cantar junto / Tudo se torna claro / Pateticamente pálido / O coração dispara / Se eu vejo o teu carro / [...]”,
+   "tituloTexto": "Fácil — Jota Quest"
+  },
+  {
+   "n": 4,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Assinale a alternativa correta, levando-se em consideração o emprego das expressões “ao invés de” e “em vez de”.",
+   "alternativas": {
+    "A": "A jovem vestiu a blusa preta em vez de branca.",
+    "B": "Nos jardins, há árvores ao invés de plantas rasteiras.",
+    "C": "Túlio e os irmãos comeram mamão ao invés de banana.",
+    "D": "Caso erre em vez de acertar, estude em vez de reclamar.",
+    "E": "Passar em um processo seletivo demanda esforço, ao invés de preguiça."
+   },
+   "imagem": "q04.png"
+  },
+  {
+   "n": 5,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "Considerando-se o fragmento de texto, dadas as afirmativas,\nI. Há, no fragmento da narrativa, descrição de duas Gabrielas: a primeira, descrita pelo narrador, coberta pela poeira, parecia uma “demente”, naquele momento. A segunda, é a que está na lembrança do personagem Clemente – a Gabriela que ele viu no primeiro encontro.\nII. O fragmento: “Só Gabriela parecia não sentir a caminhada...” sugere a resistência de Gabriela, cuja expectativa (a de chegar logo à cidade, o que encerraria sua vida no campo, no mato) serve de estímulo.\nIII. As características da personagem Gabriela, apresentadas no fim do fragmento de texto, são registros de aspectos psicológicos.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "I, apenas.",
+    "B": "III, apenas.",
+    "C": "I e II, apenas.",
+    "D": "II e III, apenas.",
+    "E": "I, II e III."
+   },
+   "texto": "Só Gabriela parecia não sentir a caminhada, seus pés como que deslizando pela picada muitas vezes aberta na hora a golpes de facão, na mata virgem. Como se não existissem as pedras, os tocos, os cipós emaranhados. A poeira dos caminhos da caatinga a cobrira tão por completo que era impossível distinguir seus traços. Nos cabelos já não penetrava o pedaço de pente, tanto pó se acumulara. Parecia uma demente perdida nos caminhos. Mas Clemente sabia como ela era deveras e o sabia em cada partícula de seu ser, na ponta dos dedos e na pele do peito. Quando os dois grupos se encontraram, no começo da viagem, a cor do rosto de Gabriela e de suas pernas era ainda visível e os cabelos rolavam sobre o cangote, espalhando perfume. Ainda agora, através da sujeira a envolvê-la, ele a enxergava como a vira no primeiro dia, encostada numa árvore, o corpo esguio, o rosto sorridente, mordendo uma goiaba.\n*AMADO, Jorge. Gabriela, cravo e canela. São Paulo: Companhia das Letras, 2008.*"
+  },
+  {
+   "n": 6,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Em relação às palavras “INSPIRAVA” e “EXPIRAVA”, dadas as afirmativas,\nI. As palavras “inspirar” e “expirar” são sinônimas e podem ser usadas de maneira intercambiável, uma vez que residem na direção do fluxo de ar e nos movimentos musculares envolvidos.\nII. O verbo “inspirar”, no contexto em questão, indica o ato de sofrer ou exercer influência e estímulo, bem como de ser impressionado por algo ou alguém.\nIII. O verbo “expirar” é parônimo de “inspirar”. “Expirar” se refere ao ato de expelir ar para fora dos pulmões e de terminar ou finalizar, bem como de acabar pouco a pouco.\nIV. “Inspirar” e “expirar” são palavras homônimas, já que têm grafia muito parecidas.\nverifica-se que está/ão correta/s apenas",
+   "alternativas": {
+    "A": "III.",
+    "B": "I e III.",
+    "C": "I e IV.",
+    "D": "II e III.",
+    "E": "II e IV."
+   },
+   "imagem": "q06.png"
+  },
+  {
+   "n": 7,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "A fim de reforçar o espírito transgressor do eu-lírico, que se apresenta como um jovem destemido, dirigindo em alta velocidade e desafiando as normas, foram empregadas as funções:",
+   "alternativas": {
+    "A": "poética e fática.",
+    "B": "emotiva e fática.",
+    "C": "expressiva e poética.",
+    "D": "expressiva e conativa.",
+    "E": "metalinguística e emotiva."
+   },
+   "texto": “Rua Augusta / Entrei na rua Augusta / A cento e vinte por hora / Botei a turma toda do passeio pra fora / Fiz curva em duas rodas sem usar a buzina / Parei a quatro dedos da vitrine / Legal / Hai-hai, Johnny, hai-hai, Alfredo / Quem é da nossa gangue não tem medo / “Ronnie Cord” / Meu carro não tem breque / Não tem luz, não tem buzina / Tem três carburadores, todos os três envenenados / Só para na subida quando acaba a gasolina / Só passa se tiver sinal fechado / Legal / Hai-hai, Johnny, hai-hai, Alfredo / Quem é da nossa gangue não tem medo”,
+   "tituloTexto": "Rua Augusta — Ronnie Cord"
+  },
+  {
+   "n": 8,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Considerando-se o fragmento de texto, dadas as afirmativas,\nI. Segundo o narrador do texto, podem ser atribuídas à educação, que recebeu na infância, características de tradicionalismo e de adequação.\nII. Para o narrador, a primeira fase de sua educação deixou a impressão de superficialidade e de enfado.\nIII. O narrador faz referência a uma escola que se sustenta mais pela essência.\nIV. A ida para o internato representa para o narrador uma “verdadeira sorte”, e isso é justificado pelo uso do foco narrativo em 3ª pessoa.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "II, apenas.",
+    "B": "III, apenas.",
+    "C": "I e II, apenas.",
+    "D": "I, III e IV, apenas.",
+    "E": "I, II, III e IV."
+   },
+   "texto": "Eu tinha onze anos.\nFrequentara como externo, durante alguns meses, uma escola familiar do Caminho Novo, onde algumas senhoras inglesas, sob a direção do pai, distribuíam educação à infância como melhor lhes parecia. Entrava às nove horas, timidamente, ignorando as lições com a maior regularidade, e bocejava até às duas, torcendo-me de insipidez sobre os carcomidos bancos que o colégio comprara, de pinho e usados, lustrosos do contato da malandragem de não sei quantas gerações de pequenos. Ao meio-dia, davam-nos pão com manteiga. Esta recordação gulosa é o que mais pronunciadamente me ficou dos meses de externato; com a lembrança de alguns companheiros — um que gostava de fazer rir à aula, espécie interessante de mono louro, arrepiado, vivendo a morder, nas costas da mão esquerda, uma protuberância calosa que tinha; outro adamado, elegante, sempre retirado, que vinha à escola de branco, engomadinho e radioso, fechada a blusa em diagonal do ombro à cinta por botões de madrepérola. Mais ainda: a primeira vez que ouvi certa injúria crespa, um palavrão cercado de terror no estabelecimento, que os partistas denunciavam às mestras por duas iniciais como em monograma. [...]\nUm dia, meu pai tomou-me pela mão, minha mãe beijou-me a testa, molhando-me de lágrimas os cabelos e eu parti.\nDuas vezes fora visitar o Ateneu antes da minha instalação. Ateneu era o grande colégio da época. Afamado por um sistema de nutrido reclame, mantido por um diretor que de tempos a tempos reformava o estabelecimento, pintando-o jeitosamente de novidade, como os negociantes que liquidam para recomeçar com artigos de última remessa; o Ateneu desde muito tinha consolidado crédito na preferência dos pais, sem levar em conta a simpatia da meninada, a cercar de aclamações o bombo vistoso dos anúncios. [...]\n*POMPÉIA, Raul. O Ateneu. São Paulo: Scipione, 2005.*"
+  },
+  {
+   "n": 9,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "Assinale a alternativa correta, observando-se a concordância e a justificativa em cada um dos enunciados.",
+   "alternativas": {
+    "A": "“... os jovens são predominantemente interpretados como um ...” – em predicado nominal, o verbo “ser” concorda com o predicativo.",
+    "B": "“A juventude vem ganhando discussões e ações públicas mundiais...” – substituindo-se o sujeito “a juventude” por “os jovens”, não haverá alteração na forma verbal.",
+    "C": "“Enfatiza-se o acesso, naquela história...” – o verbo deveria estar pluralizado por causa do pronome apassivador. Situação análoga a “Tais intervenções debatem-se com a constituição...”.",
+    "D": "“A juventude vem ganhando discussões e ações públicas...” – o adjetivo na função de adjunto adnominal apresenta-se posposto a dois substantivos, concordando em gênero e número.",
+    "E": "“Os serviços sociais direcionados a essa população intencionam realizar seu cuidado...” – a forma verbal “intencionar” deveria estar singularizada para concordar com o sujeito referente."
+   },
+   "texto": "A juventude vem ganhando discussões e ações públicas mundiais em proporções ascendentes, caracterizada como um grupo social plural e emergente. Contudo, a partir de uma visão homogeneizante, os jovens são predominantemente interpretados como um “problema político” que requer o desenvolvimento de intervenções disciplinares e de controle. Tais intervenções debatem-se com a constituição jurídica, cultural e social da juventude, questionando quem deve estar em proteção, sob tutela, e quem tem a liberdade e a autonomia de decisão sobre si. Os serviços sociais direcionados a essa população intencionam realizar seu cuidado com vistas à promoção de sua autonomia. A partir de um trabalho de campo de base etnográfica, realizado por quatro anos junto a instituições sociais e a jovens que as frequentavam, apresenta-se a trajetória de vida de um jovem no limiar de entrada para a vida adulta, compreendendo a passagem para a maioridade como um evento crítico de sofrimento social. Enfatiza-se o acesso, naquela história, a uma autonomia socioeconômica, mas que se apresenta como exceção, devido ao pequeno alcance concreto das ações dos serviços sociais junto aos jovens de grupos populares."
+  },
+  {
+   "n": 10,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "No fragmento textual, encontra-se uma expressão destacada e numerada, exercendo funções sintáticas distintas. Assinale a alternativa que apresenta, correta e respectivamente, as classificações sintáticas dessa expressão.",
+   "alternativas": {
+    "A": "sujeito – complemento nominal – objeto indireto – sujeito",
+    "B": "sujeito – adjunto adverbial – objeto indireto – objeto direto",
+    "C": "sujeito – complemento nominal – objeto indireto – objeto direto",
+    "D": "sujeito – adjunto adverbial – complemento nominal – objeto direto",
+    "E": "predicativo do sujeito – adjunto adverbial – complemento nominal – objeto direto"
+   },
+   "texto": "A __moda praia__ (1) brasileira é famosa mundialmente, não apenas por sua beleza e sensualidade, mas também por refletir a personalidade tropical do país. Desde os trajes coloridos até os biquínis ousados, a influência da cultura brasileira na __moda praia__ (2) passa por diversos aspectos, como as paisagens naturais, a alegria do carnaval e a riqueza da música local. [...]\nO Brasil é um país abençoado com uma natureza exuberante e uma diversidade cultural incrível, o que se reflete diretamente na __moda praia__ (3). As paisagens tropicais, com suas praias deslumbrantes e florestas exuberantes, inspiram designers a criarem peças cheias de vida.\nAs cores, as estampas e os cortes são apenas algumas das características que tornam a __moda praia__ (4) brasileira única.",
+   "tituloTexto": "A influência da cultura brasileira na moda praia"
+  },
+  {
+   "n": 11,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "Os vocábulos destacados no período: “Valorizar __o__ __que__ é bom, ignorar __o__ mal. __tal__ é o nosso trabalho diário!” pertencem, respectivamente, às seguintes classes gramaticais:",
+   "alternativas": {
+    "A": "artigo definido – pronome relativo – artigo definido – substantivo.",
+    "B": "pronome pessoal oblíquo – pronome relativo – artigo definido – advérbio.",
+    "C": "artigo definido – pronome relativo – artigo definido – pronome demonstrativo.",
+    "D": "pronome demonstrativo – pronome relativo – artigo definido – pronome demonstrativo.",
+    "E": "pronome demonstrativo – conjunção integrante – artigo definido – pronome demonstrativo."
+   },
+   "imagem": "q11.png"
+  },
+  {
+   "n": 12,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Considerando-se os elementos da construção textual, dadas as afirmativas,\nI. No trecho: “Uma das grandes sensações que temos atualmente é que 24 horas são insuficientes para resolvermos todas as situações que nos __cercam__ diariamente”, a forma verbal em destaque está no plural, porque concorda com o sujeito “Uma das grandes sensações”.\nII. Em: “Neste sentido, investir em uma organização diária, __que__ inclua as atividades profissionais” (2º parágrafo), o vocábulo __que__ retoma o antecedente “uma organização diária”, cuja função sintática é de sujeito da oração seguinte.\nIII. No trecho: “A todo momento, ao longo de nossas vidas, estamos constantemente superando desafios” (3º parágrafo), a expressão __A todo momento__ exprime um fato esporádico.\nIV. Em: “que tenhamos inteligência emocional suficiente para lidar com elas e nos tornarmos pessoas bem-sucedidas” (3º parágrafo), a palavra __suficiente__ caracteriza o termo __emocional__.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "II, apenas.",
+    "B": "I e IV, apenas.",
+    "C": "II e III, apenas.",
+    "D": "I, III e IV, apenas.",
+    "E": "I, II, III e IV."
+   },
+   "texto": "Uma das grandes sensações que temos atualmente é que 24 horas são insuficientes para resolvermos todas as situações que nos cercam diariamente. Coisas para serem resolvidas dentro da empresa e fora dela, que exigem de nós jogo de cintura suficiente para lidarmos da melhor maneira possível.\nÉ por isso, que a administração do tempo se tornou um dos grandes desafios profissionais a serem superados, pois aquele que não consegue organizar suas demandas diárias com excelência, dificilmente consegue ter e alcançar bons resultados. Neste sentido, investir em uma organização diária, que inclua as atividades profissionais e as pessoais também, vai ajudá-lo a lidar melhor com tudo o que o cerca.\nA todo momento, ao longo de nossas vidas, estamos constantemente superando desafios. Não importa se somos empresários, empreendedores ou os profissionais que ajudam uma empresa a crescer; existem situações que surgirão em nossa trajetória profissional, que exigirão o máximo de nós, que tenhamos inteligência emocional suficiente para lidar com elas e nos tornarmos pessoas bem-sucedidas. [...]",
+   "tituloTexto": "Administração de tempo"
+  },
+  {
+   "n": 13,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Assinale a alternativa que completa corretamente as lacunas do fragmento de texto.",
+   "alternativas": {
+    "A": "mal – A – vem – senão – mas",
+    "B": "mal – Há – vêm – senão – mais",
+    "C": "mal – A – vêm – se não – mais",
+    "D": "mau – Há – vem – se não – mas",
+    "E": "mau – Há – vêm – senão – mais"
+   },
+   "texto": "[...]. Enquanto não descobrimos a cura para este ▁▁▁▁▁▁▁▁, a única saída é aprender a lidar com ele. ▁▁▁▁▁▁▁▁ que cercar com muros altos certas horas do relógio, para que nada as possa roubar de nós. Fazer diques de pedra em torno da hora de ficar com nosso amor, da hora de trabalhar no projeto pessoal, da hora do esporte, de ler um livro, encontrar um amigo. Mesmo assim, vira e mexe, ▁▁▁▁▁▁▁▁ as obrigações, como um tsunami, ou os eventos sociais, como meteoros, e derrubam as barragens. Não há nada a fazer, ▁▁▁▁▁▁▁▁ reconstruir os muros, ainda ▁▁▁▁▁▁▁▁ fortes do que antes. [...]"
+  },
+  {
+   "n": 14,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "Observe o substantivo __mundo__, presente nas falas da personagem Mafalda, e analise a função sintática que adquire no contexto da narrativa. Nesse contexto, é correto afirmar que esse substantivo,",
+   "alternativas": {
+    "A": "nos três quadrinhos, não desempenha função sintática.",
+    "B": "nos três quadrinhos, exerce função sintática idêntica de sujeito oracional.",
+    "C": "no 1º quadrinho, funciona como predicativo do sujeito e, no 2º quadrinho, exerce função de sujeito.",
+    "D": "no 1º quadrinho, funciona como complemento verbal objeto direto e, no 2º quadrinho, exerce função de sujeito.",
+    "E": "no 1º quadrinho, funciona como predicativo do sujeito e, no 2º quadrinho, exerce função de predicativo do objeto."
+   },
+   "imagem": "q14.png"
+  },
+  {
+   "n": 15,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Dadas as afirmativas sobre a letra da canção *Maria, Maria*,\nI. Os versos [trecho da letra] evidenciam a realidade que se manifesta na capacidade de transformar dor em esperança de mulheres que se chamam “Maria”.\nII. Há na letra da canção uma especial valorização da mulher negra como símbolo de coragem, fé e sonho.\nIII. A música *Maria, Maria*, de Milton Nascimento, retrata mulheres que, mesmo em situações difíceis, encontram motivos para sorrir e seguir em frente e transfere para todas as mulheres o que a da canção tem em especial.\nIV. O texto é descritivo e nele se definem as características físicas e psicológicas de um tipo raro de mulheres, num elogio àquelas que aguentam as adversidades, sem perder a alegria.\nV. O texto apresenta características argumentativas, uma vez que mostra como a resiliência feminina vai além de suportar o sofrimento.\nverifica-se que está/ão correta/s apenas",
+   "alternativas": {
+    "A": "III.",
+    "B": "II e III.",
+    "C": "I, II e IV.",
+    "D": "I, III e V.",
+    "E": "I, II, IV e V."
+   },
+   "texto": “Maria, Maria / Maria, Maria é um dom, uma certa magia / Uma força que nos alerta / Uma mulher que merece viver e amar / Como outra qualquer do planeta / Maria, Maria é o som, é a cor, é o suor / É a dose mais forte e lenta / De uma gente que ri quando deve chorar / E não vive, apenas aguenta / Mas é preciso ter força, é preciso ter raça / É preciso ter gana sempre / Quem traz no corpo a marca / Maria, Maria mistura a dor e a alegria / “Milton Nascimento” / Mas é preciso ter manha, é preciso ter graça / É preciso ter sonho sempre / Quem traz na pele essa marca / Possui a estranha mania de ter fé na vida”,
+   "tituloTexto": "Maria, Maria — Milton Nascimento"
+  },
+  {
+   "n": 16,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Considerando-se que o emprego da vírgula é uma ferramenta poderosa para a clareza e a precisão do enunciado, transformando ambiguidades em mensagens claras e intencionais, dadas as afirmativas,\nI. Se uma vírgula fosse colocada após o advérbio de negação, o significado da situação textual seria modificado. Nesse contexto, o verbo __encher__ estaria sendo usado no sentido literal, como “preencher um recipiente”, “colocar líquido em algo”.\nII. No contexto: “NÃO ENCHE!”, o verbo __encher__ é uma gíria comum no português brasileiro que significa “incomodar”, “irritar”, “aborrecer alguém” ou “importunar”, ou seja, apresenta significado de “Pare de me incomodar!”, “Não me irrite!”.\nIII. Caso fosse colocada uma vírgula após o __Não__, haveria o isolamento da negação, transformando-a em uma resposta direta e o significado seria: a resposta é “Não” (a algo que foi perguntado), e a ordem é “Encha” (o recipiente). Exemplo de diálogo: “Devo parar de colocar combustível?” “Não, enche!”.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "I, apenas.",
+    "B": "II, apenas.",
+    "C": "I e III, apenas.",
+    "D": "II e III, apenas.",
+    "E": "I, II e III."
+   },
+   "imagem": "q16.png"
+  },
+  {
+   "n": 17,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "Sabendo-se que a Língua Portuguesa permite utilizar palavras com diversos sentidos, e a construção do humor da tirinha acontece pelo fato de se empregar uma palavra polissêmica fora do contexto, assinale a alternativa que apresenta a palavra mencionada.",
+   "alternativas": {
+    "A": "Vida.",
+    "B": "Multas.",
+    "C": "Abelhas.",
+    "D": "Pardais.",
+    "E": "Animais."
+   },
+   "imagem": "q17.png"
+  },
+  {
+   "n": 18,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Para a estruturação da gravura, o autor valeu-se da combinação de vários elementos da comunicação. Considerando-se apenas a linguagem escrita, o bilhete, segurado pelo homem, é correto afirmar que se enfatiza o",
+   "alternativas": {
+    "A": "canal.",
+    "B": "código.",
+    "C": "emissor.",
+    "D": "receptor.",
+    "E": "contexto."
+   },
+   "imagem": "q18.png"
+  },
+  {
+   "n": 19,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Na prova de seleção para o IFAL, Maria por ser uma excelente aluna de matemática acertou 18 questões das 20 questões que havia na prova.\nAssinale a alternativa que representa a razão entre o número de acertos que Maria obteve e o número de questões de matemática na prova do IFAL.",
+   "alternativas": {
+    "A": "1/18",
+    "B": "2/18",
+    "C": "2/20",
+    "D": "9/10",
+    "E": "10/9"
+   }
+  },
+  {
+   "n": 20,
+   "bloco": "Matemática",
+   "gabarito": "E",
+   "enunciado": "O período T de um sinal em um circuito é dado por T = (2^{3} · 2^{-5})^{-2} segundos. Calcule o valor numérico de T.",
+   "alternativas": {
+    "A": "T = 1/16 s",
+    "B": "T = 1/4 s",
+    "C": "T = 1 s",
+    "D": "T = 4 s",
+    "E": "T = 16 s"
+   }
+  },
+  {
+   "n": 21,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Em uma lanchonete de Maceió, o sanduíche é vendido por R$ 16,00 (dezesseis reais) e o suco por R$ 8,00 (oito reais). Os produtos também podem ser adquiridos de forma promocional. Para isso, o combo é composto por dois sanduíches e um suco, cujo valor desse combo é R$ 34,00 (trinta e quatro reais), sendo o desconto dado no valor do suco. Considerando-se essas informações, assinale a alternativa correta que indica o percentual de desconto dado no valor do suco ao se adquirir um combo.",
+   "alternativas": {
+    "A": "20%",
+    "B": "25%",
+    "C": "50%",
+    "D": "75%",
+    "E": "80%"
+   }
+  },
+  {
+   "n": 22,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "A tolerância máxima de desalinhamento de um eixo, em um sistema mecânico, é dada pela soma √20 + √45 milímetros. Simplificando essa expressão, obtém-se o total de:",
+   "alternativas": {
+    "A": "3√5 mm",
+    "B": "5√5 mm",
+    "C": "13√5 mm",
+    "D": "5√10 mm",
+    "E": "√65 mm"
+   }
+  },
+  {
+   "n": 23,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "Considere a seguinte expressão:\nL = 1 − {−√49 − [49 − 2 · 49/2] + [−2^{4} − 2 · (8 − 21)]}\nAssinale a alternativa correta que contenha o valor de L.",
+   "alternativas": {
+    "A": "L = −2",
+    "B": "L = −1",
+    "C": "L = 1",
+    "D": "L = 2",
+    "E": "L = 8"
+   }
+  },
+  {
+   "n": 24,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Uma laje retangular para uma ponte tem área de 195 m^{2}. O comprimento da laje é 2 m maior que a largura x. Determine a medida da largura x da laje.",
+   "alternativas": {
+    "A": "11 m",
+    "B": "12 m",
+    "C": "13 m",
+    "D": "15 m",
+    "E": "17 m"
+   }
+  },
+  {
+   "n": 25,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Uma placa retangular de concreto tem área A = 2x^{2} + 4x metros quadrados. Sabe-se que o comprimento da placa é 2x metros. Qual é a expressão algébrica que representa a largura L da placa em função de x?",
+   "alternativas": {
+    "A": "2x",
+    "B": "x + 2",
+    "C": "x + 4",
+    "D": "2x^{2} + 2x",
+    "E": "2x (x + 2)"
+   }
+  },
+  {
+   "n": 26,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Uma turma do IFAL, ao cuidar de sua horta comunitária, necessita aplicar 3 (três) litros de uma solução que contém fertilizante concentrado e água destilada. A turma possui 2,4 litros deste preparo já pronto. Notando que ainda faltava um pouco para completar os 3 (três) litros, a turma prepara um pouco mais da solução, misturando 1 (um) litro de água destilada com 3/4 de litro de fertilizante.\nLevando-se esses dados em consideração, assinale a alternativa correta.",
+   "alternativas": {
+    "A": "A quantidade preparada é suficiente e ainda restarão 0,60 litros da solução.",
+    "B": "A quantidade preparada é suficiente e ainda restarão 1,15 litros da solução.",
+    "C": "A quantidade preparada é suficiente e ainda restarão 1,60 litros da solução.",
+    "D": "A quantidade preparada não é suficiente, pois, após o preparo, a solução total é de 2,8 litros.",
+    "E": "A quantidade preparada não é suficiente, pois são necessários 3 (três) litros e não 2,4 litros."
+   }
+  },
+  {
+   "n": 27,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "O processo de simplificação matemática é algo muito importante e pode ser extremamente útil para resolver diversos problemas. Considere a seguinte expressão.\nM = (639 · x^{229} · y^{230} + 1278 · x^{230} · y^{229} − 1917 · x^{227} · y^{227}) : (639 · x^{227} · y^{227})\nAssinale a alternativa correta que apresenta o valor de M, quando x = 2 e y = −3.",
+   "alternativas": {
+    "A": "M = −211",
+    "B": "M = −33",
+    "C": "M = 0",
+    "D": "M = 33",
+    "E": "M = 629"
+   }
+  },
+  {
+   "n": 28,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Um químico, ao preparar uma solução, precisa adicionar uma determinada mistura com o passar do tempo. Ele adiciona 5 mL da mistura a cada 2 (dois) minutos.\nSabendo-se que ele iniciou o experimento com 50 mL da solução, assinale a alternativa correta que contenha a quantidade de solução que ele terá após 30 minutos.",
+   "alternativas": {
+    "A": "25 mL",
+    "B": "75 mL",
+    "C": "125 mL",
+    "D": "150 mL",
+    "E": "200 mL"
+   }
+  },
+  {
+   "n": 29,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "Na figura, dois retângulos estão sobrepostos, de modo que a área do retângulo ABCD é igual a área pintada em cinza. Assinale a alternativa correta que contenha o valor de x.",
+   "alternativas": {
+    "A": "x = 2(√17 − 3)",
+    "B": "x = 2(√17 + 3)",
+    "C": "x = 2(√22 − 3)",
+    "D": "x = 2(√22 + 3)",
+    "E": "x = 2(√2 + 1)"
+   },
+   "imagem": "q29.png"
+  },
+  {
+   "n": 30,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Para participar de um campeonato feminino de futsal, as estudantes do IFAL resolveram montar um time e devem arrecadar uma quantia mínima destinada à inscrição do time. O valor total necessário é de R$ 480,00. Cada jogadora deve contribuir com o mesmo valor. Sabe-se que o time já possui 12 meninas confirmadas, mas outras alunas ainda podem se inscrever. A treinadora explicou que, para que não fique muito caro, a contribuição individual de cada jogadora deverá ser inferior a R$ 30,00, ou seja, será necessário que mais estudantes participem do time.\nBaseando-se nessas informações, assinale a alternativa correta que contenha a inequação que representa corretamente a condição para que cada jogadora pague menos de R$ 30,00, sendo n o número de jogadoras do time.",
+   "alternativas": {
+    "A": "480/12 < n",
+    "B": "480/n < 30",
+    "C": "480n < 30",
+    "D": "480 − n/12 < 30",
+    "E": "480 − 30n < 30"
+   }
+  },
+  {
+   "n": 31,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "Uma loja de atacado vende uma camiseta e uma calça jeans pelo preço conjunto de R$ 100,00. Para grandes compras, a loja oferece descontos individuais nos produtos: comprando-se 20 calças ou mais, aplicam-se 20% de desconto no valor de cada calça e comprando-se 15 camisetas ou mais, aplicam-se 40% de desconto no valor de cada camiseta. Um cliente adquiriu exatamente 20 calças jeans e 15 camisetas, obtendo os dois descontos. Após a aplicação dos descontos adquiridos, ele pagou R$ 1.460,00 pela compra.\nCom base nessas informações, cada camiseta e cada calça custou, respectivamente,",
+   "alternativas": {
+    "A": "R$ 20,00 e R$ 80,00",
+    "B": "R$ 40,00 e R$ 60,00",
+    "C": "R$ 50,00 e R$ 50,00",
+    "D": "R$ 60,00 e R$ 80,00",
+    "E": "R$ 80,00 e R$ 60,00"
+   }
+  },
+  {
+   "n": 32,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Um braço robótico se move em uma trajetória circular de raio 20 cm e executa um quarto de volta (90°). Usando π ≈ 3,1, calcule o comprimento do arco percorrido.",
+   "alternativas": {
+    "A": "12,4 cm",
+    "B": "15,5 cm",
+    "C": "31 cm",
+    "D": "62 cm",
+    "E": "124 cm"
+   }
+  },
+  {
+   "n": 33,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Um reservatório de água cúbico, utilizado em uma obra, tem volume V = 64 m³. Qual é a área A da face inferior desse reservatório?",
+   "alternativas": {
+    "A": "4 m²",
+    "B": "8 m²",
+    "C": "16 m²",
+    "D": "32 m²",
+    "E": "64 m²"
+   }
+  },
+  {
+   "n": 34,
+   "bloco": "Matemática",
+   "gabarito": "E",
+   "enunciado": "O torque T(x) de um motor é dado pela função T(x) = x² − 6x + 5, na qual x representa um parâmetro de operação. Para o funcionamento correto do motor, é necessário que T(x) > 0. Determine o intervalo de valores de x para o/s qual/is o torque é positivo.",
+   "alternativas": {
+    "A": "x < 1",
+    "B": "x > 5",
+    "C": "1 < x < 5",
+    "D": "x < 0 ou x > 6",
+    "E": "x < 1 ou x > 5"
+   }
+  },
+  {
+   "n": 35,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Em um circuito eletrônico, a variação de potência entre dois pontos é proporcional a V₁² − V₂², na qual as tensões são dadas por V₁ = (x + 2) e V₂ = (x − 2). Usando produtos notáveis, qual a simplificação da expressão V₁² − V₂²?",
+   "alternativas": {
+    "A": "4x",
+    "B": "8x",
+    "C": "16",
+    "D": "x² − 4",
+    "E": "2x² + 8"
+   }
+  },
+  {
+   "n": 36,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Dois estudantes do IFAL registraram suas alturas para uma atividade de matemática. João mede 1,44 metro, enquanto José mede 162 centímetros.\nNesse contexto, dadas as afirmativas,\nI. João é mais alto que José.\nII. José é mais alto que João.\nIII. A diferença entre as alturas é de 18 centímetros.\nIV. João mede 1.440 centímetros.\nverifica-se que está/ão correta/s apenas",
+   "alternativas": {
+    "A": "II.",
+    "B": "I e III.",
+    "C": "II e III.",
+    "D": "II e IV.",
+    "E": "I, III e IV."
+   }
+  },
+  {
+   "n": 37,
+   "bloco": "Ciências da Natureza",
+   "gabarito": "A",
+   "enunciado": "Assinale a alternativa correta a respeito de calor, de temperatura e de máquinas térmicas.",
+   "alternativas": {
+    "A": "Motor a combustão interna, máquina a vapor e turbina a gás são exemplos de máquinas térmicas.",
+    "B": "A temperatura é inversamente proporcional à energia cinética média das partículas constituintes de um corpo.",
+    "C": "A energia na forma de calor passa, de forma espontânea, do corpo de menor temperatura para o de maior temperatura.",
+    "D": "No Sistema Internacional de Unidades, a quantidade de calor transferida de um corpo para outro é medida em Kelvin.",
+    "E": "O calor é a quantidade de energia térmica que um corpo possui, de modo que corpos mais quentes, necessariamente, contêm mais calor do que corpos mais frios."
+   }
+  },
+  {
+   "n": 38,
+   "bloco": "Ciências da Natureza",
+   "gabarito": "E",
+   "enunciado": "Os indicadores de saúde pública auxiliam na análise das condições de vida e no planejamento das ações governamentais. Nesse contexto, dadas as afirmativas,\nI. A taxa de mortalidade corresponde ao número de óbitos registrados em uma população, geralmente calculada para cada mil habitantes em determinado período.\nII. A taxa de natalidade expressa o número de nascidos vivos em uma população, sendo também calculada para cada mil habitantes.\nIII. A cobertura estimada da população pelas equipes de Atenção Básica à Saúde indica o alcance dos serviços essenciais de saúde. Valores mais altos desse indicador sugerem maior acesso e maior oferta de cuidados básicos à população.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "II, apenas.",
+    "B": "III, apenas.",
+    "C": "I e II, apenas.",
+    "D": "I e III, apenas.",
+    "E": "I, II e III."
+   }
+  },
+  {
+   "n": 39,
+   "bloco": "Ciências da Natureza",
+   "gabarito": "B",
+   "enunciado": "Durante um incêndio natural em uma área de mata, o calor gerado afeta plantas, solo e animais.\nCom base nos conceitos de calor e em suas formas de transmissão, nas transformações químicas e na ecologia das populações, assinale a alternativa correta.",
+   "alternativas": {
+    "A": "A transferência de calor no incêndio ocorre apenas por radiação, pois as chamas emitem radiação infravermelha, contribuindo para o aquecimento da vegetação ao redor.",
+    "B": "A propagação do incêndio ocorre, principalmente, por convecção, pois o ar aquecido sobe e leva energia térmica para outras áreas.",
+    "C": "Após o incêndio, a população de espécies volta, imediatamente, ao valor inicial, pois o fogo não altera o ambiente.",
+    "D": "A queima da vegetação é uma transformação física, pois altera apenas o estado de agregação da matéria.",
+    "E": "A combustão das plantas é causada pela perda de água por osmose, a qual desencadeia reações exotérmicas."
+   }
+  },
+  {
+   "n": 40,
+   "bloco": "Ciências da Natureza",
+   "gabarito": "D",
+   "enunciado": "Durante uma tempestade, nuvens muito grandes e altas acumulam eletricidade, o que pode gerar descargas elétricas conhecidas como raios.\nDadas as afirmativas sobre os fenômenos elétricos e a composição do ar,\nI. Em dias de tempestade, o ar úmido facilita a condução de eletricidade, pois a água presente na atmosfera pode conter partículas carregadas que ajudam o deslocamento das cargas elétricas.\nII. Os raios surgem apenas quando duas nuvens encostam uma na outra, ocorrendo eletrização por contato direto.\nIII. Durante tempestades com raios, o recomendado é evitar áreas abertas, árvores, postes, piscinas e banho de mar, além de procurar abrigo em construções com para-raios.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "II, apenas.",
+    "B": "III, apenas.",
+    "C": "I e II, apenas.",
+    "D": "I e III, apenas.",
+    "E": "I, II e III."
+   }
+  }
+ ]
+}

@@ -1,9 +1,9 @@
 import Texto, { Inline } from './Texto'
-import { LETRAS } from './data/letras'
+import { TODAS_LETRAS } from './data/letras-todas'
 
 // Junta o que foi colado em src/data/letras.js com a questão original
 function completar(prova, q) {
-  const c = LETRAS[prova.id] && LETRAS[prova.id][q.n]
+  const c = TODAS_LETRAS[prova.id] && TODAS_LETRAS[prova.id][q.n]
   if (!c) return q
   let enunciado = q.enunciado
   ;(c.trechos || []).forEach((t) => {

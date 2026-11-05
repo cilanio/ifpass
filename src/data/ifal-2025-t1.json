@@ -1,0 +1,583 @@
+{
+ "id": "ifal-2025-t1",
+ "titulo": "IFAL 2025.1.2 — Prova Tipo 1",
+ "subtitulo": "Cursos Técnicos Integrados ao Ensino Médio · COPEVE/UFAL",
+ "ano": 2025,
+ "tipo": 1,
+ "duracaoMin": 210,
+ "aplicadaEm": "2024-12-22",
+ "gabarito": "definitivo",
+ "blocos": [
+  {
+   "nome": "Língua Portuguesa",
+   "de": 1,
+   "ate": 18,
+   "cor": "#1D4ED8"
+  },
+  {
+   "nome": "Matemática",
+   "de": 19,
+   "ate": 36,
+   "cor": "#C2410C"
+  },
+  {
+   "nome": "Atualidades",
+   "de": 37,
+   "ate": 40,
+   "cor": "#7E22CE"
+  }
+ ],
+ "questoes": [
+  {
+   "n": 1,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Avaliando os componentes do processo comunicativo na tirinha, conclui-se que",
+   "alternativas": {
+    "A": "houve falha na interação, uma vez que a própria intenção comunicativa ou o objeto de comunicação não foi entendido.",
+    "B": "a comunicação existiu, porque, para entender o significado de uma mensagem, não é preciso conhecer o código.",
+    "C": "houve interação comunicativa, uma vez que o sinal representado pelo gesto do receptor foi entendido.",
+    "D": "houve comunicação, porque o receptor entendeu, perfeitamente, o significado da mensagem.",
+    "E": "a comunicação existiu, porque emissor e receptor interagiram em torno de sinais."
+   },
+   "imagem": "q01.png"
+  },
+  {
+   "n": 2,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "No título acima, caso a especificação do número percentual estivesse singularizada (do financiamento estudantil), em se tratando de concordância verbal, estaria correto afirmar que, na referida situação,",
+   "alternativas": {
+    "A": "o verbo deveria permanecer, obrigatoriamente, no plural, já que existe um número que indica porcentagem como sujeito.",
+    "B": "o verbo deveria ficar no singular, pois não existe um substantivo explícito acompanhando a porcentagem.",
+    "C": "o verbo deveria ficar, obrigatoriamente, no singular, uma vez que a especificação seria núcleo do sujeito.",
+    "D": "o verbo poderia concordar com o número ou com o substantivo que se refere à porcentagem.",
+    "E": "o verbo poderia ficar no singular ou no plural, pois não há indicação de sujeito."
+   },
+   "tituloTexto": "FIES: 68.2% dos financiamentos estudantis em 2023 foram concedidos a mulheres"
+  },
+  {
+   "n": 3,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Sobre a construção textual, é correto afirmar que",
+   "alternativas": {
+    "A": "o autor empregou o sinal de pontuação denominado “travessão” em vários momentos do texto. Nesse caso, esse sinal é utilizado para sinalizar o discurso indireto.",
+    "B": "no contexto: “Eu sei, é um conceito difícil de entender”, a vírgula serve para mostrar a supressão de um pensamento, trazendo uma informação implícita de que Papai Noel não existe.",
+    "C": "se percebe, no fragmento: “O garoto me pediu um cavalo. Eu perguntei: ‘__Um cavalinho de brinquedo?__’ Ele disse: ‘__Não, um cavalo de verdade__’”, a utilização das aspas nos trechos sublinhados, para isolar, no texto, uma explicação.",
+    "D": "o autor Luís Fernando Veríssimo, no fragmento: “É que nós temos o poder da ubiquidade, entende? Ubiquidade. A capacidade de estar em mais de um lugar ao mesmo tempo. Onipresença”, utilizou a função de linguagem expressiva, visto que deu ênfase ao referente que é o personagem “garoto”.",
+    "E": "o autor Luís Fernando Veríssimo, no fragmento: “É que nós temos o poder da ubiquidade, entende? Ubiquidade. A capacidade de estar em mais de um lugar ao mesmo tempo. Onipresença”, utilizou a função de linguagem metalinguística, visto que deu ênfase ao código usado para significar uma palavra."
+   },
+   "texto": "O garoto me pediu um cavalo. Eu perguntei: “Um cavalinho de brinquedo?”\nEle disse: “Não, um cavalo de verdade”.\nEu disse que ia ver, mas que seria difícil carregar um cavalo de verdade no meu saco.\nEle ficou me olhando. Depois disse:\n– Você não é o Papai Noel de verdade, é?\n– Claro que sou. Por que você pergunta?\n– Porque no outro xópi tem um Papai Noel igual a você.\n– E você pediu um cavalo pra ele?\n– Pedi. E ele disse que ia me dar.\n– Bom, talvez o saco dele seja maior do que o meu.\n– Mas o Papai Noel de verdade é ele ou é você?\nO que dizer para o garoto? É que nós temos o poder da ubiquidade, entende? Ubiquidade. A capacidade de estar em mais de um lugar ao mesmo tempo. Onipresença. Pergunte a sua mãe. Só existe um Papai Noel, mas ele está por toda parte. Está em todos os shoppings do mundo. Cada Papai Noel é a manifestação de uma mesma e única entidade superior. Só muda o nome e o tamanho do saco. Eu sei, é um conceito difícil de entender. Ainda mais na sua idade. Há anos, séculos, discute-se a natureza desta entidade multipartida. Existiu um Papai Noel histórico, que viveu e morreu, mas seu espírito perdurou, e perdura até hoje, porque a sua essência transcendia a sua materialidade. [...]\n*VERÍSSIMO, Luís Fernando. Em algum lugar do paraíso. Rio de Janeiro: Objetiva, 2011.*"
+  },
+  {
+   "n": 4,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "No texto, marcas da informalidade em tom de oralidade da escrita são perceptíveis, e há um eu-lírico disposto a dar conselhos ao leitor, utilizando-se de verbos no imperativo (recria-remove-recomeça-faz). Isso sugere que o poema se serve de uma linguagem cuja função é",
+   "alternativas": {
+    "A": "fática.",
+    "B": "emotiva.",
+    "C": "conativa.",
+    "D": "referencial.",
+    "E": "metalinguística."
+   },
+   "texto": "[Falta colar o poema: abra o arquivo src/data/letras-2025.js]",
+   "tituloTexto": "Aninha e suas pedras"
+  },
+  {
+   "n": 5,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Com base no fragmento: “No entanto, não há uma idade mínima e nem máxima, o que torna o ensino superior acessível a pessoas de todas as faixas etárias”, dadas as afirmativas,\nI. A expressão “uma idade mínima” representa o sujeito da oração.\nII. O sujeito do verbo “há” é classificado como simples.\nIII. O verbo “torna” é um verbo bitransitivo, pois possui complementos verbais: objeto direto e objeto indireto.\nIV. A expressão “a pessoas de todas as faixas etárias” exerce função sintática de complemento nominal.\nverifica-se que está/ão correta/s apenas",
+   "alternativas": {
+    "A": "III.",
+    "B": "IV.",
+    "C": "III e IV.",
+    "D": "I, II e III.",
+    "E": "I, II e IV."
+   },
+   "texto": "No Brasil, o requisito para o ingresso em uma faculdade é a conclusão do Ensino Médio. Na maioria dos casos, isso acontece aos 17 anos ou aos 18 anos. No entanto, não há uma idade mínima e nem máxima, o que torna o ensino superior acessível a pessoas de todas as faixas etárias.\nEstudantes que estão percorrendo o ciclo do Ensino Médio também já podem aplainar o caminho até a faculdade, realizando cursos técnicos integrados que permitem o contato com práticas básicas de seu segmento de interesse. Além disso, podem participar do Exame Nacional do Ensino Médio (Enem), na condição de treineiros, para se prepararem para o exame definitivo, que pode ser realizado após a conclusão da educação regular."
+  },
+  {
+   "n": 6,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "A respeito da palavra “taxas”, no contexto: “[...] o editorial “Criança não é Mãe!” chama atenção para as __taxas__ alarmantes de gestações precoces no Brasil”, é correto afirmar que",
+   "alternativas": {
+    "A": "é sinônima de “tachas”, por possuírem o mesmo sentido.",
+    "B": "é antônima de “tachas”, por possuírem significados opostos.",
+    "C": "é homônima perfeita de “tachas”, já que ambas apresentam a mesma pronúncia.",
+    "D": "é homônima homófona de “tachas”, já que são iguais na pronúncia e diferentes na grafia.",
+    "E": "é homônima homógrafa de “tachas”, uma vez que apresentam o mesmo significado."
+   },
+   "texto": "Abordando de forma crítica a violência de gênero, o editorial “Criança não é Mãe!” chama atenção para as taxas alarmantes de gestações precoces no Brasil.\nExistem aproximadamente 12.000 ocorrências de gravidez em meninas menores de 14 anos anualmente no Brasil, afetando predominantemente meninas negras na região Norte. Esses casos geralmente resultam em cuidados pré-natais precários e resultados adversos para recém-nascidos. É importante enfatizar a necessidade de que o setor de saúde e a sociedade abordem essas questões, alinhando-se às metas da Agenda 2030 da ONU para eliminar todas as formas de violência contra mulheres e meninas."
+  },
+  {
+   "n": 7,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Dos substantivos destacados no texto, o que desempenha função sintática de predicativo do sujeito é",
+   "alternativas": {
+    "A": "vitamina C.",
+    "B": "hidratação.",
+    "C": "firmeza.",
+    "D": "frutas.",
+    "E": "água."
+   },
+   "texto": "Um dos elementos mais importantes para a manutenção de nossa jovialidade e firmeza da pele é a __água__. Grande parte do nosso corpo é composto por este elemento e este conteúdo precisa ser reposto diariamente, em quantidade média de 1,5 a 2 litros diários. Esta proporção corporal varia conforme a idade, nível de atividade física e perdas diárias (transpiração, urina, secreção corporal para produção de substâncias digestivas). Outra forma para manter a sua __hidratação__ é o consumo de __frutas__ com elevada quantidade de água, como a melancia, o melão, a laranja, a mexerica e o abacaxi, por exemplo.\nCom o passar dos anos, vamos reduzindo a quantidade de músculo e água corporal, o que compromete a __firmeza__ da pele e, consequentemente a sua aparência, logo, sugiro que você tenha atenção a sua hidratação diária e associe com uma bela dose diária de __vitamina C__.",
+   "tituloTexto": "A água e a beleza da pele"
+  },
+  {
+   "n": 8,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "Dados os versos, retirados da letra da canção,\nI. [trecho da letra].\nII. [trecho da letra].\nIII. [trecho da letra].\nAs funções da linguagem predominantes nos versos são, respectivamente,",
+   "alternativas": {
+    "A": "apelativa, emotiva e metalinguística.",
+    "B": "emotiva, metalinguística e fática.",
+    "C": "emotiva, conativa e poética.",
+    "D": "fática, apelativa e emotiva.",
+    "E": "fática, emotiva e poética."
+   },
+   "texto": "[Falta colar a letra da música: abra o arquivo src/data/letras-2025.js]",
+   "tituloTexto": "Vento ventania"
+  },
+  {
+   "n": 9,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "Assinale a alternativa cuja palavra grifada tem a mesma classificação gramatical do vocábulo “singular” destacado no texto.",
+   "alternativas": {
+    "A": "Boa! A prática esportiva merece __aplausos__!",
+    "B": "A empresa conseguiu o __prêmio__ que tanto esperava.",
+    "C": "Naquela manhã ensolarada, saímos __para__ caminhar.",
+    "D": "A avaliação do concurso parecia estar bem __acessível__.",
+    "E": "Esta expansão curricular melhorou __consideravelmente__."
+   },
+   "texto": "O Brasil enfrenta um cenário demográfico __singular__: a população total cresce, mas a taxa de natalidade cai e a expectativa de vida aumenta. Segundo dados do IBGE, em 2020, pela primeira vez, o número de pessoas com 60 anos ou mais superou o de crianças menores de 10 anos, representando 14,9% da população. Em 2050, esse número deverá dobrar para 30,7%. Essa inversão da pirâmide etária se intensificará nas próximas décadas, com mais adultos e menos crianças.\nO Brasil, assim como o mundo, enfrenta um cenário de envelhecimento populacional sem precedentes. Enquanto a taxa de natalidade despenca, a expectativa de vida aumenta consideravelmente, impulsionando um crescimento exponencial da população adulta – especialmente a faixa etária acima de 60 anos. Esse fenômeno tem impulsionado a demanda por produtos geriátricos descartáveis, como fraldas, *pants*, toalhas umedecidas e produtos cosméticos específicos, somado à crescente necessidade de cuidados com a saúde e higiene pessoal dos idosos. Diante disso, vale destacar o panorama atual e futuro, considerando dados do IBGE, pesquisas relevantes do mercado e reflexões sobre o impacto ambiental.",
+   "tituloTexto": "EXPANSÃO DA POPULAÇÃO ADULTA E QUEDA DA POPULAÇÃO INFANTIL"
+  },
+  {
+   "n": 10,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Considerando-se o texto acima, dadas as afirmativas,\nI. O texto traz uma forte carga sociopolítica, refletindo acerca de um povo que não está acostumado à liberdade.\nII. O texto tem como característica uma dimensão irreal no curso dos acontecimentos e a presença do absurdo, provocando uma inverossimilhança externa, já que há afastamento da realidade.\nIII. Identifica-se, no texto, uma importante característica da literatura fantástica: a possibilidade de criar alegorias. Ou seja, apresentar um enredo aparentemente absurdo para criticar algo que está presente na nossa realidade.\nIV. Há, no texto, traços de um conto contemporâneo, já que tudo, em uma narrativa desse gênero, tem sua razão de ser, isto é, contribui para o sentido de toda história. Além disso, concentra-se em um breve momento, contexto atual ou baseado em fatos.\nverifica-se que estão corretas apenas",
+   "alternativas": {
+    "A": "I e IV.",
+    "B": "II e III.",
+    "C": "II e IV.",
+    "D": "III e IV.",
+    "E": "I, II e III."
+   },
+   "texto": "Havia um país em que tudo era proibido. Ora, como a única coisa não proibida era o jogo de bilharda, os súditos se reuniam em certos campos que ficavam atrás da aldeia e ali, jogando bilharda, passavam os dias. E como as proibições tinham vindo paulatinamente, sempre por motivos justificados, não havia ninguém que pudesse reclamar ou que não soubesse se adaptar.\nPassaram-se os anos. Um dia, os condestáveis viram que não havia mais razão para que tudo fosse proibido e enviaram mensageiros para avisar os súditos que podiam fazer o que quisessem. Os mensageiros foram àqueles lugares onde os súditos costumavam se reunir.\n— Saibam — anunciaram — que nada mais é proibido. Eles continuaram a jogar bilharda.\n— Entenderam? — os mensageiros insistiram.\n— Vocês estão livres para fazer o que quiserem.\n— Muito bem — responderam os súditos.\n— Nós jogamos bilharda.\nOs mensageiros se empenharam em recordar-lhes quantas ocupações belas e úteis havia, às quais eles tinham se dedicado no passado e poderiam agora novamente se dedicar. Mas eles não prestavam atenção e continuavam a jogar, uma batida atrás da outra, sem nem mesmo tomar fôlego. Vendo que as tentativas eram inúteis, os mensageiros foram contar aos condestáveis.\n— Nem uma, nem duas — disseram os condestáveis. — Proibamos o jogo de bilharda.\nAí então o povo fez uma revolução e matou-os todos. Depois, sem perder tempo, voltou a jogar bilharda.",
+   "tituloTexto": "Quem se contenta – Italo Calvino"
+  },
+  {
+   "n": 11,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Considerando-se o cartaz, dadas as afirmativas,\nI. O cartaz é um guia que sugere como simplificar documentos e comunicações na Justiça estadual.\nII. O cartaz menciona o uso da informação; a eficácia nos resultados pretendidos; a eficiência dos documentos, quando simplificados.\nIII. Dentre outras informações, o guia destaca que o uso da linguagem simples para pessoas e organizações de todo país apresenta vantagens.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "I, apenas.",
+    "B": "II, apenas.",
+    "C": "III, apenas.",
+    "D": "I e II, apenas.",
+    "E": "I, II e III."
+   },
+   "imagem": "q11.png"
+  },
+  {
+   "n": 12,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Sobre os aspectos da pontuação do texto em tela, é correto afirmar que",
+   "alternativas": {
+    "A": "no contexto: “A mulher em questão era Mary Somerville, uma física, geóloga e química escocesa...”, as vírgulas foram empregadas para isolar um aposto.",
+    "B": "as aspas, em: ‘Você sabia que a palavra “cientista” foi criada por causa de uma mulher?’, foram usadas para esclarecer um termo científico empregado no texto.",
+    "C": "as aspas, presentes nos dois últimos parágrafos, marcam uma citação de alguém. Elas incorporam ao texto citações de especialistas.",
+    "D": "a vírgula, em: “No meio disso tudo, ela ainda teve tempo de ter quatro filhos...”, foi empregada para isolar uma oração deslocada.",
+    "E": "as aspas, presentes nos dois últimos parágrafos, sinalizam expressões metafóricas empregadas intencionalmente pelo autor."
+   },
+   "texto": "Você sabia que a palavra “cientista” foi criada por causa de uma mulher? A mulher em questão era Mary Somerville, uma física, geóloga e química escocesa que também tocava piano e falava latim, francês e grego.\nNo meio disso tudo, ela ainda teve tempo de ter quatro filhos, lutar pelo direito das mulheres ao voto e ser tutora de matemática de Ada Lovelace, que viria a ser a primeira programadora da história dos computadores.\nEm 1834, Mary escreveu um tratado que conectou tão bem ideias da matemática, astronomia, geologia e física que acabou se tornando a base do primeiro currículo de ciência da Universidade de Cambridge. Até então, esses campos eram vistos de forma completamente separada.\nO texto impressionou tanto que obrigou um de seus revisores a criar um termo melhor para descrevê-la do que o utilizado na época, que era “man of science”, ou “homem da ciência”.\nWilliam Whewell chegou até a escrever um artigo complementar em que cunhou pela primeira vez a palavra “scientist”, ou “cientista”, para falar de Mary. E nesse artigo ele comparava esse neologismo a uma palavra que já existia, que era “artist”, ou “artista”. [...]"
+  },
+  {
+   "n": 13,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Na tirinha, as palavras “mim” (no primeiro quadrinho), “mas” e “um” (no segundo quadrinho) e “por” (no terceiro quadrinho) são, respectivamente,",
+   "alternativas": {
+    "A": "pronome, conjunção, numeral e preposição.",
+    "B": "pronome, conjunção, artigo e preposição.",
+    "C": "preposição, advérbio, artigo e advérbio.",
+    "D": "pronome, conjunção, numeral e verbo.",
+    "E": "conjunção, advérbio, artigo e verbo."
+   },
+   "imagem": "q13.png"
+  },
+  {
+   "n": 14,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Sabendo-se que a estimativa usada pelo anúncio publicitário foi responsável pela argumentação para convencer o leitor, assinale a alternativa que apresenta a classe gramatical desse argumento responsável pela persuasão do interlocutor.",
+   "alternativas": {
+    "A": "Numeral (12).",
+    "B": "Verbo (aprenda).",
+    "C": "Adjetivo (abertas).",
+    "D": "Substantivo (turmas).",
+    "E": "Substantivo (descontos)."
+   },
+   "imagem": "q14.png"
+  },
+  {
+   "n": 15,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Caso o adjetivo destacado no fragmento do texto fosse substituído por outro biforme, que pudesse ser flexionado em gênero e número, a concordância nominal se estabeleceria corretamente se o adjetivo fosse",
+   "alternativas": {
+    "A": "colocado posposto a um verbo de ligação.",
+    "B": "posto entre os dois substantivos que aparecem no contexto.",
+    "C": "colocado anteposto aos dois substantivos aos quais se refere.",
+    "D": "pluralizado no feminino ou colocado no gênero e no número do primeiro substantivo.",
+    "E": "pluralizado no masculino ou colocado no gênero e no número do substantivo mais próximo."
+   },
+   "texto": "Mesmo com o mercado aquecido e em forte expansão, o *e-commerce* de beleza e saúde tem alguns desafios. Uma das maiores dificuldades apontadas para o ramo é o de tornar a venda mais humanizada. Sem o vendedor presencial o consumidor fica impedido de testar o produto ou sentir a fragrância de um perfume. No entanto, a própria tecnologia vem sendo usada como aliada para aproximar produto e consumidor __final__ no *e-commerce*.\n“As famosas *beauty techs* têm desenvolvido ferramentas de interação desse *shopper* através do *e-commerce*. A marca de maquiagem Maybelline, da L’oréal, lançou uma plataforma *online* de realidade aumentada (Virtual Try It On), no qual é possível testar a cor da base para encontrar o produto ideal para a sua pele”, explica Thaís.\nA especialista também cita a inteligência artificial como aliada da experiência de compra dos *e-shoppers*. Segundo Thaís, já existe uma tecnologia desenvolvida para dermatologistas, na qual o cliente consegue fotografar o seu rosto e receber na hora a informação do produto ideal para tratar a pele.\n“Estamos falando de categoria com *ticket* médio alto e o consumidor brasileiro não pode errar. Ainda é um desafio, mas muitas indústrias usam a tecnologia para desenvolver e facilitar a jornada do consumidor”, frisa a profissional.\nOs profissionais da área também citam estratégias com influenciadores como uma forma de aproximação com os consumidores, além de investimentos em conteúdo completo nas páginas de produtos. [...]",
+   "tituloTexto": "Os principais desafios do segmento de beleza no e-commerce"
+  },
+  {
+   "n": 16,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "Nos quadrinhos, é possível notar marcas não só da identidade cultural, mas também da diversidade de significados que as palavras da língua portuguesa apresentam.\nAssim, a palavra “aipim” mantém uma relação de",
+   "alternativas": {
+    "A": "paronímia com as palavras “mandioca” e “macaxeira”.",
+    "B": "antonímia com as palavras “mandioca” e “macaxeira”.",
+    "C": "sinonímia com as palavras “mandioca” e “macaxeira”.",
+    "D": "sinonímia com a palavra “macaxeira”, apenas.",
+    "E": "sinonímia com a palavra “mandioca”, apenas."
+   },
+   "imagem": "q16.png"
+  },
+  {
+   "n": 17,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Considerando-se as regras de acentuação gráfica das palavras presentes na tirinha, dadas as afirmativas,\nI. A palavra “ótimo”, presente no primeiro quadrinho, é uma palavra proparoxítona, seguindo corretamente a norma gramatical, que orienta: todas essas palavras recebem acentuação gráfica na antepenúltima sílaba.\nII. As palavras “memória” e “prá”, no segundo quadrinho, são, respectivamente, proparoxítona e oxítona.\nIII. O vocábulo “aí”, escrito no segundo quadrinho, é um monossílabo tônico terminado em –i, por isso recebe acento gráfico.\nIV. A palavra “óbvio”, no terceiro quadrinho, é um substantivo terminado em ditongo crescente; por essa razão, está acentuado graficamente.\nverifica-se que estão corretas apenas",
+   "alternativas": {
+    "A": "I e III.",
+    "B": "I e IV.",
+    "C": "II e III.",
+    "D": "III e IV.",
+    "E": "I, II e IV."
+   },
+   "imagem": "q17.png"
+  },
+  {
+   "n": 18,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "Tendo como base as falas dos personagens da tirinha, assinale a alternativa correta quanto às justificativas para o emprego do vocábulo “meio” ou “meia”.",
+   "alternativas": {
+    "A": "Em: “[...] Estou meio tonta”, o falante pertence ao gênero feminino; dessa maneira, o correto seria “meia tonta”.",
+    "B": "Nas duas ocorrências, o vocábulo “meio” em: “No meio do encontro? Dê meia-volta!” está sendo usado como advérbio de intensidade.",
+    "C": "O vocábulo destacado em: “Só há um __meio__ de não estragar o encanto” funciona como substantivo, da mesma forma que “É uma __meia__ meio usada”.",
+    "D": "O vocábulo destacado em: “Só há um __meio__ de não estragar o encanto” funciona como adjetivo ou fração de medida e concorda com o substantivo referente.",
+    "E": "Na fala: “[...] Você tomou meia garrafa de vinho [...]”, o vocábulo “meia” está sendo usado como adjetivo dentro de um substantivo composto; assim, deveria estar com hífen."
+   },
+   "imagem": "q18.png"
+  },
+  {
+   "n": 19,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Considere a expressão numérica\nN = √50 + 3√8 − 2√18\nAssinale a alternativa correta que contém o valor de N.",
+   "alternativas": {
+    "A": "19",
+    "B": "5√2",
+    "C": "19√2",
+    "D": "20√2",
+    "E": "43√2"
+   }
+  },
+  {
+   "n": 20,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Para os jogos internos de um colégio, foi criada uma competição para selecionar o melhor *design* de troféu para a premiação dos melhores colocados. Dois dos principais intuitos da competição é desenvolver o lado artístico dos alunos, mas também melhorar o conhecimento em geometria espacial, pois cada troféu deve ser formado por, ao menos, dois sólidos conhecidos. Maria participou da competição e elaborou o seguinte protótipo:\nAssinale a alternativa que apresenta corretamente os sólidos que Maria utilizou para confeccionar seu protótipo.",
+   "alternativas": {
+    "A": "Um cone, um prisma e uma esfera.",
+    "B": "Um tronco de cone, um cilindro e uma esfera.",
+    "C": "Uma pirâmide, um paralelepípedo e uma esfera.",
+    "D": "Um tronco de pirâmide, um cilindro e uma semiesfera.",
+    "E": "Um tronco de cone, um paralelepípedo e uma semiesfera."
+   },
+   "imagem": "q20.png"
+  },
+  {
+   "n": 21,
+   "bloco": "Matemática",
+   "gabarito": "E",
+   "enunciado": "No IFAL, os alunos do curso técnico em Agropecuária estão organizando uma horta comunitária. Eles sabem que, com 6 (seis) alunos trabalhando 5 horas por dia, durante 4 (quatro) dias, conseguem preparar 240 metros quadrados de terreno para plantio. Agora, os alunos precisam preparar uma nova área de 300 metros quadrados em apenas 2 (dois) dias, trabalhando o mesmo número de horas por dia. Assinale a alternativa que apresenta o número mínimo de alunos necessários para cumprir essa tarefa.",
+   "alternativas": {
+    "A": "5",
+    "B": "6",
+    "C": "12",
+    "D": "14",
+    "E": "15"
+   }
+  },
+  {
+   "n": 22,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Uma praça triangular é delimitada por um ciclovia representada pelos segmentos AB, BC e AC. Deseja-se construir nela uma calçada para pedestres para evitar acidentes com as bicicletas que circulam na ciclovia. Essa calçada, representada na figura pelos segmentos CD, DE e EF, será construída de modo que os segmentos BC e DE sejam paralelos e os segmentos CD e EF sejam também paralelos.\nSabendo-se que a extensão da ciclovia do ponto A até o ponto B mede 6,25 km e que a distância do ponto F até ponto A deve medir 2,56 km, assinale a alternativa que apresenta a distância correta do ponto A até o ponto D.",
+   "alternativas": {
+    "A": "2,79 km",
+    "B": "3,69 km",
+    "C": "4,00 km",
+    "D": "4,17 km",
+    "E": "8,81 km"
+   },
+   "imagem": "q22.png"
+  },
+  {
+   "n": 23,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Considere o seguinte sistema de equações\nx^{2} + y^{2} = 25\nx + y = 7\nDadas as afirmativas,\nI. Existem duas soluções para o sistema.\nII. Não tem como resolver o sistema, pois uma equação envolve termos quadráticos e a outra não.\nIII. O problema em questão é um sistema de equações do primeiro grau.\nIV. O problema em questão é um sistema de equações do segundo grau.\nverifica-se que estão corretas apenas",
+   "alternativas": {
+    "A": "I e III.",
+    "B": "I e IV.",
+    "C": "II e III.",
+    "D": "I, II e IV.",
+    "E": "II, III e IV."
+   }
+  },
+  {
+   "n": 24,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Uma construtora possui 30 metros quadrados de grama para construir um jardim de uma casa; porém, o cliente deu algumas exigências para a sua construção. Ele solicitou que a parte gramada tenha a forma de trapézio e, além disso, solicitou que a base maior desse trapézio seja 4 (quatro) metros maior que a altura dele, e a base menor 2 (dois) metros menor que a altura.\nDiante dessas informações, a altura do trapézio que a construtora deverá entregar ao cliente, levando em consideração que serão plantados 30 metros quadrados de grama é de",
+   "alternativas": {
+    "A": "2 metros.",
+    "B": "5 metros.",
+    "C": "6 metros.",
+    "D": "7 metros.",
+    "E": "8 metros."
+   }
+  },
+  {
+   "n": 25,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "A figura plana é um paralelogramo. Além disso, os ângulos BDC = CBA = 90°, AB = 4 e BF = 5.\nAssinale a alternativa que apresenta o valor correto de DC.",
+   "alternativas": {
+    "A": "9/5",
+    "B": "5/2",
+    "C": "5/3",
+    "D": "3",
+    "E": "9"
+   },
+   "imagem": "q25.png"
+  },
+  {
+   "n": 26,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Considere a expressão\n(3x^{2} − 12x + 12) / (6x^{2} − 18x + 12)\nA forma mais simplificada da expressão é",
+   "alternativas": {
+    "A": "1.",
+    "B": "8/5.",
+    "C": "(−2x − 2) / (−3x + 2).",
+    "D": "(x − 2) / (2 · (x − 1)).",
+    "E": "(x^{2} − 2x + 1) / (2x^{2} − 3x + 1)."
+   }
+  },
+  {
+   "n": 27,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "Considere o número L, dado pela seguinte expressão numérica\nL = (3^{4} · 9^{-1})^{2} / (27^{2/3} · 3^{-3})\nAssinale a alternativa que apresenta o valor correto de L.",
+   "alternativas": {
+    "A": "3^{5}",
+    "B": "3^{-6}",
+    "C": "3^{8/3}",
+    "D": "3^{-1}",
+    "E": "3^{32/3}"
+   }
+  },
+  {
+   "n": 28,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Considere a inequação\nx^{2} − 8x + 16 ≥ 0\nDadas as afirmativas,\nI. A inequação é satisfeita para todo valor de x.\nII. Existe um único valor de x que torna x^{2} − 8x + 16 = 0.\nIII. Existem valores de x que tornam x^{2} − 8x + 16 negativo.\nverifica-se que está/ão correta/s",
+   "alternativas": {
+    "A": "II, apenas.",
+    "B": "III, apenas.",
+    "C": "I e II, apenas.",
+    "D": "I e III, apenas.",
+    "E": "I, II e III."
+   }
+  },
+  {
+   "n": 29,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Ao começar um curso de origami (dobradura em papel), Maria inicia alguns exercícios de dobraduras para aprimorar sua técnica. Após algum treino, ela se depara com um exercício de transformar figuras planas em triângulos, usando apenas as dobraduras, sem que seja permitido o recorte do papel. No exercício em questão, Maria inicia com um polígono regular de 8 (oito) lados. Diante disso, o número mínimo de dobraduras que Maria precisa fazer para que o polígono seja dobrado em um triângulo é",
+   "alternativas": {
+    "A": "2.",
+    "B": "3.",
+    "C": "4.",
+    "D": "5.",
+    "E": "8."
+   }
+  },
+  {
+   "n": 30,
+   "bloco": "Matemática",
+   "gabarito": "E",
+   "enunciado": "Considere a expressão\n(x + 4)^{2} + (x − 3) · (x + 3) − (2x − 1)^{2}\nA forma simplificada dessa expressão é",
+   "alternativas": {
+    "A": "−x + 3.",
+    "B": "−x^{2} + 3.",
+    "C": "2 · (−x^{2} + 3).",
+    "D": "2 · (−x^{2} + 9x + 3).",
+    "E": "2 · (−x^{2} + 6x + 3)."
+   }
+  },
+  {
+   "n": 31,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "Ao longo dos últimos anos, a obesidade infantil tem se tornado um problema cada vez mais preocupante no Brasil e no mundo. Segundo dados do Ministério da Saúde, em conjunto com as diretrizes da Sociedade Brasileira de Pediatria (SBP) e da Organização Mundial da Saúde (OMS), a quantidade de calorias recomendada para crianças entre 9 (nove) anos e 12 anos varia entre 1.800 e 2.200 calorias por dia, dependendo do nível de atividade física. No caso de Maria, em seu café da manhã, ela consumiu 300 g de macaxeira cozida e 250 g de cuscuz. Além disso, no almoço e ao longo do dia, Maria ingeriu mais 1.200 calorias.\nSabendo-se que 100 g de macaxeira cozida contém 125 calorias e que 100 g de cuscuz contém 112 calorias, assinale a alternativa correta que representa a porcentagem de calorias que Maria já consumiu, considerando-se a recomendação diária de 2.000 calorias.",
+   "alternativas": {
+    "A": "92,75%",
+    "B": "87,50%",
+    "C": "71,85%",
+    "D": "60%",
+    "E": "32,75%"
+   }
+  },
+  {
+   "n": 32,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Ana estuda em uma escola na qual a média final de Matemática é calculada a partir das notas das quatro provas realizadas ao longo dos bimestres do ano. A média final é dada pela fórmula:\nMF = (B₁ + B₂ + B₃ + B₄) / 4,\nem que B₁, B₂, B₃ e B₄ são as notas de cada bimestre. Para ser aprovada, Ana precisa obter uma média final de, pelo menos, 6,0. Sabe-se que Ana tem as notas de 3 (três) bimestres: B₁ = 5,5; B₂ = 6,0 e B₃ = 7,0.\nAssinale a alternativa correta que apresenta a nota mínima de B₄ para que Ana seja aprovada.",
+   "alternativas": {
+    "A": "B₄ ≥ 1,4",
+    "B": "B₄ ≥ 4,6",
+    "C": "B₄ ≥ 5,5",
+    "D": "B₄ ≥ 6,0",
+    "E": "B₄ ≥ 6,5"
+   }
+  },
+  {
+   "n": 33,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Ao realizar a prova de seleção do IFAL, um estudante, antes de entrar para a prova, comprou duas canetas reservas, duas garrafas de água e uma barra de chocolate, efetuando o pagamento com uma nota de R$ 50,00. Se cada água custou R$ 2,70, cada caneta R$ 0,80 e a barra de chocolate R$ 11,00, o troco que o estudante recebeu foi",
+   "alternativas": {
+    "A": "R$ 14,50.",
+    "B": "R$ 18,00.",
+    "C": "R$ 32,00.",
+    "D": "R$ 35,50.",
+    "E": "R$ 39,00."
+   }
+  },
+  {
+   "n": 34,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Uma equipe de estudantes do IFAL está desenvolvendo um modelo de inteligência artificial para prever o consumo de energia em um laboratório. O consumo total é estimado por um modelo polinomial que considera o número de dispositivos ligados, x, e o tempo de uso em horas, y. O polinômio que modela o consumo de energia, medido em kWh, é dado por:\nP(x, y) = 2x^{2} + 3xy − 4y^{2} + 5\nPara efetuar um teste no modelo de consumo e verificar sua precisão, os estudantes deixam 3 (três) dispositivos ligados por 2 (duas) horas. Assinale a alternativa correta que apresenta o consumo total estimado pelo modelo.",
+   "alternativas": {
+    "A": "68 kWh",
+    "B": "37 kWh",
+    "C": "31 kWh",
+    "D": "25 kWh",
+    "E": "9 kWh"
+   }
+  },
+  {
+   "n": 35,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Luísa está organizando a sua festa de aniversário e decidiu encomendar balões e chapéus de festa. Cada balão custa R$ 3,00 e cada chapéu custa R$ 5,00. Ela gastou ao todo R$ 90,00 e comprou 22 itens entre balões e chapéus. Quantos balões e chapéus Luísa comprou?",
+   "alternativas": {
+    "A": "4 balões e 4 chapéus.",
+    "B": "7 balões e 4 chapéus.",
+    "C": "10 balões e 12 chapéus.",
+    "D": "11 balões e 11 chapéus.",
+    "E": "30 balões e 18 chapéus."
+   }
+  },
+  {
+   "n": 36,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Durante um atendimento de emergência, um paciente recebe uma infusão intravenosa de soro fisiológico a uma taxa de 125 mL por hora. Sabendo-se que o paciente precisa receber 1,25 litros de soro, assinale a alternativa correta que contém o tempo necessário para completar a infusão.",
+   "alternativas": {
+    "A": "1 hora",
+    "B": "5 horas",
+    "C": "10 horas",
+    "D": "50 horas",
+    "E": "100 horas"
+   }
+  },
+  {
+   "n": 37,
+   "bloco": "Atualidades",
+   "gabarito": "B",
+   "enunciado": "A charge faz uma alusão à permanência e à intensidade dos furacões ao longo dos anos.\nCom base nesse contexto, é correto afirmar que a charge",
+   "alternativas": {
+    "A": "faz uma crítica ao fato de que as mudanças climáticas não são levadas a sério, com furacões se tornando eventos de entretenimento, como uma música famosa.",
+    "B": "ironiza a ideia de que os furacões, causados pelas mudanças climáticas, tornam-se fenômenos “imortais”, sempre lembrados e recorrentes.",
+    "C": "critica a frequência dos furacões, sugerindo que a população se acostuma tanto com esses desastres que acaba os confundindo.",
+    "D": "sugere que os furacões são mais fortes devido às alterações climáticas e, por isso, confundem-se com outros desastres naturais.",
+    "E": "faz uma crítica à mídia, dizendo que ela dá mais importância à música de Sandy do que aos danos causados pelos furacões."
+   },
+   "imagem": "q37.png"
+  },
+  {
+   "n": 38,
+   "bloco": "Atualidades",
+   "gabarito": "D",
+   "enunciado": "A charge representa, no contexto atual, de maneira simbólica, a disputa de poder entre os Estados Unidos e a Rússia.\nQual contexto geopolítico atual é mais associado a essa competição representada na charge?",
+   "alternativas": {
+    "A": "A corrida espacial entre os Estados Unidos e a Rússia durante a Guerra Fria.",
+    "B": "A formação de alianças econômicas entre os países do BRICS e as potências ocidentais.",
+    "C": "O debate sobre mudanças climáticas e as políticas ambientais de grandes potências.",
+    "D": "A guerra no Leste Europeu, especialmente com a crescente presença da OTAN nas fronteiras russas.",
+    "E": "O aumento das tensões militares no Indo-Pacífico, especialmente com a presença militar dos EUA na região."
+   },
+   "imagem": "q38.png"
+  },
+  {
+   "n": 39,
+   "bloco": "Atualidades",
+   "gabarito": "C",
+   "enunciado": "O conceito de descarbonização envolve a redução da emissão de gases de efeito estufa, que são responsáveis pelo aquecimento global. Empresas de petróleo, como a Petrobras, estão investindo em tecnologias e em processos mais limpos, incluindo o desenvolvimento de combustíveis alternativos.\nAssinale a alternativa que melhor descreve a relação entre a descarbonização e os combustíveis alternativos.",
+   "alternativas": {
+    "A": "A descarbonização está diretamente relacionada ao aumento da produção de petróleo para atender à crescente demanda energética.",
+    "B": "Combustíveis alternativos não contribuem para a descarbonização, pois não têm impacto nas emissões de gases de efeito estufa.",
+    "C": "Combustíveis alternativos, como o diesel renovável, ajudam a descarbonizar as operações ao substituir combustíveis fósseis e ao reduzir a emissão de poluentes.",
+    "D": "A descarbonização não tem impacto no setor energético, pois as emissões de gases de efeito estufa não estão ligadas ao consumo de combustíveis fósseis.",
+    "E": "A produção de combustíveis alternativos visa, principalmente, a aumentar a queima de combustíveis fósseis para melhorar a eficiência energética."
+   },
+   "texto": "Embora mantenha o foco no petróleo, a Petrobras também olha para as alternativas. No mesmo período, a empresa planeja investir 11,5 bilhões de dólares em projetos de descarbonização das operações e no amadurecimento dos negócios em segmentos como o do diesel renovável, obtido pelo processamento do diesel mineral com óleo vegetal. “Toda empresa de petróleo está preocupada em se descarbonizar e investir em combustíveis alternativos, até porque a demanda por petróleo em algum momento deverá ser menor do que a atual”, disse Maurício Tolmasquim."
+  },
+  {
+   "n": 40,
+   "bloco": "Atualidades",
+   "gabarito": "A",
+   "enunciado": "O diálogo apresentado na tirinha mostra como, apesar de estarmos em um mundo globalizado, muitas pessoas ainda sofrem com a fome e a desigualdade, até mesmo em países ricos.\nCom base nisso, qual das alternativas melhor explica por que a fome e a desigualdade continuam existindo, mesmo em países desenvolvidos?",
+   "alternativas": {
+    "A": "A globalização permite uma maior troca de produtos e de ideias, mas também aumenta as desigualdades, pois concentra a riqueza em grandes empresas e em poucas pessoas, deixando muitos de fora da prosperidade.",
+    "B": "A globalização ajuda a distribuir melhor a riqueza entre os países, fazendo que a fome e a desigualdade desapareçam, já que todos têm acesso aos mesmos recursos.",
+    "C": "A globalização resolve os problemas da fome e da desigualdade, pois cria empregos e aumenta as oportunidades para todos, sem exceção.",
+    "D": "A globalização não afeta a desigualdade econômica, porque todos os países têm as mesmas oportunidades de crescer e de melhorar a vida de suas populações.",
+    "E": "A globalização ajuda a produzir mais alimentos, garantindo que todas as pessoas, especialmente em países ricos, tenham o suficiente para comer."
+   },
+   "imagem": "q40.png"
+  }
+ ]
+}

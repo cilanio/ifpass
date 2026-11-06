@@ -2,5 +2,6 @@
 // Quando entrar uma prova nova com letras, é só acrescentar uma linha aqui.
 import { LETRAS } from './letras'
 import { LETRAS_2025 } from './letras-2025'
+import { LETRAS_2024 } from './letras-2024'
 
-export const TODAS_LETRAS = { ...LETRAS, ...LETRAS_2025 }
+export const TODAS_LETRAS = { ...LETRAS, ...LETRAS_2025, ...LETRAS_2024 }

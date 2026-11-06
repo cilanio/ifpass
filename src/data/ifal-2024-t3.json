@@ -1,0 +1,582 @@
+{
+ "id": "ifal-2024-t3",
+ "titulo": "IFAL 2024.1.1 — Prova Tipo 3",
+ "subtitulo": "Cursos Técnicos Integrados ao Ensino Médio · COPEVE/UFAL",
+ "ano": 2024,
+ "tipo": 3,
+ "duracaoMin": 210,
+ "aplicadaEm": "2023-12-03",
+ "gabarito": "definitivo",
+ "blocos": [
+  {
+   "nome": "Língua Portuguesa",
+   "de": 1,
+   "ate": 18,
+   "cor": "#1D4ED8"
+  },
+  {
+   "nome": "Matemática",
+   "de": 19,
+   "ate": 36,
+   "cor": "#C2410C"
+  },
+  {
+   "nome": "Atualidades",
+   "de": 37,
+   "ate": 40,
+   "cor": "#7E22CE"
+  }
+ ],
+ "questoes": [
+  {
+   "n": 1,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "A respeito do período EU TENTEI PEGAR ELE (2º quadrinho da tirinha), pode-se dizer que",
+   "alternativas": {
+    "A": "tanto o pronome EU como o pronome ELE apresentam a mesma função sintática.",
+    "B": "os dois pronomes pessoais do caso reto foram devidamente empregados na função de sujeito.",
+    "C": "os dois pronomes pessoais do caso reto devem ser substituídos por pronomes pessoais oblíquos.",
+    "D": "o pronome EU, na função de sujeito oracional, deve ser substituído por um pronome pessoal oblíquo de 3ª pessoa (o).",
+    "E": "o pronome ELE, na função de complemento verbal, deve ser substituído por um pronome pessoal oblíquo de 3ª pessoa (o)."
+   },
+   "imagem": "q01.png"
+  },
+  {
+   "n": 2,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "Nos versos: [trecho da letra] / [trecho da letra] / [trecho da letra], o vocábulo __ainda__ é invariável, já que pertence à classe morfológica",
+   "alternativas": {
+    "A": "das preposições.",
+    "B": "das conjunções.",
+    "C": "das interjeições.",
+    "D": "dos advérbios.",
+    "E": "dos verbos."
+   },
+   "texto": "[Falta colar a letra da música: abra o arquivo src/data/letras-2024.js]"
+  },
+  {
+   "n": 3,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "No título: “Alimentar-se: simples ou complicado demais?”, a linguagem foi apresentada por meio de um recurso linguístico. O nome desse recurso é",
+   "alternativas": {
+    "A": "rimas pobres.",
+    "B": "rimas ricas.",
+    "C": "antonímia.",
+    "D": "paronímia.",
+    "E": "sinonímia."
+   },
+   "tituloTexto": "Alimentar-se: simples ou complicado demais?"
+  },
+  {
+   "n": 4,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "Levando-se em consideração as duas palavras graficamente acentuadas no *slogan*, assinale a afirmativa correta.",
+   "alternativas": {
+    "A": "As palavras acentuadas graficamente estão corretas, considerando-se que ambas se encaixam na regra das oxítonas.",
+    "B": "Ambas as palavras foram acentuadas corretamente, considerando-se que existem hiatos finais.",
+    "C": "A regra que manda acentuar o vocábulo “inesquecível” é a mesma que explica o acento em “heroína”.",
+    "D": "A regra que manda acentuar o vocábulo “inesquecível” é a mesma que explica o acento em “repórter”.",
+    "E": "Tanto o vocábulo “você” quanto o vocábulo “inesquecível” foram acentuados pela mesma razão."
+   },
+   "imagem": "q04.png"
+  },
+  {
+   "n": 5,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "Assinale a alternativa em que o sentido do vocábulo grifado é idêntico ao da palavra “todavia” em: “__Todavia__, o Ensino Técnico é uma ponte para o Ensino Superior”.",
+   "alternativas": {
+    "A": "O funcionário da empresa gosta de trabalhar, __mas também__ de bajular seu supervisor.",
+    "B": "Cândida chegou atrasada, __portanto__ terá que aguardar que a chamem novamente.",
+    "C": "Os jovens queriam sair, __contudo__ estava chovendo bastante.",
+    "D": "Descemos do trem, __porque__ esquecemos nossa bagagem.",
+    "E": "Não emprestes o livro novo __nem__ o velho."
+   },
+   "texto": "O crescimento dos cursos técnicos é um grande estímulo tanto para o ensino, quanto para o crescimento do mercado de trabalho. __Todavia__, o Ensino Técnico é uma ponte para o Ensino Superior. Iniciar por cursos técnicos transforma o profissional e o torna muito mais capacitado.\nAs pesquisas mostram que cerca de 80% dos alunos que possuem formação técnica tem conquistado ótimas colocações e melhor reconhecimento no mercado de trabalho. Sendo assim, é através dos cursos técnicos que milhares de jovens estão conseguindo ingressar no mercado de trabalho, com melhores vagas e melhores salários. [...]"
+  },
+  {
+   "n": 6,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Analise os fragmentos retirados do texto, observando em qual/quais aparece/m APENAS pronome/s que faz/em referência/s a um termo anterior.\nI. “Ele ainda era uma criancinha quando ganhou seu primeiro ukulele”.\nII. “... como baterista da banda Reaction, na qual também atuava como vocalista”.\nIII. “... veio a oportunidade que mudou a vida de Taylor: em 1968, ele se uniu a Brian May...”\nIV. “O grupo manteve a formação até 1991, quando Freddie Mercury morreu...”\nEm qual/quais do/s fragmento/s nota-se isso?",
+   "alternativas": {
+    "A": "I, II e III.",
+    "B": "II e IV.",
+    "C": "I e III.",
+    "D": "IV.",
+    "E": "III."
+   },
+   "texto": "Nascido em Kings Lynn, na Inglaterra, em 26 de julho de 1949, Roger Taylor demonstrou desde cedo sua paixão pela música.\nEle ainda era uma criancinha quando ganhou seu primeiro ukulele, aprendeu violão sozinho e foi convidado para participar de corais líricos. No entanto, foi em outro instrumento que Taylor encontrou sua verdadeira vocação: a bateria.\nOs primeiros passos musicais foram em meados de 1961, como baterista da banda Reaction, na qual também atuava como vocalista.\nMenos de sete anos depois, veio a oportunidade que mudou a vida de Taylor: em 1968, ele se uniu a Brian May, dando início à lendária jornada do Queen.\nEm 1968, juntamente com Brian May e Tim Staffell, Roger Taylor fundou a banda Smile. Após a saída de Staffell, Freddie Mercury assumiu como vocalista e John Deacon se juntou como baixista.\nFoi assim que a formação original do Queen surgiu, uma das mais icônicas na história do rock. O grupo manteve a formação até 1991, quando Freddie Mercury morreu e a banda se desmantelou. [...]",
+   "tituloTexto": "Curiosidades sobre Roger Taylor, o icônico baterista do Queen"
+  },
+  {
+   "n": 7,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "Os três vocábulos destacados no texto são, respectivamente,",
+   "alternativas": {
+    "A": "preposição + artigo / pronome pessoal oblíquo / artigo.",
+    "B": "preposição + artigo / artigo / pronome pessoal oblíquo.",
+    "C": "preposição + artigo / preposição / artigo.",
+    "D": "preposição / preposição / preposição.",
+    "E": "artigo / artigo / artigo."
+   },
+   "texto": "O acesso __à__ informação via recursos on-line possibilita um alcance imediato __a__ recursos para ensino, pesquisa e informação em diversos bancos de dados nos mais diferentes campos e áreas de governo, de conhecimento e do comércio. Conta com o fator de análise da quantidade (o volume), __a__ qualidade (identificar o relevante) e agrega a rapidez da busca, acesso e uso da informação."
+  },
+  {
+   "n": 8,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Em: “Um estudo recente concluiu que a corrida pode ter efeitos sobre a depressão e a ansiedade __semelhantes__...”, a palavra “semelhantes” está pluralizada porque",
+   "alternativas": {
+    "A": "é um adjetivo uniforme e concorda com dois substantivos de gêneros diferentes.",
+    "B": "é um adjetivo uniforme e concorda com um substantivo masculino plural.",
+    "C": "é um adjetivo uniforme e concorda com dois substantivos do mesmo gênero.",
+    "D": "é um advérbio que foi pluralizado equivocadamente.",
+    "E": "é um substantivo comum de dois gêneros."
+   },
+   "texto": "Praticar exercícios físicos regularmente é muito importante para cuidar da saúde do corpo e da mente. Do ponto de vista da manutenção da saúde mental, estudos já comprovaram que doses diárias de exercícios realizados de forma consistente aliviam o estresse, melhoram os distúrbios de sono, a oxigenação cerebral e [o] funcionamento do cérebro. A partir de um ponto de vista biológico, vale destacar que há neurotransmissores liberados com a prática e o corpo se beneficia de forma geral.\nAlém disso, estudos revelam que o exercício físico estimula o crescimento de novas células do cérebro, ajudando no processo de memória e tomada de decisão e de forma geral, interrompendo o ciclo de pensamentos e emoções negativas.\nUm estudo recente concluiu que a corrida pode ter efeitos sobre a depressão e a ansiedade __semelhantes__ aos dos antidepressivos, reduzindo os sintomas depressivos, pelo menos em algumas pessoas que sofrem de depressão. [...]"
+  },
+  {
+   "n": 9,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Com base nas informações contidas na tirinha acima, assinale a alternativa que está de acordo com a gramática normativa.",
+   "alternativas": {
+    "A": "Maria enfatizou: aonde quer que você esteja, lembre-se da nossa conversa!",
+    "B": "Aqueles jovens chegaram aonde ninguém nunca havia chegado.",
+    "C": "Onde quer que você vá, não deixe de sorrir.",
+    "D": "Joãozinho, aonde você estuda?",
+    "E": "Você mora aonde?"
+   },
+   "imagem": "q09.png"
+  },
+  {
+   "n": 10,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "Qual das seguintes expressões, retiradas do texto, serve para hierarquizar ideias?",
+   "alternativas": {
+    "A": "Na medida em que",
+    "B": "Em primeiro lugar",
+    "C": "Por exemplo",
+    "D": "por sua vez",
+    "E": "então"
+   },
+   "texto": "__Na medida em que__ a prática escolar pode estar desempenhando algum papel na educação das pessoas, que tenha algum efeito sobre suas vidas futuras, estamos falando de problemas nos quais a pretensão da justiça e da igualdade social pode ter um significado intrínseco à própria definição do trabalho docente. Parece, __então__, legítimo perguntar-se, como parte da prática profissional de ensino, pela forma em que a escola colabora de fato e deve colaborar à promoção de práticas que têm um claro significado social. __Por exemplo__, se está favorecendo ou se está resistindo a que a educação escolar seja um lugar onde se reproduz e legitima a desigualdade e a injustiça social [...].\n__Em primeiro lugar__, as instituições educativas são lugares nos quais os alunos e alunas se introduzem em formas particulares de vida que, __por sua vez__, supõem uma preparação para suas vidas futuras [...]. Estas experiências não possuem somente um significado individual, mas representam perspectivas sobre o sentido tanto público como privado da vida e do social. [...]\n*CONTRERAS, José. Autonomia de professores. São Paulo: Cortez, 2002.*"
+  },
+  {
+   "n": 11,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "Em relação ao texto, é possível afirmar que",
+   "alternativas": {
+    "A": "aparece, nessa narrativa, um amontoado de exemplos sem relação entre si.",
+    "B": "se atribui ao conteúdo textual um caráter descontraído, com linguagem longa, o que prejudica a credibilidade da narrativa.",
+    "C": "é exemplo de um texto multissemiótico, veiculado pelos ambientes digitais, cuja linguagem não verbal se apresenta sob a forma de imagens em movimento.",
+    "D": "é uma resenha, já que descreve, analisa e expõe uma opinião de alguém acerca da qualidade de determinada obra e/ou produto que circula em nosso meio.",
+    "E": "o emprego da pontuação nessa narrativa é diferente do uso mais comum, ou seja, há maior flexibilidade no uso da pontuação, como é comum nos poemas."
+   },
+   "texto": "“Tu já leu (sic) ‘variados tons de tal cor?” – era mais ou menos isso o título do livro – foi a pergunta da colega – numa folguinha entre aula e outra – acrescida do comentário “foi o mais vendido na Feira do Livro em Caxias, no Brasil e no mundo”! A moça ficou com cara de “não entendi”, para não dizer besteira, quando a minha resposta foi “não sei por que, mas sempre leio os menos vendidos (risos)! Quase pude ver materializado no rosto o pensamento dela, naquela expressão de quem diz: “é professora de Português, membro de academia de letras, e não leu? É inadmissível”. Até que gostaria de ter lido, quanto mais se ler, melhor, a leitura nunca é demasiada e é bom que se leia um pouco de tudo para conhecer e avaliar; e comentar, indicar, contraindicar, mas (in)felizmente esses que, normalmente, são “os mais vendidos”, aqui e ali, vão parar sempre no fim da fila, da enorme fila de leituras e releituras que me espera – precisaria, quem sabe, de umas três ou quatro vidas para dar conta de tudo. Confesso que a empolgação da colega professora, dizendo que fulana e sicrana estavam lendo, e estavam adorando, e que estavam fazendo até uns comentários maliciosamente “quentes” sobre a história, me deixou apreensiva, com a nítida sensação de estar perdendo alguma preciosidade, ou de estar meio fora de moda, ou algo assim, não sei bem. A primeira coisa que fiz, ao chegar à minha casa, foi correr para o amigo Google e pedir socorro, afinal, ele resume e conta tudo a todo mundo, resolve casos urgentes de alunos, desde o fundamental ao universitário, por que não haveria de me ajudar num caso tão conflitante e urgente? Pronto! Em segundos... Tudo ali! Estampada na telinha a síntese e comentários da famigerada história! No mais alto estilo das sagas adolescentes, entremeada a cenas eróticas picantes. Uma saga (para os da minha geração, uma Júlia, Sabrina) que virou gente grande, mas se esqueceu de amadurecer. Ler ou não ler, colocar ou não na fila, cometer o sacrilégio de criticar sem ler, sendo guiada pelas experiências de leituras? Eis as questões! Em meio a tantos tons de tantas cores apresentados pelas editoras, chegando até as livrarias e revolucionando as feiras de livros de todos os lugares, estão perdidos, esquecidos e abandonados aqueles que colorem o espírito, fazem-no brilhar, sobressair-se, crescer e aparecer. Na maioria das vezes, no fundo dos balaios de promoção barata. Lamento que esses sejam sempre os menos procurados, menos falados, menos vendidos... Os menos conhecidos, os nunca lidos. Precisamos, sim, dar um colorido as nossas vidas, ele é necessário, imprescindível, mas... Fiquemos em alerta! Procuremos, escolhamos e adotemos os tons certos, a fim de dar um colorido especial na grandiosa, magnífica tela do imaginário, do conhecimento! Elejamos as cores de um arco-íris de luz que ilumine e expanda nossos horizontes. Quem sabe o tom Rosa de Guimarães, os tons secos do Nordeste de Graciliano, o tom de ressaca dos olhos de Capitu, os tons históricos de Euclides da Cunha em seu passeio literário pelos “sertões”, os vários tons dos heterônimos de Pessoa, os tons macabros de Poe, os tons Quixoteanos de Cervantes, os tons solitários de Gabriel García Márquez, enfim... Decididamente, “50 tons de qualquer coisa” não vai para o fim da minha fila de espera, aliás, não vai para a fila! Pronto, falei!"
+  },
+  {
+   "n": 12,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Nas falas: “vim fazer um servicinho pro coronel Trindade” e “Dar um susto nuns mocinhos”, o personagem Dente Seco, além de usar um tom irônico e ameaçador, emprega também os diminutivos para exprimir",
+   "alternativas": {
+    "A": "ênfase à profissão que exercia.",
+    "B": "o desprezo ao trabalho e curiosidade do barbeiro.",
+    "C": "a descoberta de que a pessoa procurada era o barbeiro.",
+    "D": "um tom de alegria ao descobrir que tal “servicinho” estava prestes a acontecer.",
+    "E": "um tom de desprezo e insignificância em relação aos “moços” a quem ele se refere."
+   },
+   "texto": "[...]\nComecei a examinar a cara do homem pelo espelho. Ele viu que eu estava olhando e perguntou: 'Sabe quem sou eu?'. Respondi que não. E o homem: 'Me chamo Silvino Neves, mas me tratam por Dente Seco'.\n— E tu, que disseste? [perguntou Rodrigo]\n— Ora, eu fiquei mais pra lá que mais pra cá, e achei melhor dizer que já conhecia ele de nome. Ensaboei a cara do cabra e indaguei assim com ar de quem não quer nada: “Ainda que mal pergunte, que é que o patrício anda fazendo por estas bandas?” E tu sabes o que foi que ele respondeu: ”vim fazer um servicinho pro coronel Trindade”. Comecei a passar a navalha no assentador: “Que servicinho? ” E ele, mais que depressa: “Dar um susto nuns mocinhos”. E meio que riu. Quando eu já estava barbeando o bandido [...]\n*VERÍSSIMO, Érico. O retrato. vol. 2: O tempo e o vento. São Paulo: Companhia das Letras, 2004. p. 294.*"
+  },
+  {
+   "n": 13,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "Assinale a alternativa que preencha, respectivamente, as lacunas do fragmento de texto acima.",
+   "alternativas": {
+    "A": "porque / sobre / aonde / mais",
+    "B": "porque / sob / onde / mais",
+    "C": "por quê / sobre / onde / mas",
+    "D": "por que / sobre / aonde / mas",
+    "E": "porque / sobre / onde / mas"
+   },
+   "texto": "Milton adora contar histórias. “Só não me pergunte o ano [em que elas ocorreram] ▁▁▁▁▁▁▁▁ eu não lembro”, afirma. Uma das clássicas é ▁▁▁▁▁▁▁▁ quando ele começou a compor, na década de 1960. Ele vivia em Belo Horizonte, para ▁▁▁▁▁▁▁▁ se mudou para estudar economia — ▁▁▁▁▁▁▁▁ não chegou a cursar a disciplina."
+  },
+  {
+   "n": 14,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "D",
+   "enunciado": "A respeito das palavras presentes nos quadrinhos e considerando-se as normas de acentuação gráfica, pode-se dizer que",
+   "alternativas": {
+    "A": "são verbos que se encaixam em um dos casos especiais e se grafam de duas maneiras.",
+    "B": "são acentuadas por serem oxítonas, possuírem vogal tônica, precedida de ditongo decrescente em posição final.",
+    "C": "são substantivos os quais se encaixam em um dos casos especiais, porém não devem ser incluídos na regra das proparoxítonas.",
+    "D": "são substantivos os quais se encaixam em um dos casos especiais e levam acento por terminarem em ditongo oral átono crescente.",
+    "E": "são substantivos que se encaixam em um dos casos especiais e levam acento por terminarem em ditongo oral átono decrescente."
+   },
+   "imagem": "q14.png"
+  },
+  {
+   "n": 15,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "B",
+   "enunciado": "A BO PAPER lançou, no início de junho de 2021, uma Campanha Anual Ambiental, em comemoração ao Dia Mundial do Meio Ambiente, com o *slogan*: “Alguns papéis a gente fabrica. Outros, a gente assume!”. A colocação da vírgula, no *slogan*, justifica-se porque",
+   "alternativas": {
+    "A": "depois de “outros”, altera o sentido do texto.",
+    "B": "indica a elipse de um substantivo.",
+    "C": "separa o sujeito do predicado.",
+    "D": "isola um termo explicativo.",
+    "E": "isola um vocativo."
+   },
+   "imagem": "q15.png"
+  },
+  {
+   "n": 16,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "A",
+   "enunciado": "Considerando-se a grafia do vocábulo “grama”, citado nessa tirinha, pode-se dizer que são palavras",
+   "alternativas": {
+    "A": "homônimas homógrafas.",
+    "B": "homônimas homófonas.",
+    "C": "parônimas.",
+    "D": "antônimas.",
+    "E": "sinônimas."
+   },
+   "imagem": "q16.png"
+  },
+  {
+   "n": 17,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "C",
+   "enunciado": "A linguagem não verbal dessa situação comunicativa enfatiza principalmente o/s seguinte/s elemento/s",
+   "alternativas": {
+    "A": "interlocutor e referente.",
+    "B": "emissor e receptor.",
+    "C": "emissor e canal.",
+    "D": "mensagem.",
+    "E": "código."
+   },
+   "imagem": "q17.png"
+  },
+  {
+   "n": 18,
+   "bloco": "Língua Portuguesa",
+   "gabarito": "E",
+   "enunciado": "De acordo com os recursos linguísticos que se destacam na gravura, determinadas funções são atribuídas à linguagem. A função predominante nessa gravura é a fática, já que",
+   "alternativas": {
+    "A": "existe muito mais preocupação estética, gerando muitas interpretações pessoais.",
+    "B": "o enunciado foca o código por meio do qual se estabelece a mensagem, citando-o e/ou descrevendo-o explicitamente.",
+    "C": "a mensagem costuma tratar-se de um enunciado repleto de lirismo e subjetividade.",
+    "D": "o enunciado procura estabelecer um vínculo muito forte com o receptor, chamando sua atenção.",
+    "E": "a mensagem está sempre voltada para o contato em si, a fim de certificar-se de que o canal está aberto, funcionando eficientemente, e de prolongar a comunicação."
+   },
+   "imagem": "q18.png"
+  },
+  {
+   "n": 19,
+   "bloco": "Matemática",
+   "gabarito": "NULA",
+   "enunciado": "Pretende-se construir uma rampa como mostrada na figura, sabendo-se que as proporções de largura, altura e comprimento são da ordem de 1:2:4.\nQual é a área da rampa?",
+   "alternativas": {
+    "A": "4x^{2}√5",
+    "B": "4√5",
+    "C": "28x^{2}",
+    "D": "14x^{2}",
+    "E": "8x^{3}"
+   },
+   "imagem": "q19.png"
+  },
+  {
+   "n": 20,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "A caixa d’água de um condomínio tem o formato como mostra a figura, na qual a base e a tampa são circunferências:\nSabendo-se que o raio da base da caixa d’água é 1 m e o raio da tampa é 2 m, qual o volume dessa caixa d'água? (Volume de tronco de cone: V = (1/3)πh[R^{2} + r^{2} + Rr])",
+   "alternativas": {
+    "A": "9π m³",
+    "B": "7π m³",
+    "C": "5π m³",
+    "D": "2π m³",
+    "E": "(35/3)π m³"
+   },
+   "imagem": "q20.png"
+  },
+  {
+   "n": 21,
+   "bloco": "Matemática",
+   "gabarito": "E",
+   "enunciado": "Uma das maneiras de calcular área de figuras planas é subdividi-la em outras figuras de área conhecida. Com o objetivo de calcular a área de um dodecágono (polígono regular de doze lados), divide-se a área desse polígono em triângulos menores, em que os vértices dos triângulos também são vértices do dodecágono. Dessa forma, levando-se em consideração o cálculo da área do polígono, o número de triângulos obtidos nessa subdivisão é:",
+   "alternativas": {
+    "A": "120",
+    "B": "110",
+    "C": "12",
+    "D": "11",
+    "E": "10"
+   }
+  },
+  {
+   "n": 22,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Dois foguetes com mesma velocidade e com trajetórias parabólicas foram lançados do solo. As trajetórias dos foguetes são descritas pelas funções F₁ = −(1/10)x^{2} + 5x e F₂ = −(1/5)x^{2} + 8x. Uma pessoa envolvida no projeto de lançamento notou que ambos os foguetes não poderiam ser lançados simultaneamente, pois, de acordo com suas trajetórias, eles iriam colidir. Qual é o ponto de colisão desses foguetes após o lançamento?",
+   "alternativas": {
+    "A": "(50, 40)",
+    "B": "(40, 30)",
+    "C": "(30, 60)",
+    "D": "(10, 20)",
+    "E": "(5, 8)"
+   }
+  },
+  {
+   "n": 23,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Em uma praça triangular, deseja-se fazer uma calçada de concreto e, em outra parte, plantio de grama, como mostra a figura:\nPara efetuar o plantio da grama e a aplicação da calçada, é necessário encontrar as áreas dos polígonos ABE e BCDE. Sabendo-se que os segmentos BE e CD são paralelos e conhecendo-se as medidas AB = 4 m, AE = 6 m e ED = 12 m, qual é a medida de BC?",
+   "alternativas": {
+    "A": "16 m",
+    "B": "14 m",
+    "C": "8 m",
+    "D": "4 m",
+    "E": "2 m"
+   },
+   "imagem": "q23.png"
+  },
+  {
+   "n": 24,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Para organizar um jardim retangular de uma residência, um arquiteto elabora um projeto genérico, no qual o comprimento do jardim terá o dobro da largura. Além disso, toda a extensão do jardim, ao longo das arestas do retângulo, será reservada para flores da região em que o projeto for construído. Considerando-se que o espaço para as flores tem largura medindo “a”, qual é a expressão matemática que representa a área do jardim, onde não serão plantadas flores, pressupondo-se que o lado menor do retângulo mede x?",
+   "alternativas": {
+    "A": "2x^{2}",
+    "B": "2x^{2} − a^{2}",
+    "C": "2(x − a)^{2}",
+    "D": "2x^{2} − 6ax + 4a^{2}",
+    "E": "4ax"
+   }
+  },
+  {
+   "n": 25,
+   "bloco": "Matemática",
+   "gabarito": "E",
+   "enunciado": "No dia 01 de dezembro de 2022, Maceió recebeu seu primeiro cruzeiro da alta temporada de turismo 2022/2023. O navio Costa Velosa, de origem italiana, trouxe a Alagoas 1.612 turistas. Porém, de acordo com a secretaria de turismo, 1.112 turistas não adquiriram pacotes de passeios para conhecerem melhor a capital alagoana.\nConsiderando-se que um pacote de passeio custa R$ 70,00 (setenta reais) por pessoa, qual é o valor de arrecadação com a venda desses pacotes de passeios?",
+   "alternativas": {
+    "A": "R$ 190.680,00",
+    "B": "R$ 112.840,00",
+    "C": "R$ 77.840,00",
+    "D": "R$ 70.000,00",
+    "E": "R$ 35.000,00"
+   }
+  },
+  {
+   "n": 26,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "Uma família de Maceió pretende passar as férias no sertão alagoano e fazer os passeios pelo rio São Francisco. A distância entre Maceió e a cidade de Piranhas é de aproximadamente 280 km. Durante o trajeto, a família pretende fazer duas paradas, para descanso e refeições. Levando-se em consideração que a velocidade média é de 80 km/h e que cada parada dura 20min, nessas condições, qual será o tempo de viagem?",
+   "alternativas": {
+    "A": "4h e 10min",
+    "B": "4 horas",
+    "C": "3h e 50min",
+    "D": "3h e 30min",
+    "E": "2h e 48min"
+   }
+  },
+  {
+   "n": 27,
+   "bloco": "Matemática",
+   "gabarito": "A",
+   "enunciado": "Uma loja de roupas decide fazer uma promoção de verão: todas as camisetas pelo mesmo valor de R$ 45,00 e, a partir da segunda camiseta comprada, há um desconto de 20% nas demais camisetas. Qual a função V(n) que representa o valor total a pagar de acordo com o número n de camisetas?",
+   "alternativas": {
+    "A": "V(n) = 45 + 36(n − 1)",
+    "B": "V(n) = 45 + 36n",
+    "C": "V(n) = 45n − 36",
+    "D": "V(n) = 45n",
+    "E": "V(n) = 36n"
+   }
+  },
+  {
+   "n": 28,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "José e mais 8 (oito) pessoas foram convidados para participarem da ceia de Natal da família Silva. Para realizar a ceia, Maria irá preparar 5 kg de carne de boi assada, um arroz com legumes, uma salada de tomates, uma farofa de banana da terra e um doce de abacaxi. O valor dos gastos com a organização da ceia será dividido entre todos os 10 participantes da ceia. Levando em consideração que todos comparecerão à ceia, que o quilo da carne custa R$ 42,70 e que o restante das compras totalizaram R$ 147,50, qual o valor que cada membro da família deverá contribuir?",
+   "alternativas": {
+    "A": "R$ 42,20",
+    "B": "R$ 36,10",
+    "C": "R$ 21,35",
+    "D": "R$ 19,02",
+    "E": "R$ 10,48"
+   }
+  },
+  {
+   "n": 29,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Uma colônia de bactérias é um exemplo clássico de um processo que pode ser modelado com uma função exponencial. As bactérias são organismos microscópicos que se reproduzem por divisão celular. Quando as condições são favoráveis, uma única bactéria pode se dividir em duas, as quais, por sua vez, se dividirão em quatro, oito, dezesseis e assim por diante. Esse processo de multiplicação é o que torna as colônias de bactérias tão prolíficas e capazes de se expandir rapidamente. Considere que o número de bactérias de uma determinada espécie é dada pela função N(t) = 5 · 2^{t}, em que t é o tempo contado em horas. Qual o número de bactérias dessa colônia, quando t = 4?",
+   "alternativas": {
+    "A": "400",
+    "B": "80",
+    "C": "40",
+    "D": "16",
+    "E": "10"
+   }
+  },
+  {
+   "n": 30,
+   "bloco": "Matemática",
+   "gabarito": "E",
+   "enunciado": "A empresa 1 estima seu lucro para os próximos 4 (quatro) anos, por meio da função L₁(t) = −(1/4)t^{2} + 2t + 5, enquanto a empresa 2, sua concorrente, estima seu lucro para os próximos 8 (oito) anos com a função L₂(t) = −(1/4)t^{2} + 4t + 3. É evidente, com base nessas funções, que a empresa 2 superará a empresa 1 em lucratividade em algum momento. A questão é: em quantos anos, a empresa 2 começará a lucrar mais do que a empresa 1?",
+   "alternativas": {
+    "A": "6,75 anos",
+    "B": "5 anos",
+    "C": "4 anos",
+    "D": "2 anos",
+    "E": "1 ano"
+   }
+  },
+  {
+   "n": 31,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Funções racionais são funções matemáticas que podem ser expressas como o quociente de dois polinômios. Elas têm várias aplicações em diversos campos, incluindo matemática, física, engenharia, economia, medicina e ciências naturais. Hipoteticamente, a função C(t) = (2t^{2} + 5t − 3) / (t^{2} + 6t + 9) pode medir a concentração de uma certa substância em um meio. Das alternativas a seguir, qual representa uma forma simplificada da função C?",
+   "alternativas": {
+    "A": "C(t) = (2t^{2} + 5t − 3) / (t^{2} + 6t + 9)",
+    "B": "C(t) = 2(t + 1) / (t + 15)",
+    "C": "C(t) = (2t − 1) / (t + 3)",
+    "D": "C(t) = −1/3",
+    "E": "C(t) = 1/4"
+   }
+  },
+  {
+   "n": 32,
+   "bloco": "Matemática",
+   "gabarito": "C",
+   "enunciado": "Em um festival de cultura, são cobrados dois tipos de entrada: R$ 20,00 para quem for prestigiar apenas os espetáculos musicais e outro, custando R$ 30,00, para quem escolher prestigiar os espetáculos de música e dança. Um grupo de dez amigos resolveu ir ao festival e gastou um total de R$ 260,00 em 10 ingressos. Quantas pessoas desse grupo irão prestigiar tanto as atrações musicais como também as de dança?",
+   "alternativas": {
+    "A": "10",
+    "B": "8",
+    "C": "6",
+    "D": "5",
+    "E": "4"
+   }
+  },
+  {
+   "n": 33,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Em ambas edições, a delegação do Brasil conquistou o primeiro lugar. De acordo com as tabelas, o aumento no número de medalhas da delegação brasileira, de 2015 para 2019, foi de",
+   "alternativas": {
+    "A": "54,51%",
+    "B": "51%",
+    "C": "45,48%",
+    "D": "19,84%",
+    "E": "16,55%"
+   },
+   "imagem": "q33.png",
+   "texto": "A primeira versão das Paralímpiadas, sob esse nome, foi realizada em Roma, na Itália, em 1960. Já os jogos Parapan-Americanos, ocorreram, em sua primeira edição, na Cidade do México, em 1999. Desde então, cada vez mais esses eventos ganham visibilidade e é dada a eles a sua devida importância. Nos últimos dois jogos Parapan-Americanos de 2015 e 2019, os quais antecederam os jogos deste ano, o Brasil teve seu desempenho como demonstrado nas tabelas.\nTabela 1 (a de cima): quadro de medalhas do Parapan-Americano de 2015, no Canadá.\nTabela 2 (a de baixo): quadro de medalhas do Parapan-Americano de 2019, no Peru."
+  },
+  {
+   "n": 34,
+   "bloco": "Matemática",
+   "gabarito": "NULA",
+   "enunciado": "Dois amigos foram jantar numa pizzaria e pediram uma pizza grande. Porém, ao chegar a pizza, ela não estava dividida em 8 (oito) fatias iguais, estava dividida em 12 (doze) fatias sendo elas, 3 (três) pequenas, 4 (quatro) médias e 5 (cinco) fatias grandes. Para serem justos, eles devem dividir as fatias de modo que cada um fique com metade da pizza. Dessa forma, qual seria a distribuição das fatias para que cada um consuma metade da pizza?",
+   "alternativas": {
+    "A": "Um dos amigos deve consumir 2 (duas) fatias pequenas e 3 (três) fatias grandes, enquanto o outro deve consumir 1 (uma) fatia pequena, 4 (quatro) fatias médias e 2 (duas) fatias grandes.",
+    "B": "Um dos amigos deve consumir 3 (três) fatias pequenas e 3 (três) fatias grandes, enquanto o outro deve consumir 4 (quatro) fatias médias e 2 (duas) fatias grandes.",
+    "C": "Um dos amigos deve consumir 3 (três) fatias pequenas e 2 (duas) fatias médias, enquanto o outro deve consumir 2 (duas) fatias médias e 5 (cinco) fatias grandes.",
+    "D": "Cada um deverá comer 6 (seis) fatias independente dos tamanhos.",
+    "E": "Não há como dividir igualmente entre os dois amigos."
+   }
+  },
+  {
+   "n": 35,
+   "bloco": "Matemática",
+   "gabarito": "B",
+   "enunciado": "Uma turma de ensino médio decide vender fatias de bolo para levantar fundos para a realização de sua festa de formatura. Para preparar um bolo de chocolate, que rende 12 fatias, a turma comprou 1 kg de chocolate em pó, 4 kg de farinha de trigo e 18 ovos; os demais ingredientes a escola forneceu. Para produzir o bolo, são necessários 250 g de farinha de trigo, 125 g de chocolate em pó e 3 ovos. Nessas condições, quantas fatias de bolo a turma conseguirá produzir?",
+   "alternativas": {
+    "A": "96 fatias",
+    "B": "72 fatias",
+    "C": "48 fatias",
+    "D": "8 fatias",
+    "E": "6 fatias"
+   }
+  },
+  {
+   "n": 36,
+   "bloco": "Matemática",
+   "gabarito": "D",
+   "enunciado": "Analisando o gráfico anterior e considerando o período de 2005 até 2023, é correto afirmar que:",
+   "alternativas": {
+    "A": "O gráfico que melhor representa o comportamento do número de inscritos é o gráfico de uma função constante.",
+    "B": "Não ocorreram grandes mudanças no número de inscritos, ao longo do período demonstrado na tabela.",
+    "C": "O período de 2013 até 2017 foi o de maior taxa de crescimento no número de inscritos.",
+    "D": "De 2012 para 2013, foi o período de maior taxa de crescimento no número de inscritos.",
+    "E": "De 2017 para 2018, não houve decréscimo no número de inscritos."
+   },
+   "imagem": "q36.png",
+   "texto": "O Exame Nacional do Ensino Médio (ENEM) é a principal porta de entrada para o ensino superior. Nos últimos anos, o número de inscritos para essa prova nacional vinha diminuindo; porém, em 2023, houve um aumento de cerca de 15% dos inscritos em comparação ao ano de 2022."
+  },
+  {
+   "n": 37,
+   "bloco": "Atualidades",
+   "gabarito": "A",
+   "enunciado": "Acerca do texto, é correto afirmar que:",
+   "alternativas": {
+    "A": "os pesquisadores acreditam que a principal hipótese para as mortes é que a temperatura da água do lago tenha alcançado 40 °C até os 3 (três) metros de profundidade, além dos efeitos cumulativos da poluição urbana, especialmente o grande número de queimadas.",
+    "B": "a análise de diversas amostras de tecidos e órgãos enviadas a diversos laboratórios especializados em todo o Brasil concluiu que a causa das mortes foi devido a uma doença infecciosa.",
+    "C": "embora o agravamento das alterações climáticas não tenha sido a causa das mortes, várias análises revelaram que o envenenamento por algas foi a causa.",
+    "D": "os botos sofreram de hipotermia, devido às queimadas na Amazônia, acarretando suas mortes.",
+    "E": "a principal causa da morte dos botos é devido à caça desordenada na região Amazônica."
+   },
+   "texto": "“Estamos enfrentando um evento de mortalidade incomum de botos-vermelhos amazônicos no Lago Tefé – uma situação muito preocupante e grave. Perdemos 110 animais entre botos-vermelhos e tucuxis”, explicou a pesquisadora Miriam Marmontel, do Instituto de Desenvolvimento Sustentável Mamirauá, organização social vinculada ao Ministério da Ciência, Tecnologia e Inovação."
+  },
+  {
+   "n": 38,
+   "bloco": "Atualidades",
+   "gabarito": "E",
+   "enunciado": "O texto se refere ao conflito entre palestinos e israelenses que teve início após o ataque terrorista deflagrado pelo Hamas e que vitimou civis israelenses. Sobre o papel do Irã na geopolítica do Oriente Médio, assinale a alternativa correta.",
+   "alternativas": {
+    "A": "Única democracia consolidada no Oriente Médio, o Irã tem buscado combater a presença militar russa na Síria.",
+    "B": "Governado por fundamentalistas sunitas, o Irã é uma teocracia que prega a destruição total do estado de Israel.",
+    "C": "A boa relação com a Arábia Saudita fez que o Irã tivesse um papel fundamental na libertação de reféns que estavam sob custódia do Hamas.",
+    "D": "O regime dos aiatolás tem assumido uma postura conciliadora no conflito, buscando mediar as divergências entre israelenses e palestinos.",
+    "E": "A disputa com a Arábia Saudita pela condição de potência regional faz que o Irã financie grupos paramilitares como o Hamas e o Hezbollah que lutam contra Israel e os EUA."
+   },
+   "texto": "Há pelo menos duas décadas, a maior divisão na fragmentada paisagem geopolítica da região do Oriente Médio tem sido entre amigos e aliados do Irã e amigos e aliados dos Estados Unidos. O núcleo da rede de apoio iraniana, às vezes chamada de “eixo de resistência”, é formado pelo Hezbollah no Líbano, pelo regime de Bashar al-Assad na Síria, pelos rebeldes houthis do Iêmen e diversas milícias iraquianas armadas e treinadas pelo país dos aiatolás."
+  },
+  {
+   "n": 39,
+   "bloco": "Atualidades",
+   "gabarito": "E",
+   "enunciado": "Nesse Contexto, a COP28 é uma oportunidade para:",
+   "alternativas": {
+    "A": "uma melhor discussão sobre o objetivo de limitar o aquecimento global em 1,0 °C, de acordo com o Painel Intergovernamental de Mudanças Climáticas.",
+    "B": "reconhecer a carência de apoio econômico aos países menos desenvolvidos e gerar um menor comprometimento dos países mais ricos.",
+    "C": "mostrar-nos que os combustíveis fósseis não são os principais causadores das alterações climáticas.",
+    "D": "que os países produtores de petróleo, façam uma transição energética imediata, pois não haverá grande necessidade de mudanças.",
+    "E": "uma maior consciência da necessidade de acelerar a transição energética, partilhando responsabilidades entre os países desenvolvidos, gerando maior investimento em energia limpa."
+   },
+   "texto": "O planeta está mais quente e as pessoas enfrentam impactos sem precedentes ao redor do mundo: recordes de incêndios florestais, enchentes catastróficas e ondas de calor insuportáveis. Precisamos de ações drásticas que beneficiem o clima e precisamos delas agora. A COP28 (Conferência das Partes (do inglês, *Conference of the Parties*)) é a oportunidade para o mundo elevar a ambição climática."
+  },
+  {
+   "n": 40,
+   "bloco": "Atualidades",
+   "gabarito": "E",
+   "enunciado": "Sobre os impactos da guerra para a Ucrânia, assinale a alternativa correta.",
+   "alternativas": {
+    "A": "A contraofensiva ucraniana fez que o exército russo recuasse da ocupação da Crimeia.",
+    "B": "A queda iminente do presidente Zelensky gera otimismo em Moscou quanto à possibilidade de ascensão de um governo aliado em Kiev.",
+    "C": "A participação de mercenários do grupo Wagner, em apoio ao exército ucraniano foi fundamental para o sucesso da contraofensiva de Kiev.",
+    "D": "O conflito acelerou o processo de adesão da Ucrânia na OTAN, oficializado com uma cerimônia em Bruxelas, com a presença do presidente Biden.",
+    "E": "A redução drástica da população ucraniana tem relação com a queda nas taxas de natalidade e, principalmente, com o êxodo de mulheres para outros países, e essa questão deve se intensificar em decorrência da guerra."
+   },
+   "texto": "A guerra entre Rússia e Ucrânia se prolonga, contrariando as previsões daqueles que projetavam um desfecho rápido para o conflito. O presidente ucraniano, Volodymyr Zelensky, afirmou que a contraofensiva de suas tropas enfrenta forte resistência, mas está se impondo diante dos ocupantes russos.\n“Os ocupantes tentam frear nossos meninos com todas as suas forças. Os combates são muito violentos”, mas “pouco importa o que o inimigo faça, o Exército ucraniano está se impondo”, afirmou ele. O presidente da Ucrânia também diz que no sul do país “tudo é difícil”."
+  }
+ ]
+}

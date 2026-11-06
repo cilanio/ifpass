@@ -6,7 +6,7 @@ import Prova from './Prova'
 import Resultado from './Resultado'
 import './simulado.css'
 
-export default function Simulados() {
+export default function Simulados({ onTreinar }) {
   const [tentativas, setTentativas] = useState([])
   const [tela, setTela] = useState({ nome: 'lista' })
   const [erro, setErro] = useState('')
@@ -62,6 +62,7 @@ export default function Simulados() {
       <Resultado
         prova={prova}
         tentativa={tela.tentativa}
+        onTreinar={onTreinar}
         onVoltar={() => {
           carregar()
           setTela({ nome: 'lista' })

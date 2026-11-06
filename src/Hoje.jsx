@@ -1,8 +1,9 @@
 import { useEffect, useState, useCallback } from 'react'
 import { supabase } from './lib/supabase'
 import { DIAS, dataLocal, horaCurta, calcularSequencia } from './lib/util'
+import Foco from './Foco'
 
-export default function Hoje() {
+export default function Hoje({ onTreinar }) {
   const hoje = dataLocal()
   const diaSemana = new Date().getDay()
   const [materias, setMaterias] = useState([])
@@ -66,6 +67,8 @@ export default function Hoje() {
           blocos feitos
         </div>
       </div>
+
+      <Foco onTreinar={onTreinar} />
 
       <div className="secao">
         <div className="barra">

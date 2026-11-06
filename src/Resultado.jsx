@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { formatarTempo } from './lib/correcao'
 import Questao from './Questao'
+import Assuntos from './Assuntos'
+import { porAssunto } from './lib/assuntos'
 
-export default function Resultado({ prova, tentativa, onVoltar }) {
+export default function Resultado({ prova, tentativa, onVoltar, onTreinar }) {
   const r = tentativa.resultado
   const [filtro, setFiltro] = useState('erros')
   const [aberta, setAberta] = useState(null)
   const pct = Math.round((r.acertos / r.total) * 100)
+  const assuntos = porAssunto([tentativa])
 
   const lista = r.detalhes.filter((d) => {
     if (filtro === 'erros') return !d.acertou && d.marcada
@@ -43,6 +46,12 @@ export default function Resultado({ prova, tentativa, onVoltar }) {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="secao">
+        <h2>Desempenho por assunto</h2>
+        <p className="dica">Do menor para o maior aproveitamento neste simulado. Os de cima são os melhores para estudar primeiro.</p>
+        <Assuntos dados={assuntos} onTreinar={onTreinar} />
       </div>
 
       <div className="secao">

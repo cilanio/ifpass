@@ -158,3 +158,24 @@ button.item-res {
 }
 button.item-res.ok { background: #dcfce7; }
 button.item-res.erro-item { background: #fee2e2; }
+
+/* Assuntos, foco de estudo e treino */
+.assunto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.assunto:last-child { border-bottom: 0; }
+.assunto-info { flex: 1; min-width: 0; }
+.assunto-nome { font-weight: 600; line-height: 1.3; }
+.assunto-meta { font-size: 0.8rem; color: #6b7280; margin-top: 2px; }
+.assunto-barra { height: 8px; background: #e5e7eb; border-radius: 999px; overflow: hidden; margin-top: 6px; }
+.assunto-barra div { height: 100%; border-radius: 999px; }
+.assunto-pct { font-weight: 700; min-width: 48px; text-align: right; }
+.foco { border-left: 6px solid var(--cor-destaque); }
+.bloco-titulo { font-weight: 700; margin: 16px 0 4px; color: var(--cor-principal); }
+.feedback { padding: 10px 14px; border-radius: 10px; margin: 10px 0; font-weight: 600; }
+.feedback.ok { background: #dcfce7; color: #14532d; }
+.feedback.erro-fb { background: #fee2e2; color: #7f1d1d; }

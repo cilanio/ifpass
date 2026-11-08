@@ -44,7 +44,7 @@ export const CLASSIFICACAO = {
     'p_sintaxe', 'p_classes', 'p_sintaxe', 'p_grafia', 'p_sintaxe', 'p_texto', 'p_sintaxe', 'p_semantica', 'p_comunicacao',
     // Matemática 19–36
     'm_proporcao', 'm_potencia', 'm_proporcao', 'm_potencia', 'm_numeros', 'm_eq2', 'm_algebra', 'm_numeros', 'm_algebra',
-    'm_numeros', 'm_eq2', 'm_equacoes1', 'm_equacoes1', 'm_geo_plana', 'm_geo_espacial', 'm_eq2', 'm_algebra', 'm_numeros',
+'m_numeros', 'm_geo_plana', 'm_equacoes1', 'm_equacoes1', 'm_geo_plana', 'm_geo_espacial', 'm_eq2', 'm_algebra', 'm_numeros',
     // Ciências 37–40
     'c_calor', 'c_saude', 'c_ambiente', 'c_eletricidade',
   ],
@@ -58,7 +58,8 @@ export const CLASSIFICACAO = {
   'ifal-2024-t3': [
     'p_sintaxe', 'p_classes', 'p_semantica', 'p_acentuacao', 'p_classes', 'p_classes', 'p_classes', 'p_concordancia', 'p_grafia',
     'p_texto', 'p_texto', 'p_texto', 'p_grafia', 'p_acentuacao', 'p_sintaxe', 'p_semantica', 'p_comunicacao', 'p_comunicacao',
-    'm_geo_plana', 'm_geo_espacial', 'm_geo_plana', 'm_funcoes', 'm_geo_semelhanca', 'm_algebra', 'm_numeros', 'm_proporcao', 'm_funcoes',
+    'm_geo_plana', 'm_geo_espacial', 'm_geo_plana', 'm_funcoes', 'm_geo_semelhanca', 'm_algebra', 'm_numeros', 'm_proporcao', 'm_potencia',
+'m_numeros', 'm_funcoes', 'm_funcoes', 'm_algebra',
     'm_numeros', 'm_funcoes', 'm_funcoes', 'm_algebra', 'm_equacoes1', 'm_proporcao', 'm_numeros', 'm_proporcao', 'm_dados',
     'a_clima', 'a_geopolitica', 'a_clima', 'a_geopolitica',
   ],

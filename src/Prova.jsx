@@ -16,15 +16,28 @@ export default function Prova({ prova, tentativa, onSair, onFinalizar }) {
 
   const encerrando = useRef(false)
   const ultimo = useRef({ respostas, marcadas })
-  ultimo.current = { respostas, marcadas }
+  const temporizador = useRef(null)
+  const salvamento = useRef(Promise.resolve())
 
-  const finalizar = useCallback(async () => {
-    if (encerrando.current) return
-    encerrando.current = true
+  
+const finalizar = useCallback(async () => {
+  if (encerrando.current) return
+
+  encerrando.current = true
+  clearTimeout(temporizador.current)
+
+  try {
+    await salvamento.current.catch(() => {})
+
     const { respostas: r, marcadas: m } = ultimo.current
     const resultado = corrigir(prova, r)
     const agora = new Date()
-    const duracao = Math.min(total, Math.round((agora - new Date(tentativa.iniciado_em)) / 1000))
+
+    const duracao = Math.min(
+      total,
+      Math.round((agora - new Date(tentativa.iniciado_em)) / 1000)
+    )
+
     const { data, error } = await supabase
       .from('simulados')
       .update({
@@ -38,15 +51,19 @@ export default function Prova({ prova, tentativa, onSair, onFinalizar }) {
         resultado,
       })
       .eq('id', tentativa.id)
+      .eq('status', 'em_andamento')
       .select()
       .single()
-    if (error) {
-      encerrando.current = false
-      setErro('Não foi possível salvar o resultado: ' + error.message)
-      return
-    }
+
+    if (error) throw error
+
     onFinalizar(data)
-  }, [prova, tentativa, total, onFinalizar])
+  } catch (error) {
+    encerrando.current = false
+    setErro('Não foi possível finalizar o simulado: ' + error.message)
+  }
+}, [prova, tentativa, total, onFinalizar])
+
 
   // cronômetro
   useEffect(() => {
@@ -60,37 +77,75 @@ export default function Prova({ prova, tentativa, onSair, onFinalizar }) {
 
   // salva o andamento (para não perder nada se a página fechar)
   const primeira = useRef(true)
+  const salvarAndamento = useCallback(async (dados) => {
+  const { error } = await supabase
+    .from('simulados')
+    .update({
+      respostas: dados.respostas,
+      marcadas: dados.marcadas,
+    })
+    .eq('id', tentativa.id)
+    .eq('status', 'em_andamento')
+
+  if (error) throw error
+}, [tentativa.id])
+
   useEffect(() => {
-    if (primeira.current) {
-      primeira.current = false
-      return
-    }
-    const t = setTimeout(() => {
-      supabase
-        .from('simulados')
-        .update({ respostas, marcadas })
-        .eq('id', tentativa.id)
-        .then(({ error }) => {
-          if (error) setErro(error.message)
-        })
-    }, 700)
-    return () => clearTimeout(t)
-  }, [respostas, marcadas, tentativa.id])
+  if (primeira.current) {
+    primeira.current = false
+    return
+  }
+
+  clearTimeout(temporizador.current)
+
+  temporizador.current = setTimeout(() => {
+    const dados = { ...ultimo.current }
+
+    salvamento.current = salvamento.current
+      .catch(() => {})
+      .then(() => salvarAndamento(dados))
+      .catch((error) => {
+        setErro('Erro ao salvar o andamento: ' + error.message)
+      })
+  }, 700)
+
+  return () => clearTimeout(temporizador.current)
+}, [respostas, marcadas, salvarAndamento])
 
   const q = prova.questoes[indice]
 
-  function responder(letra) {
-    setRespostas((r) => {
-      const novo = { ...r }
-      if (novo[q.n] === letra) delete novo[q.n]
-      else novo[q.n] = letra
-      return novo
-    })
-  }
+  
+function responder(letra) {
+  setRespostas((r) => {
+    const novo = { ...r }
 
-  function alternarRevisao() {
-    setMarcadas((m) => (m.includes(q.n) ? m.filter((x) => x !== q.n) : [...m, q.n]))
-  }
+    if (novo[q.n] === letra) delete novo[q.n]
+    else novo[q.n] = letra
+
+    ultimo.current = {
+      ...ultimo.current,
+      respostas: novo,
+    }
+
+    return novo
+  })
+}
+
+function alternarRevisao() {
+  setMarcadas((m) => {
+    const novo = m.includes(q.n)
+      ? m.filter((x) => x !== q.n)
+      : [...m, q.n]
+
+    ultimo.current = {
+      ...ultimo.current,
+      marcadas: novo,
+    }
+
+    return novo
+  })
+}
+
 
   // atalhos: A–E marcam, setas navegam
   useEffect(() => {
@@ -110,9 +165,18 @@ export default function Prova({ prova, tentativa, onSair, onFinalizar }) {
   }, [indice])
 
   async function sair() {
-    await supabase.from('simulados').update({ respostas, marcadas }).eq('id', tentativa.id)
+  if (encerrando.current) return
+
+  clearTimeout(temporizador.current)
+
+  try {
+    await salvamento.current.catch(() => {})
+    await salvarAndamento(ultimo.current)
     onSair()
+  } catch (error) {
+    setErro('Não foi possível salvar seu progresso: ' + error.message)
   }
+}
 
   function pedirFinalizar() {
     const respondidas = Object.keys(respostas).length

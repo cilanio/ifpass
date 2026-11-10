@@ -55,14 +55,19 @@ export const CLASSIFICACAO = {
     'm_eq2', 'm_geo_plana', 'm_algebra', 'm_proporcao', 'm_equacoes1', 'm_numeros', 'm_algebra', 'm_equacoes1', 'm_numeros',
     'a_clima', 'a_geopolitica', 'a_clima', 'a_globalizacao',
   ],
-  'ifal-2024-t3': [
-    'p_sintaxe', 'p_classes', 'p_semantica', 'p_acentuacao', 'p_classes', 'p_classes', 'p_classes', 'p_concordancia', 'p_grafia',
-    'p_texto', 'p_texto', 'p_texto', 'p_grafia', 'p_acentuacao', 'p_sintaxe', 'p_semantica', 'p_comunicacao', 'p_comunicacao',
-    'm_geo_plana', 'm_geo_espacial', 'm_geo_plana', 'm_funcoes', 'm_geo_semelhanca', 'm_algebra', 'm_numeros', 'm_proporcao', 'm_potencia',
-'m_numeros', 'm_funcoes', 'm_funcoes', 'm_algebra',
-    'm_numeros', 'm_funcoes', 'm_funcoes', 'm_algebra', 'm_equacoes1', 'm_proporcao', 'm_numeros', 'm_proporcao', 'm_dados',
-    'a_clima', 'a_geopolitica', 'a_clima', 'a_geopolitica',
-  ],
+  
+'ifal-2024-t3': [
+  // Português 1–18
+  'p_sintaxe', 'p_classes', 'p_semantica', 'p_acentuacao', 'p_classes', 'p_classes', 'p_classes', 'p_concordancia', 'p_grafia',
+  'p_texto', 'p_texto', 'p_texto', 'p_grafia', 'p_acentuacao', 'p_sintaxe', 'p_semantica', 'p_comunicacao', 'p_comunicacao',
+
+  // Matemática 19–36
+  'm_geo_plana', 'm_geo_espacial', 'm_geo_plana', 'm_funcoes', 'm_geo_semelhanca', 'm_algebra', 'm_numeros', 'm_proporcao', 'm_funcoes',
+  'm_numeros', 'm_potencia', 'm_funcoes', 'm_algebra', 'm_equacoes1', 'm_proporcao', 'm_numeros', 'm_proporcao', 'm_dados',
+
+  // Atualidades 37–40
+  'a_clima', 'a_geopolitica', 'a_clima', 'a_geopolitica',
+],
 }
 
 export function assuntoDe(provaId, n) {

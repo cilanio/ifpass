@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react'
 import { supabase } from './lib/supabase'
 import { PROVAS } from './data/provas'
@@ -38,11 +37,12 @@ export default function Treino({ assuntoInicial }) {
   const [rodada, setRodada] = useState(null)
   const [escolhida, setEscolhida] = useState(null)
   const [erro, setErro] = useState('')
-  const [iniciando, setIniciando] = useState(false)
+  const [iniciando, setIniciando] = useState(null) // Guarda o ID do assunto carregando
   const [salvandoResposta, setSalvandoResposta] = useState(false)
   const [finalizando, setFinalizando] = useState(false)
 
   const enviando = useRef(false)
+  const iniciandoRef = useRef(false)
 
   async function carregar() {
     const [s, t] = await Promise.all([
@@ -66,9 +66,9 @@ export default function Treino({ assuntoInicial }) {
 
   // Cria uma sessão no banco antes de iniciar a rodada.
   async function iniciar(id) {
-    if (iniciando) return
+    if (iniciandoRef.current) return
 
-    setErro('')
+      setErro('')
 
     const itens = sortear(BANCO[id] || [], TAMANHO_RODADA)
 
@@ -77,7 +77,9 @@ export default function Treino({ assuntoInicial }) {
       return
     }
 
-    setIniciando(true)
+    iniciandoRef.current = true
+
+    setIniciando(id)
 
     try {
       const { data, error } = await supabase
@@ -85,6 +87,7 @@ export default function Treino({ assuntoInicial }) {
         .insert({
           assunto: id,
           total_questoes: itens.length,
+          status: 'em_andamento',
         })
         .select('id')
         .single()
@@ -105,7 +108,8 @@ export default function Treino({ assuntoInicial }) {
     } catch (error) {
       setErro('Não foi possível iniciar o treinamento: ' + error.message)
     } finally {
-      setIniciando(false)
+      iniciandoRef.current = false
+      setIniciando(null)
     }
   }
 
@@ -207,7 +211,7 @@ export default function Treino({ assuntoInicial }) {
     }
   }
 
-    // Ao sair antes de concluir, registra a sessão como interrompida.
+  // Ao sair antes de concluir, registra a sessão como interrompida.
   async function voltar() {
     if (salvandoResposta || finalizando || iniciando) return
 
@@ -234,7 +238,7 @@ export default function Treino({ assuntoInicial }) {
     await carregar()
   }
 
-  // ---------- Tela da rodada concluída ----------
+  // ---------- 1. Tela da rodada concluída ----------
   if (rodada && rodada.fim) {
     return (
       <div className="secao nota-box">
@@ -252,9 +256,9 @@ export default function Treino({ assuntoInicial }) {
           <button
             className="pequeno"
             onClick={() => iniciar(rodada.id)}
-            disabled={iniciando}
+            disabled={iniciando === rodada.id}
           >
-            {iniciando ? 'Iniciando...' : 'Treinar de novo'}
+            {iniciando === rodada.id ? 'Iniciando...' : 'Treinar de novo'}
           </button>
 
           <button className="pequeno sair" onClick={voltar}>
@@ -265,7 +269,7 @@ export default function Treino({ assuntoInicial }) {
     )
   }
 
-  // ---------- Tela da questão ----------
+  // ---------- 2. Tela da questão ----------
   if (rodada) {
     const { prova, questao } = rodada.itens[rodada.i]
     const acertou = escolhida === questao.gabarito
@@ -338,7 +342,7 @@ export default function Treino({ assuntoInicial }) {
     )
   }
 
-  // ---------- Tela de escolha do assunto ----------
+  // ---------- 3. Tela de escolha do assunto ----------
   return (
     <div className="secao">
       <h2>Treino por assunto</h2>
@@ -376,11 +380,16 @@ export default function Treino({ assuntoInicial }) {
 
                       {d && (
                         <>
-                          {' · seu aproveitamento: '}
+                          {' · aproveitamento: '}
                           <strong style={{ color: corBarra(d.pct) }}>
-                            {d.pct}%
-                          </strong>{' '}
-                          ({d.acertos}/{d.total})
+                            {d.pct === null ? '—' : `${d.pct}%`}
+                          </strong>
+                          {' · '}
+                          {d.acertos} acertos
+                          {' · '}
+                          {d.erros} erros
+                          {' · '}
+                          {d.emBranco} em branco
                         </>
                       )}
                     </div>
@@ -389,9 +398,9 @@ export default function Treino({ assuntoInicial }) {
                   <button
                     className="pequeno"
                     onClick={() => iniciar(id)}
-                    disabled={iniciando}
+                    disabled={iniciando === id}
                   >
-                    {iniciando ? 'Iniciando...' : 'Treinar'}
+                    {iniciando === id ? 'Iniciando...' : 'Treinar'}
                   </button>
                 </div>
               )

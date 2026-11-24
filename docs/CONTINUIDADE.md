@@ -120,6 +120,16 @@ Metadados propostos, rubrica e piloto em MATRIZ_PEDAGOGICA.md. Escassez de exemp
 
 Para cada implementação, aplicar as verificações previstas na seção 7 do AGENTS.md, incluindo lint, build e testes disponíveis; registrar justificadamente eventuais verificações não executadas. Avisos anteriores de React em Hoje.jsx/Simulados.jsx e tamanho de bundle devem ser distinguidos de regressões. Manter revisão semanal somente diagnóstica, sem commits ou alterações automáticas.
 
+### Etapa 6.7 — parcialmente concluída
+
+A suíte SQL passou com 70 asserções em PostgreSQL descartável com o snapshot do Supabase e identidade de teste. A validação de ponta a ponta com Supabase Auth e PostgREST permanece pendente. Consulte o [relatório da etapa 6.7](../supabase/tests/README.md).
+
+- **Prioridade de segurança:** confirmar os privilégios efetivos e preparar a revogação dos privilégios `TRUNCATE` desnecessários concedidos a `anon` e `authenticated`. A execução da revogação depende de alteração aprovada separadamente.
+- Verificar permissões efetivas de atualização de `profiles`, incluindo privilégios de tabela, de coluna e herdados. Na réplica, a atualização pelo próprio usuário foi negada.
+- Verificar a integridade dos registros finalizados de simulados e treinos, incluindo a proteção contra alterações posteriores e a consistência dos resultados persistidos.
+- Avaliar o bloqueio de exclusão de usuários com sessões vinculadas, observado na réplica, e definir como tratar o histórico.
+- Acompanhar possível instabilidade no teste de seleção de treino. Houve um timeout de 5 s na primeira execução e 60 testes passaram na reexecução.
+
 ## 10. Controle de versões e continuidade
 
 v1.0: referência inicial. v1.1 (16/11): estado técnico, auditorias, contagens, rubrica e piloto propostos. v1.2: decisões curriculares e progressão; reconstrução de 24/11 é parcial. v1.3: consolidação das duas versões, diagnóstico Codex, AGENTS.md e pendências posteriores. Não equivale a nova auditoria. A cada tarefa consultar AGENTS.md, esta referência, matriz e código atual; registrar evidências e atualizar decisões aprovadas. Não depender da memória de chats.

@@ -1,23 +1,29 @@
 # Etapa 6.7 — Segurança e integridade do Supabase
 
-A suíte [seguranca-integridade.sql](seguranca-integridade.sql) verifica o comportamento do [snapshot estrutural](../schema.sql) no PostgreSQL. Os cenários usam dois usuários fictícios, os papéis `authenticated` e `anon`, e o contexto de identidade consumido por `auth.uid()`. A suíte exige confirmação explícita de uso descartável, conexão por socket local e tabela de usuários vazia. As operações com dados de teste ficam em uma transação revertida ao final. As permissões de `TRUNCATE` são lidas do catálogo.
+A suíte [seguranca-integridade.sql](seguranca-integridade.sql) verifica o comportamento do [snapshot estrutural](../schema.sql) com a migração de TRUNCATE aplicada em PostgreSQL descartável. Os cenários usam dois usuários fictícios, os papéis `authenticated` e `anon`, e o contexto de identidade consumido por `auth.uid()`. A suíte exige confirmação explícita de uso descartável, conexão por socket local e tabela de usuários vazia. As operações com dados de teste ficam em uma transação revertida ao final. As permissões de `TRUNCATE` são lidas do catálogo.
 
 ## Execução no Supabase local
 
 1. Em um diretório separado do repositório, inicialize uma instância descartável com `supabase init` e `supabase start`. Use Docker local com espaço para baixar e extrair as imagens. A instância precisa de PostgreSQL, dos papéis padrão, de `auth.users` e `auth.uid()`. Para verificações adicionais pela API, mantenha também Supabase Auth e PostgREST disponíveis.
 2. Confirme que a instância é nova, que não há usuários e que as tabelas do IFPASS ainda não existem. Identifique com `docker ps` o contêiner de banco pertencente a essa instância.
-3. A partir da raiz do repositório, substitua `CONTAINER_LOCAL_DESCARTAVEL` pelo nome conferido. As duas chamadas usam o socket dentro do contêiner.
+3. A partir da raiz do repositório, substitua `CONTAINER_LOCAL_DESCARTAVEL` pelo nome conferido. As chamadas usam o socket dentro do contêiner.
 
 ```sh
 docker exec -i CONTAINER_LOCAL_DESCARTAVEL psql -X -U postgres -d postgres \
   -v ON_ERROR_STOP=1 --single-transaction -f - < supabase/schema.sql
+docker exec -i CONTAINER_LOCAL_DESCARTAVEL psql -X -U postgres -d postgres \
+  -v ON_ERROR_STOP=1 --single-transaction -f - < supabase/migrations/20261124230000_revoga_truncate_anon_authenticated.sql
 docker exec -i CONTAINER_LOCAL_DESCARTAVEL psql -X -U postgres -d postgres \
   -v ifpass_ambiente_descartavel=1 -f - < supabase/tests/seguranca-integridade.sql
 ```
 
 Carregue o snapshot uma vez por instância nova. As asserções imprimem `OK` ou interrompem a execução com o cenário que falhou. Exclua a instância de teste após a validação. O repositório não precisa de chaves, tokens ou dados reais para essa execução.
 
-## Resultados de 24/11/2026
+## Conferência de privilégios antes e depois
+
+A [consulta de verificação](../verificacoes/privilegios-truncate.sql) é somente leitura. Compare seu resultado antes e depois de uma eventual execução aprovada no Supabase real. A coluna `pode_truncar` deve ser falsa para `anon` e `authenticated` nas quatro tabelas. Os demais valores devem permanecer iguais. Se algum privilégio efetivo persistir por herança ou via `PUBLIC`, registre a divergência para revisão separada.
+
+## Resultados de 24/11/2026 antes da migração
 
 A pilha completa do Supabase não iniciou. O armazenamento do Docker retornou `no space left on device` durante a extração das imagens de banco. A alternativa executada foi PostgreSQL 17.12 em contêiner descartável, sem rede ou porta publicada e com dados em memória. O ambiente tinha os três papéis padrão, uma tabela mínima `auth.users` e uma implementação de teste de `auth.uid()` que lê o `sub` de `request.jwt.claims`. O snapshot foi carregado integralmente. **70 asserções passaram** e a transação foi revertida. A consulta posterior confirmou zero usuários e zero simulados.
 

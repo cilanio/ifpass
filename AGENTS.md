@@ -1,12 +1,12 @@
-AGENTS.md — IFPASS
+# AGENTS.md — IFPASS
 
-1. Contexto e objetivo
+## 1. Contexto e objetivo
 
 O IFPASS (IFAL Smart Study) é uma plataforma educacional destinada à preparação de estudantes para o processo seletivo do IFAL, organizado pela COPEVE/UFAL.
 
 O objetivo é desenvolver conhecimento progressivo, identificar dificuldades de aprendizagem e melhorar o desempenho do estudante.
 
-2. Arquitetura atual
+## 2. Arquitetura atual
 
 - Front-end: React 19, Vite e JavaScript.
 - Autenticação e banco de dados: Supabase.
@@ -18,7 +18,7 @@ O objetivo é desenvolver conhecimento progressivo, identificar dificuldades de 
 
 Preservar a arquitetura existente, salvo quando uma alteração for tecnicamente justificada e aprovada.
 
-3. Regras obrigatórias de desenvolvimento
+## 3. Regras obrigatórias de desenvolvimento
 
 - Trabalhar exclusivamente no projeto IFPASS.
 - Preservar funcionalidades existentes.
@@ -31,7 +31,7 @@ Preservar a arquitetura existente, salvo quando uma alteração for tecnicamente
 - Não expor credenciais, tokens, informações pessoais ou chaves privadas.
 - Não inventar resultados de testes ou verificações.
 
-4. Regras pedagógicas
+## 4. Regras pedagógicas
 
 - Priorizar Língua Portuguesa e Matemática no treino inicial.
 - Preservar os dados de Atualidades e Ciências da Natureza.
@@ -41,7 +41,7 @@ Preservar a arquitetura existente, salvo quando uma alteração for tecnicamente
 - Respeitar as regras de correção das questões anuladas.
 - Não alterar classificações existentes sem justificativa e avaliação do impacto no histórico.
 
-5. Questões autorais geradas por IA
+## 5. Questões autorais geradas por IA
 
 Adotar uma abordagem pedagógica híbrida, contemplando:
 
@@ -62,7 +62,7 @@ Não publicar automaticamente questões geradas por IA.
 
 Preservar a compatibilidade entre questões oficiais e autorais, sem comprometer os simulados oficiais.
 
-6. Supabase e segurança
+## 6. Supabase e segurança
 
 - Preservar os registros existentes.
 - Respeitar o isolamento de dados entre usuários.
@@ -74,7 +74,7 @@ Preservar a compatibilidade entre questões oficiais e autorais, sem comprometer
 - Não presumir que a estrutura publicada no GitHub corresponde integralmente ao banco em execução.
 - Diferenciar configurações verificadas de configurações apenas relatadas.
 
-7. Testes e qualidade técnica
+## 7. Testes e qualidade técnica
 
 Antes de considerar uma implementação concluída:
 
@@ -89,7 +89,7 @@ Antes de considerar uma implementação concluída:
 
 Priorizar a implantação gradual de testes automatizados para correção, classificação, indicadores, persistência e recuperação de sessões.
 
-8. Fluxo de trabalho
+## 8. Fluxo de trabalho
 
 Para cada tarefa:
 
@@ -104,7 +104,7 @@ Para cada tarefa:
 
 Não repetir auditorias completas quando não houver mudanças relevantes.
 
-9. Documentação e continuidade
+## 9. Documentação e continuidade
 
 O arquivo docs/CONTINUIDADE.md, quando criado, deverá concentrar:
 
@@ -119,7 +119,7 @@ O arquivo docs/CONTINUIDADE.md, quando criado, deverá concentrar:
 
 Nenhuma informação essencial à continuidade do projeto deverá depender exclusivamente da memória de uma ferramenta de inteligência artificial.
 
-10. Comunicação
+## 10. Comunicação
 
 - Utilizar português brasileiro.
 - Ser objetivo e tecnicamente fundamentado.

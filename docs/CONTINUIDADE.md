@@ -118,7 +118,7 @@ Metadados propostos, rubrica e piloto em MATRIZ_PEDAGOGICA.md. Escassez de exemp
 - [ ] Avaliar recuperação de treino, autosave, paginação e indicadores de repetição.
 - [ ] Melhorar README e avaliar bundle quando necessário.
 
-Executar lint e build após alterações funcionais; avisos anteriores de React em Hoje.jsx/Simulados.jsx e tamanho de bundle devem ser distinguidos de regressões. Manter revisão semanal somente diagnóstica, sem commits ou alterações automáticas.
+Para cada implementação, aplicar as verificações previstas na seção 7 do AGENTS.md, incluindo lint, build e testes disponíveis; registrar justificadamente eventuais verificações não executadas. Avisos anteriores de React em Hoje.jsx/Simulados.jsx e tamanho de bundle devem ser distinguidos de regressões. Manter revisão semanal somente diagnóstica, sem commits ou alterações automáticas.
 
 ## 10. Controle de versões e continuidade
 

@@ -43,15 +43,26 @@ SELECT pg_temp.conferir(
        'treino_respostas'::regclass, 'questoes_ia'::regclass
      )), 'RLS habilitada nas oito tabelas');
 
--- Leitura dos privilégios efetivos. A suíte não executa TRUNCATE.
+-- has_table_privilege considera grants diretos, herdados e via PUBLIC.
+-- A suíte verifica o catálogo sem executar TRUNCATE.
 SELECT pg_temp.conferir(
-  has_table_privilege(papel, tabela, 'TRUNCATE') = (tabela = ANY (
-    ARRAY['profiles', 'materias', 'plano_blocos', 'estudos_feitos']
-  )), 'ACL TRUNCATE ' || papel || ' / ' || tabela)
+  has_table_privilege(papel, tabela::regclass, 'TRUNCATE')
+    = (papel IN ('postgres', 'service_role')),
+  'TRUNCATE efetivo ' || papel || ' / ' || tabela)
+FROM unnest(ARRAY['anon', 'authenticated', 'postgres', 'service_role']) AS papel
+CROSS JOIN unnest(ARRAY[
+  'public.profiles', 'public.materias', 'public.plano_blocos', 'public.estudos_feitos',
+  'public.simulados', 'public.treino_sessoes', 'public.treino_respostas', 'public.questoes_ia'
+]) AS tabela;
+
+-- Preserva REFERENCES e TRIGGER além da matriz CRUD abaixo.
+SELECT pg_temp.conferir(
+  has_table_privilege(papel, tabela::regclass, 'REFERENCES')
+  AND has_table_privilege(papel, tabela::regclass, 'TRIGGER'),
+  'REFERENCES e TRIGGER preservados ' || papel || ' / ' || tabela)
 FROM unnest(ARRAY['anon', 'authenticated']) AS papel
 CROSS JOIN unnest(ARRAY[
-  'profiles', 'materias', 'plano_blocos', 'estudos_feitos', 'simulados',
-  'treino_sessoes', 'treino_respostas', 'questoes_ia'
+  'public.profiles', 'public.materias', 'public.plano_blocos', 'public.estudos_feitos'
 ]) AS tabela;
 
 -- Compara ACL separadamente da visibilidade de linhas controlada por RLS.

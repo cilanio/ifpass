@@ -14,3 +14,19 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the Oxlint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+## Testes unitários do IFPASS
+
+Use Node.js 22.12+ na linha 22 ou Node.js 24 LTS.
+
+```bash
+npm ci
+npm run test
+npm run test:watch
+```
+
+`npm run test` executa a suíte uma vez. `npm run test:watch` reexecuta os testes quando arquivos mudam. Use `Ctrl+C` para sair.
+
+A suíte usa Vitest em ambiente Node e verifica a correção de simulados com dados sintéticos e a integridade do catálogo e da classificação oficiais. As contagens do catálogo refletem as provas versionadas e devem ser revisadas ao adicionar uma prova oficial. Os testes rodam sem credenciais ou conexão com o Supabase.
+
+Execute também `npm run lint` e `npm run build` antes de concluir uma implementação.

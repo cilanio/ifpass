@@ -73,6 +73,16 @@ Dificuldade (fácil, média, difícil) é independente do objetivo cognitivo. Um
 
 O Desafio no padrão COPEVE é uma modalidade complementar. Suas questões mantêm a etapa cognitiva e a dificuldade próprias. Os mínimos informam o diagnóstico de cobertura e determinam a abertura da rodada. Uma rodada pode ser menor que o tamanho padrão se atingir o mínimo da etapa. A rodada tem 10 questões por padrão. Os limites são configuráveis por etapa e serão extensíveis por tópico. Avaliar suficiência também pela cobertura curricular e pela diversidade dos itens. A etapa 7.4 estabelecerá os valores definitivos e detalhará os critérios. Após a transição, a falta de autorais elegíveis reduz a oferta de treino, mantendo as questões oficiais reservadas aos simulados.
 
+### Modelo híbrido e roteiro pedagógico unificado
+
+O roteiro recomenda uma sequência de aprendizagem e explicita os pré-requisitos de cada assunto. Os pré-requisitos orientam a escolha e a revisão do conteúdo. O aluno pode navegar livremente e acessar outros assuntos sem cumprir etapas obrigatórias.
+
+O mesmo roteiro alinha o conteúdo teórico, o treinamento e a avaliação por assunto, habilidade e objetivo cognitivo. Essa referência comum mantém as finalidades próprias de cada atividade e a separação entre os acervos de aprendizagem e avaliação.
+
+A interface inicial futura oferecerá **Estudar**, **Treinar** e **Fazer Simulado**. Dificuldades identificadas poderão orientar recomendações de conteúdo teórico para revisão, que o aluno poderá seguir livremente. A produção do conteúdo teórico poderá usar IA como apoio, com validação e revisão humana antes da publicação.
+
+O planejamento futuro prevê expansão dos simulados (etapa 9), estudo teórico (etapa 10), personalização integrada (etapa 11) e estrutura comercial com assinaturas (etapa 12). A diferenciação por planos poderá ser avaliada futuramente, com preços e restrições a definir. A numeração e a ordem poderão ser revistas. O foco atual permanece na etapa 7.4. Consulte o [roadmap do Documento Mestre de Continuidade](CONTINUIDADE.md#etapas-futuras-aprovadas).
+
 ## 6. Metadados — proposta técnica
 
 Identificador próprio, origem oficial/autoral, versão do edital, disciplina, assunto, subassunto, habilidade, objetivo cognitivo, dificuldade estimada, enunciado, cinco alternativas, gabarito único, explicação fundamentada, justificativa dos distratores, fontes quando aplicáveis, estado de validação. Nomes e tipos definitivos dependem do modelo comum e schema aprovado. Rastrear geração e revisão. Não publicar automaticamente. Questões autorais devem ser originais e nunca apresentadas como oficiais.

@@ -1,7 +1,7 @@
 import Texto, { Inline } from './Texto'
 import { adaptarQuestaoOficial } from './lib/questoes'
 
-export default function Questao({ prova, questao: questaoOriginal, modelo, resposta, onResponder, revisao }) {
+export default function Questao({ prova, questao: questaoOriginal, modelo, resposta, onResponder, revisao, bloqueada = false }) {
   const questao = modelo ?? adaptarQuestaoOficial(prova, questaoOriginal)
   const oficial = questao.origem === 'oficial'
 
@@ -41,7 +41,7 @@ export default function Questao({ prova, questao: questaoOriginal, modelo, respo
                 key={letra}
                 type="button"
                 className={classe}
-                disabled={revisao}
+                disabled={revisao || bloqueada}
                 onClick={() => onResponder && onResponder(letra)}
               >
                 <span className="alt-letra">{letra}</span>

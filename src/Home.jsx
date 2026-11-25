@@ -4,6 +4,10 @@ import Hoje from './Hoje'
 import Plano from './Plano'
 import Simulados from './Simulados'
 import Treino from './Treino'
+import TreinoAutoral from './TreinoAutoral'
+import { treinoAutoralHabilitado } from './lib/treinoAutoral'
+
+const TelaTreino = treinoAutoralHabilitado ? TreinoAutoral : Treino
 
 export default function Home({ usuario }) {
   const [perfil, setPerfil] = useState(null)
@@ -60,7 +64,7 @@ export default function Home({ usuario }) {
       {aba === 'hoje' && <Hoje onTreinar={treinar} />}
       {aba === 'plano' && <Plano />}
       {aba === 'simulados' && <Simulados onTreinar={treinar} />}
-      {aba === 'treino' && <Treino key={assuntoTreino || 'lista'} assuntoInicial={assuntoTreino} />}
+      {aba === 'treino' && <TelaTreino key={assuntoTreino || 'lista'} assuntoInicial={assuntoTreino} />}
     </div>
   )
 }

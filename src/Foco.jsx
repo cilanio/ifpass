@@ -3,10 +3,13 @@ import { useEffect, useState } from 'react'
 import { supabase } from './lib/supabase'
 import { porAssunto } from './lib/assuntos'
 import Assuntos from './Assuntos'
+import { ASSUNTOS } from './data/assuntos'
+import { treinoAutoralHabilitado } from './lib/treinoAutoral'
 
 export default function Foco({ onTreinar, limite = 3 }) {
   const [dados, setDados] = useState(null)
   const [erro, setErro] = useState('')
+  const [treino, setTreino] = useState([])
 
   useEffect(() => {
     let ativo = true
@@ -19,9 +22,9 @@ export default function Foco({ onTreinar, limite = 3 }) {
             .select('prova_id, status, resultado, finalizado_em')
             .eq('status', 'finalizado'),
 
-          supabase
-            .from('treino_respostas')
-            .select('assunto, acertou, criado_em'),
+          treinoAutoralHabilitado
+            ? supabase.rpc('ifpass_treino_indicadores', { p_desde: '-infinity' })
+            : supabase.from('treino_respostas').select('assunto, acertou, criado_em'),
         ])
 
         if (s.error || t.error) {
@@ -29,7 +32,8 @@ export default function Foco({ onTreinar, limite = 3 }) {
         }
 
         if (ativo) {
-          setDados(porAssunto(s.data || [], t.data || []))
+          setDados(porAssunto(s.data || [], treinoAutoralHabilitado ? [] : t.data || []))
+          if (treinoAutoralHabilitado) setTreino(t.data || [])
         }
       } catch (e) {
         if (ativo) {
@@ -73,12 +77,23 @@ export default function Foco({ onTreinar, limite = 3 }) {
   return (
     <div className="secao foco">
       <h2>🎯 Foco de estudo</h2>
+      {treinoAutoralHabilitado && (
+        <>
+          <h3>Treino</h3>
+          {treino.length === 0 && !erro && <p className="dica">Ainda não há respostas válidas de treino.</p>}
+          {treino.length > 0 && <ul>{treino.map(({ assunto, acertos, respondidas }) => (
+            <li key={assunto}>{ASSUNTOS[assunto]?.nome ?? assunto} — {acertos} de {respondidas} corretas</li>
+          ))}</ul>}
+          <h3>Simulados oficiais</h3>
+        </>
+      )}
 
       {erro && <p className="erro">{erro}</p>}
 
       {!erro && dados.length === 0 && (
         <p className="dica">
-          Faça um simulado ou treino por assunto para começar seu diagnóstico.
+          {treinoAutoralHabilitado ? 'Conclua um simulado oficial para começar este diagnóstico.'
+            : 'Faça um simulado ou treino por assunto para começar seu diagnóstico.'}
         </p>
       )}
 

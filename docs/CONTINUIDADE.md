@@ -130,6 +130,17 @@ A suíte SQL passou com 70 asserções em PostgreSQL descartável com o snapshot
 - Avaliar o bloqueio de exclusão de usuários com sessões vinculadas, observado na réplica, e definir como tratar o histórico.
 - Acompanhar possível instabilidade no teste de seleção de treino. Houve um timeout de 5 s na primeira execução e 60 testes passaram na reexecução.
 
+### Etapa 6.8 — Compatibilidade com o histórico oficial
+
+Os testes verificam renderização de questão oficial, correção e revisão de um simulado do catálogo e preservação dos indicadores para respostas históricas identificadas por `prova_id` e `n`, com os campos autorais ausentes ou nulos. A agregação atual usa `assunto`, `acertou` e `criado_em` já persistidos nas respostas de treino.
+
+**Testes pendentes da etapa 7**, após a definição do modelo unificado
+
+- Verificar que os adaptadores preservam textos, alternativas e gabaritos das oficiais e renderizam a resolução das autorais.
+- Verificar identificação por origem e versão, ausência de colisões e retomada de registros históricos sem campos autorais.
+- Verificar seleção mista no treino, exclusão de autorais sem aprovação e separação do catálogo de simulados oficiais.
+- Verificar gravação e leitura do novo contrato e agregação dos registros oficiais e autorais sem alterar totais históricos ou contar uma resposta duas vezes.
+
 ## 10. Controle de versões e continuidade
 
 v1.0: referência inicial. v1.1 (16/11): estado técnico, auditorias, contagens, rubrica e piloto propostos. v1.2: decisões curriculares e progressão; reconstrução de 24/11 é parcial. v1.3: consolidação das duas versões, diagnóstico Codex, AGENTS.md e pendências posteriores. Não equivale a nova auditoria. A cada tarefa consultar AGENTS.md, esta referência, matriz e código atual; registrar evidências e atualizar decisões aprovadas. Não depender da memória de chats.

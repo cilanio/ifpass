@@ -115,3 +115,29 @@ describe('indicadores por assunto', () => {
     ])
   })
 })
+
+describe('compatibilidade do histórico de treino', () => {
+  it.each([
+    ['sem campos autorais', {}],
+    ['com campos autorais nulos', {
+      questao_ref: null, origem_questao: null, topico_id: null,
+      etapa: null, habilidade_principal: null, dificuldade: null,
+    }],
+  ])('mantém os indicadores de registros históricos %s', (_formato, campos) => {
+    const historico = [
+      { prova_id: 'ifal-2026-t1', n: 1, assunto: 'p_semantica', acertou: true, criado_em: data(2) },
+      { prova_id: 'ifal-2025-t1', n: 1, assunto: 'p_comunicacao', acertou: false, criado_em: data(31) },
+    ].map(registro => ({ ...registro, ...campos }))
+
+    expect(porAssunto([], historico, agora)).toMatchObject([
+      {
+        id: 'p_comunicacao', pct: 0, total: 1, acertos: 0, erros: 1,
+        evolucao: { anterior: { total: 1, pct: 0 }, recente: { total: 0, pct: null } },
+      },
+      {
+        id: 'p_semantica', pct: 100, total: 1, acertos: 1, erros: 0,
+        evolucao: { anterior: { total: 0, pct: null }, recente: { total: 1, pct: 100 } },
+      },
+    ])
+  })
+})

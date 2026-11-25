@@ -127,6 +127,14 @@ A implementação do treino autoral foi concluída no [PR #16](https://github.co
 - Definir como encerrar as sessões legadas ainda abertas, preservando seus registros.
 - Aguardar as definições pedagógicas da etapa 7.4 antes de iniciar novas implementações.
 
+### Visão futura da aprendizagem
+
+O modelo de aprendizagem será híbrido, com sequência recomendada, pré-requisitos usados como orientação e liberdade para navegar entre os conteúdos, sem bloqueios obrigatórios. A interface inicial terá três funcionalidades principais: **Estudar**, **Treinar** e **Fazer Simulado**.
+
+Um roteiro pedagógico unificado orientará o conteúdo teórico, o treinamento e a avaliação. As dificuldades identificadas poderão indicar conteúdos teóricos pertinentes para o aluno revisar. A produção de teoria poderá ser assistida por IA, com validação e revisão humana antes da publicação.
+
+Planos de assinatura poderão diferenciar a oferta comercial. Preços e restrições de acesso ficam para definição futura.
+
 ### Etapas futuras aprovadas
 
 - **8.1 — Importação de provas oficiais.** Inclusão de provas, gabaritos, imagens e classificações por interface administrativa, com validação antes da publicação e preservação dos identificadores históricos.
@@ -134,6 +142,13 @@ A implementação do treino autoral foi concluída no [PR #16](https://github.co
 - **8.3 — Adaptação do perfil de geração.** Atualização versionada das instruções e exemplos usados pela IA, validada por pessoas e alinhada à progressão pedagógica.
 
 Na etapa 7.4, separar evidências, configuração de geração e modelo utilizado. O perfil deve registrar a versão, as referências e os exemplos que o fundamentam, de modo que instruções e exemplos possam evoluir sem exigir retreinamento da IA. As etapas 8.1 a 8.3 permanecem planejadas.
+
+- **Etapa 9 — Expansão das modalidades de simulados.** Desenvolver as modalidades Oficial, Híbrido e Autoral conforme as regras já aprovadas.
+- **Etapa 10 — Módulo de estudo teórico.** Oferecer conteúdo alinhado ao roteiro pedagógico comum.
+- **Etapa 11 — Personalização integrada da aprendizagem.** Usar as dificuldades identificadas para orientar a navegação entre estudo, treino e avaliação.
+- **Etapa 12 — Estrutura comercial e assinaturas.** Planejar a diferenciação por planos, com preços e restrições a definir.
+
+A numeração e a ordem dessas etapas futuras poderão ser revistas. O foco atual permanece nas definições pedagógicas da etapa 7.4.
 
 ## 9. Backlog priorizado
 

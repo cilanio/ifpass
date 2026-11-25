@@ -17,8 +17,33 @@ CREATE TABLE public.revisor_disciplinas (
   PRIMARY KEY (usuario_id, disciplina)
 );
 
+CREATE TABLE public.historico_permissoes_equipe (
+  id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  usuario_id uuid NOT NULL,
+  disciplina text,
+  operacao text NOT NULL CHECK (operacao IN ('concessao','alteracao','revogacao')),
+  anterior jsonb,
+  posterior jsonb NOT NULL,
+  ator_id uuid NOT NULL,
+  criado_em timestamptz NOT NULL DEFAULT clock_timestamp()
+);
+
 ALTER TABLE public.questoes_ia
   ADD COLUMN submetida_por uuid REFERENCES auth.users(id),
+  ADD COLUMN motivo_inativacao text,
+  ADD COLUMN retirada_por uuid REFERENCES auth.users(id),
+  ADD COLUMN retirada_em timestamptz,
+  ADD COLUMN observacao_retirada text,
+  ADD CONSTRAINT questoes_ia_inativacao_check CHECK (
+    CASE
+      WHEN motivo_inativacao = 'erro' THEN
+        status = 'retirada' AND retirada_por IS NOT NULL AND retirada_em IS NOT NULL
+        AND coalesce(btrim(observacao_retirada), '') <> ''
+      WHEN motivo_inativacao = 'substituicao' THEN
+        status = 'retirada' AND retirada_por IS NULL AND retirada_em IS NULL AND observacao_retirada IS NULL
+      ELSE motivo_inativacao IS NULL AND retirada_por IS NULL AND retirada_em IS NULL AND observacao_retirada IS NULL
+    END
+  ),
   ADD CONSTRAINT questoes_ia_submissao_check CHECK (
     status NOT IN ('em_revisao', 'aprovada') OR submetida_por IS NOT NULL
   );
@@ -84,12 +109,13 @@ CREATE INDEX treino_itens_autorais_versao_idx
 CREATE INDEX treino_respostas_versao_autoral_idx
   ON public.treino_respostas (questao_id, questao_versao) WHERE questao_id IS NOT NULL;
 
+ALTER TABLE public.historico_permissoes_equipe ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.papeis_equipe ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.revisor_disciplinas ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.revisoes_questoes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.treino_itens_autorais ENABLE ROW LEVEL SECURITY;
 
 REVOKE ALL ON public.papeis_equipe, public.revisor_disciplinas,
-  public.revisoes_questoes, public.treino_itens_autorais FROM PUBLIC, anon, authenticated, service_role;
+  public.revisoes_questoes, public.treino_itens_autorais, public.historico_permissoes_equipe FROM PUBLIC, anon, authenticated, service_role;
 
 COMMIT;

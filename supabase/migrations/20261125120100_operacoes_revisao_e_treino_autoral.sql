@@ -62,6 +62,41 @@ BEGIN
 END;
 $$;
 
+CREATE FUNCTION public.ifpass_auditar_permissao() RETURNS trigger
+LANGUAGE plpgsql SECURITY DEFINER SET search_path = ''
+AS $$
+DECLARE
+  antes jsonb;
+  depois jsonb := to_jsonb(NEW) - ARRAY['alterado_por','alterado_em'];
+BEGIN
+  IF TG_OP = 'UPDATE' THEN
+    antes := to_jsonb(OLD) - ARRAY['alterado_por','alterado_em'];
+    IF antes = depois THEN RETURN NEW; END IF;
+  END IF;
+  INSERT INTO public.historico_permissoes_equipe (
+    usuario_id, disciplina, operacao, anterior, posterior, ator_id
+  ) VALUES (
+    NEW.usuario_id, depois ->> 'disciplina',
+    CASE
+      WHEN NOT NEW.ativo THEN 'revogacao'
+      WHEN antes IS NULL OR antes -> 'ativo' = 'false'::jsonb THEN 'concessao'
+      ELSE 'alteracao'
+    END,
+    antes, depois, NEW.alterado_por
+  );
+  RETURN NEW;
+END;
+$$;
+
+CREATE TRIGGER ifpass_auditar_papel AFTER INSERT OR UPDATE ON public.papeis_equipe
+  FOR EACH ROW EXECUTE FUNCTION public.ifpass_auditar_permissao();
+CREATE TRIGGER ifpass_auditar_disciplina AFTER INSERT OR UPDATE ON public.revisor_disciplinas
+  FOR EACH ROW EXECUTE FUNCTION public.ifpass_auditar_permissao();
+
+GRANT SELECT ON public.historico_permissoes_equipe TO authenticated;
+CREATE POLICY ifpass_historico_administrador ON public.historico_permissoes_equipe
+  FOR SELECT TO authenticated USING (public.ifpass_pode_revisar(NULL));
+
 -- A existência da atribuição separa a conta de equipe mesmo após revogação.
 DO $$
 DECLARE tabela text;
@@ -103,8 +138,8 @@ LANGUAGE plpgsql SET search_path = ''
 AS $$
 BEGIN
   IF OLD.submetida_por IS NOT NULL AND (
-    (to_jsonb(OLD) - ARRAY['status','aprovado_em']) IS DISTINCT FROM
-    (to_jsonb(NEW) - ARRAY['status','aprovado_em'])
+    (to_jsonb(OLD) - ARRAY['status','aprovado_em','motivo_inativacao','retirada_por','retirada_em','observacao_retirada']) IS DISTINCT FROM
+    (to_jsonb(NEW) - ARRAY['status','aprovado_em','motivo_inativacao','retirada_por','retirada_em','observacao_retirada'])
     OR (OLD.aprovado_em IS NOT NULL AND (
       NEW.aprovado_em IS DISTINCT FROM OLD.aprovado_em
       OR NEW.status NOT IN ('aprovada','retirada')))
@@ -146,6 +181,10 @@ DECLARE
   ator uuid := auth.uid();
   q public.questoes_ia%ROWTYPE;
   auditoria uuid;
+  avaliacao CONSTANT text[] := ARRAY[
+    'fidelidade_edital','correcao_cientifica_matematica_linguistica','clareza_precisao',
+    'qualidade_alternativas','adequacao_dificuldade','compatibilidade_copeve','qualidade_explicacao'
+  ];
   obrigatorios CONSTANT text[] := ARRAY[
     'gabarito_incorreto','alternativa_correta_nao_unica','erro_conceitual_ou_matematico',
     'ambiguidade','informacoes_insuficientes','fora_do_edital_sem_justificativa',
@@ -173,7 +212,7 @@ BEGIN
   END IF;
   IF p_decisao IS NULL OR p_decisao NOT IN ('aprovada','correcao_solicitada','rejeitada')
     OR p_checklist_versao IS DISTINCT FROM 1 OR jsonb_typeof(p_criterios) IS DISTINCT FROM 'object'
-    OR EXISTS (SELECT FROM unnest(obrigatorios) chave
+    OR EXISTS (SELECT FROM unnest(obrigatorios || avaliacao) chave
       WHERE jsonb_typeof(p_criterios -> chave) IS DISTINCT FROM 'boolean') THEN
     RAISE EXCEPTION 'Decisão ou checklist inválido' USING ERRCODE = '23514';
   END IF;
@@ -199,7 +238,8 @@ BEGIN
       WHERE id = p_id AND status = 'aprovada' AND versao > p_versao) THEN
       RAISE EXCEPTION 'Já existe uma versão aprovada mais recente' USING ERRCODE = '23514';
     END IF;
-    UPDATE public.questoes_ia SET status = 'retirada' WHERE id = p_id AND status = 'aprovada';
+    UPDATE public.questoes_ia SET status = 'retirada', motivo_inativacao = 'substituicao'
+      WHERE id = p_id AND status = 'aprovada';
   END IF;
 
   INSERT INTO public.revisoes_questoes (
@@ -212,6 +252,31 @@ BEGIN
     aprovado_em = CASE WHEN p_decisao = 'aprovada' THEN now() ELSE NULL END
   WHERE id = p_id AND versao = p_versao;
   RETURN auditoria;
+END;
+$$;
+
+CREATE FUNCTION public.ifpass_retirar_autoral(p_id uuid, p_versao integer, p_motivo text) RETURNS void
+LANGUAGE plpgsql SECURITY DEFINER SET search_path = ''
+AS $$
+DECLARE ator uuid := auth.uid();
+BEGIN
+  PERFORM 1 FROM public.papeis_equipe
+    WHERE usuario_id = ator AND papel = 'administrador' AND ativo FOR SHARE;
+  IF NOT FOUND THEN
+    RAISE EXCEPTION 'Retirada não autorizada' USING ERRCODE = '42501';
+  END IF;
+  IF coalesce(btrim(p_motivo), '') = '' THEN
+    RAISE EXCEPTION 'Informe o motivo da retirada por erro' USING ERRCODE = '23514';
+  END IF;
+  PERFORM pg_advisory_xact_lock(hashtextextended(p_id::text, 0));
+  UPDATE public.questoes_ia
+    SET status = 'retirada', motivo_inativacao = 'erro',
+        retirada_por = ator, retirada_em = clock_timestamp(), observacao_retirada = p_motivo
+    WHERE id = p_id AND versao = p_versao
+      AND (status = 'aprovada' OR motivo_inativacao = 'substituicao');
+  IF NOT FOUND THEN
+    RAISE EXCEPTION 'Versão indisponível para retirada' USING ERRCODE = '23514';
+  END IF;
 END;
 $$;
 
@@ -232,24 +297,28 @@ BEGIN
   IF NOT FOUND THEN
     RAISE EXCEPTION 'Sessão indisponível' USING ERRCODE = '42501';
   END IF;
-  SELECT * INTO q FROM public.questoes_ia
-    WHERE id = p_questao AND assunto_id = sessao.assunto AND status = 'aprovada'
-    AND EXISTS (SELECT FROM public.revisoes_questoes r
-      WHERE r.questao_id = questoes_ia.id AND r.questao_versao = questoes_ia.versao
-        AND r.decisao = 'aprovada') FOR SHARE;
-  IF NOT FOUND THEN
-    RAISE EXCEPTION 'Questão indisponível' USING ERRCODE = '42501';
-  END IF;
-  INSERT INTO public.treino_itens_autorais (user_id, sessao_id, questao_id, questao_versao)
-    VALUES (ator, p_sessao, q.id, q.versao)
-    ON CONFLICT (sessao_id, questao_id) DO NOTHING
-    RETURNING id INTO item;
-  IF item IS NULL THEN
-    SELECT i.id INTO item FROM public.treino_itens_autorais i
-      WHERE i.sessao_id = p_sessao AND i.questao_id = q.id AND i.questao_versao = q.versao;
-    IF NOT FOUND THEN
-      RAISE EXCEPTION 'Sessão já contém outra versão desta questão' USING ERRCODE = '23514';
+  SELECT i.id INTO item FROM public.treino_itens_autorais i
+    WHERE i.sessao_id = p_sessao AND i.questao_id = p_questao AND i.user_id = ator;
+  IF FOUND THEN
+    SELECT qv.* INTO q
+    FROM public.treino_itens_autorais i
+    JOIN public.questoes_ia qv ON qv.id = i.questao_id AND qv.versao = i.questao_versao
+    WHERE i.id = item FOR SHARE OF qv;
+    IF q.motivo_inativacao = 'erro' THEN
+      RETURN jsonb_build_object('status','item_anulado','item_id',item);
     END IF;
+  ELSE
+    SELECT * INTO q FROM public.questoes_ia
+      WHERE id = p_questao AND assunto_id = sessao.assunto AND status = 'aprovada'
+      AND EXISTS (SELECT FROM public.revisoes_questoes r
+        WHERE r.questao_id = questoes_ia.id AND r.questao_versao = questoes_ia.versao
+          AND r.decisao = 'aprovada') FOR SHARE;
+    IF NOT FOUND THEN
+      RAISE EXCEPTION 'Questão indisponível' USING ERRCODE = '42501';
+    END IF;
+    INSERT INTO public.treino_itens_autorais (user_id, sessao_id, questao_id, questao_versao)
+      VALUES (ator, p_sessao, q.id, q.versao)
+      RETURNING id INTO item;
   END IF;
   RETURN jsonb_build_object('item_id',item,'questao_ref',concat('ia:',q.id,':',q.versao),
     'disciplina',q.disciplina,'assunto_id',q.assunto_id,'titulo_texto',q.titulo_texto,
@@ -287,7 +356,11 @@ BEGIN
       RAISE EXCEPTION 'Item já respondido' USING ERRCODE = '23505';
     END IF;
   ELSE
-    IF estado <> 'em_andamento' OR q.status <> 'aprovada' THEN
+    IF q.motivo_inativacao = 'erro' THEN
+      RETURN jsonb_build_object('status','item_anulado','item_id',p_item);
+    END IF;
+    IF estado <> 'em_andamento' OR
+      (q.status <> 'aprovada' AND q.motivo_inativacao IS DISTINCT FROM 'substituicao') THEN
       RAISE EXCEPTION 'Item indisponível para resposta' USING ERRCODE = '42501';
     END IF;
     IF p_alternativa IS NULL OR NOT (q.alternativas ? p_alternativa) THEN
@@ -310,14 +383,17 @@ $$;
 
 REVOKE ALL ON FUNCTION public.ifpass_conta_equipe(), public.ifpass_pode_revisar(text),
   public.ifpass_gerir_equipe(uuid,text,boolean,text), public.ifpass_preservar_versao_submetida(),
+  public.ifpass_auditar_permissao(),
   public.ifpass_submeter_questao(uuid,integer),
   public.ifpass_revisar_questao(uuid,integer,text,integer,jsonb,text),
+  public.ifpass_retirar_autoral(uuid,integer,text),
   public.ifpass_atribuir_autoral(uuid,uuid), public.ifpass_responder_autoral(uuid,text)
   FROM PUBLIC, anon, authenticated, service_role;
 
 GRANT EXECUTE ON FUNCTION public.ifpass_conta_equipe(), public.ifpass_pode_revisar(text),
   public.ifpass_gerir_equipe(uuid,text,boolean,text), public.ifpass_submeter_questao(uuid,integer),
   public.ifpass_revisar_questao(uuid,integer,text,integer,jsonb,text),
+  public.ifpass_retirar_autoral(uuid,integer,text),
   public.ifpass_atribuir_autoral(uuid,uuid), public.ifpass_responder_autoral(uuid,text)
   TO authenticated;
 

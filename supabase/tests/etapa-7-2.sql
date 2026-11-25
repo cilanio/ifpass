@@ -113,8 +113,12 @@ SELECT pg_temp.negado(
   $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,'{}')$$,
   '23514','checklist incompleto não aprova');
 
-\set checklist '{"gabarito_incorreto":false,"alternativa_correta_nao_unica":false,"erro_conceitual_ou_matematico":false,"ambiguidade":false,"informacoes_insuficientes":false,"fora_do_edital_sem_justificativa":false,"explicacao_incompativel":false,"reproducao_indevida":false}'
+\set checklist '{"gabarito_incorreto":false,"alternativa_correta_nao_unica":false,"erro_conceitual_ou_matematico":false,"ambiguidade":false,"informacoes_insuficientes":false,"fora_do_edital_sem_justificativa":false,"explicacao_incompativel":false,"reproducao_indevida":false,"fidelidade_edital":true,"correcao_cientifica_matematica_linguistica":true,"clareza_precisao":true,"qualidade_alternativas":true,"adequacao_dificuldade":true,"compatibilidade_copeve":false,"qualidade_explicacao":true}'
 SELECT set_config('ifpass.checklist', :'checklist', true);
+SELECT pg_temp.negado(
+  $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,
+    current_setting('ifpass.checklist')::jsonb - 'adequacao_dificuldade')$$,
+  '23514','checklist sem critério pedagógico é rejeitado');
 SELECT pg_temp.negado(
   $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,
     current_setting('ifpass.checklist')::jsonb || '{"gabarito_incorreto":true}')$$,
@@ -127,6 +131,11 @@ SELECT pg_temp.conferir(
     AND criado_em IS NOT NULL) FROM public.revisoes_questoes)
   AND EXISTS (SELECT FROM public.revisoes_questoes WHERE observacoes='Rever enunciado'),
   'trilha registra revisor, checklist, observação e as três decisões');
+SELECT pg_temp.conferir(
+  EXISTS (SELECT FROM public.revisoes_questoes WHERE decisao='aprovada'
+    AND criterios -> 'compatibilidade_copeve' = 'false'::jsonb
+    AND criterios -> 'qualidade_explicacao' = 'true'::jsonb),
+  'avaliação pedagógica registrada sem pontuação ou bloqueio adicional');
 
 SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000003"}';
 SELECT public.ifpass_submeter_questao('00000000-0000-4000-8000-000000000101',2);
@@ -154,6 +163,12 @@ SELECT pg_temp.negado(
   $$SELECT public.ifpass_responder_autoral(current_setting('ifpass.item')::uuid,'A')$$,
   '23505','segunda alternativa não substitui a primeira');
 
+INSERT INTO public.treino_sessoes(id, assunto) VALUES
+  ('00000000-0000-4000-8000-000000000202','p_texto'),
+  ('00000000-0000-4000-8000-000000000203','p_texto');
+SELECT public.ifpass_atribuir_autoral('00000000-0000-4000-8000-000000000202',
+  '00000000-0000-4000-8000-000000000101') AS item_original \gset
+
 SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000002"}';
 SELECT pg_temp.negado(
   $$SELECT public.ifpass_responder_autoral(current_setting('ifpass.item')::uuid,'B')$$,
@@ -173,8 +188,56 @@ SELECT pg_temp.conferir(
    FROM public.questoes_ia WHERE id='00000000-0000-4000-8000-000000000101'),
   'sucessora aprovada substitui publicação e preserva a versão anterior');
 
+SELECT pg_temp.conferir(NOT EXISTS (SELECT FROM public.historico_permissoes_equipe),
+  'revisor não tem acesso ao histórico de permissões');
+SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000001"}';
+SELECT pg_temp.conferir(
+  public.ifpass_atribuir_autoral('00000000-0000-4000-8000-000000000202',
+    '00000000-0000-4000-8000-000000000101') = :'item_original'::jsonb,
+  'retomada mantém a atribuição original após substituição normal');
+SELECT pg_temp.conferir(
+  public.ifpass_responder_autoral((:'item_original'::jsonb ->> 'item_id')::uuid,'A') ->> 'gabarito' = 'A',
+  'item atribuído continua respondível após substituição normal');
+SELECT public.ifpass_atribuir_autoral('00000000-0000-4000-8000-000000000203',
+  '00000000-0000-4000-8000-000000000101') AS item_sucessor \gset
+SELECT pg_temp.conferir(:'item_sucessor'::jsonb ->> 'questao_ref' LIKE '%:2',
+  'apenas a versão corrente é atribuída a uma sessão nova');
+
+SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000003"}';
+SELECT public.ifpass_retirar_autoral('00000000-0000-4000-8000-000000000101',2,'Erro confirmado');
+SELECT public.ifpass_gerir_equipe('00000000-0000-4000-8000-000000000005','administrador',true);
+SELECT public.ifpass_gerir_equipe('00000000-0000-4000-8000-000000000005','administrador',false);
+SELECT pg_temp.conferir(
+  (SELECT array_agg(operacao ORDER BY id) = ARRAY['concessao','alteracao','revogacao']
+    AND bool_and(ator_id = auth.uid() AND criado_em IS NOT NULL)
+    FROM public.historico_permissoes_equipe
+    WHERE usuario_id='00000000-0000-4000-8000-000000000005' AND disciplina IS NULL)
+  AND EXISTS (SELECT FROM public.historico_permissoes_equipe
+    WHERE disciplina IS NULL AND operacao='alteracao'
+      AND anterior->>'papel'='revisor_pedagogico' AND posterior->>'papel'='administrador'),
+  'histórico de papel preserva concessão, alteração, revogação e valores anteriores');
+
+SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000001"}';
+SELECT pg_temp.conferir(
+  public.ifpass_responder_autoral((:'item_sucessor'::jsonb ->> 'item_id')::uuid,'A') =
+    jsonb_build_object('status','item_anulado','item_id', :'item_sucessor'::jsonb ->> 'item_id')
+  AND NOT EXISTS (SELECT FROM public.treino_respostas
+    WHERE item_id=(:'item_sucessor'::jsonb ->> 'item_id')::uuid),
+  'retirada por erro sinaliza anulação sem gravar resposta nem revelar gabarito');
+SELECT pg_temp.conferir(
+  public.ifpass_atribuir_autoral('00000000-0000-4000-8000-000000000203',
+    '00000000-0000-4000-8000-000000000101') ->> 'status' = 'item_anulado',
+  'retomada sinaliza item anulado sem devolver conteúdo');
+
+
 SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000003"}';
 SELECT public.ifpass_gerir_equipe('00000000-0000-4000-8000-000000000004','revisor_pedagogico',false,'Português');
+SELECT pg_temp.conferir(
+  (SELECT array_agg(operacao ORDER BY id) = ARRAY['concessao','revogacao']
+   AND bool_and(ator_id=auth.uid())
+   FROM public.historico_permissoes_equipe
+   WHERE usuario_id='00000000-0000-4000-8000-000000000004' AND disciplina='Português'),
+  'revogação de disciplina mantém o evento de concessão anterior');
 SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000004"}';
 SELECT pg_temp.conferir(NOT EXISTS (SELECT FROM public.questoes_ia),
   'revogação da disciplina bloqueia leitura imediatamente');

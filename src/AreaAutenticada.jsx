@@ -3,8 +3,14 @@ import Home from './Home'
 import RevisaoPedagogica from './RevisaoPedagogica'
 import { supabase } from './lib/supabase'
 
+function tabelaEquipeAusente(erro) {
+  return erro?.code === 'PGRST205'
+    || (erro?.code === '42P01' && erro.message?.includes('"public.papeis_equipe"'))
+}
+
 export default function AreaAutenticada({ usuario }) {
-  const [equipe, setEquipe] = useState(undefined)
+  const [resultado, setResultado] = useState(null)
+  const [tentativa, setTentativa] = useState(0)
 
   useEffect(() => {
     let atual = true
@@ -12,16 +18,32 @@ export default function AreaAutenticada({ usuario }) {
       try {
         const { data, error } = await supabase.from('papeis_equipe')
           .select('papel, ativo').eq('usuario_id', usuario.id).maybeSingle()
-        if (atual) setEquipe(error ? null : data)
-      } catch {
-        if (atual) setEquipe(null)
+        if (error && !tabelaEquipeAusente(error)) throw error
+        if (atual) setResultado({ equipe: error ? null : data })
+      } catch (erro) {
+        if (atual) setResultado({ erro })
       }
     }
     consultarEquipe()
     return () => { atual = false }
-  }, [usuario.id])
+  }, [usuario.id, tentativa])
 
-  if (equipe === undefined) return <p role="status">Carregando...</p>
+  if (!resultado) return <p role="status">Carregando...</p>
+  if (resultado.erro) {
+    return (
+      <main className="painel">
+        <h1>IFPass</h1>
+        <p role="alert">Não foi possível verificar as permissões da sua conta.</p>
+        <button onClick={() => {
+          setResultado(null)
+          setTentativa(n => n + 1)
+        }}>Tentar novamente</button>
+        <button className="pequeno sair" onClick={() => supabase.auth.signOut()}>Sair</button>
+      </main>
+    )
+  }
+
+  const { equipe } = resultado
   if (equipe?.ativo && ['revisor_pedagogico', 'administrador'].includes(equipe.papel)) {
     return <RevisaoPedagogica papel={equipe.papel} />
   }

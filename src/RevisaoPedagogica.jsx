@@ -172,6 +172,7 @@ function Detalhe({ selecionada, papel, onVoltar }) {
   const enviando = useRef(false)
   const [salvando, setSalvando] = useState(false)
   const { id, versao } = selecionada
+  const imagemPendente = Boolean(resultado?.questao?.imagem?.trim())
 
   useEffect(() => {
     let atual = true
@@ -203,6 +204,7 @@ function Detalhe({ selecionada, papel, onVoltar }) {
     e.preventDefault()
     const decisao = e.nativeEvent.submitter?.value
     const chaves = [...Object.keys(ELIMINATORIOS), ...Object.keys(QUALITATIVOS)]
+    if (decisao === 'aprovada' && imagemPendente) return
     if (!Object.hasOwn(DECISOES, decisao) || enviando.current || chaves.some(chave => !valores[chave])) return
 
     enviando.current = true
@@ -257,7 +259,7 @@ function Detalhe({ selecionada, papel, onVoltar }) {
             <h2>Versão {versao} · {SITUACOES[questao.status] ?? questao.status}</h2>
             <p>{ASSUNTOS[questao.assunto_id]?.nome ?? questao.assunto_id}</p>
             <Questao modelo={modelo} revisao />
-            {questao.imagem && <p className="dica">A visualização da imagem privada está pendente.</p>}
+            {imagemPendente && <p className="dica">A aprovação exige a visualização da imagem privada, ainda indisponível.</p>}
             <h3>Gabarito {modelo.gabarito}</h3>
             <h4>Explicação da resposta correta</h4>
             <Texto>{modelo.explicacao?.correta ?? 'Explicação não informada.'}</Texto>
@@ -281,7 +283,8 @@ function Detalhe({ selecionada, papel, onVoltar }) {
                 <label>Observações<textarea value={observacoes} onChange={e => setObservacoes(e.target.value)} /></label>
                 <div className="linha">
                   {Object.entries(DECISOES).map(([id, rotulo]) => (
-                    <button key={id} type="submit" className="pequeno" value={id}>{rotulo}</button>
+                    <button key={id} type="submit" className="pequeno" value={id}
+                      disabled={id === 'aprovada' && imagemPendente}>{rotulo}</button>
                   ))}
                 </div>
               </fieldset>

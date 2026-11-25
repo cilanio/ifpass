@@ -44,7 +44,7 @@ const questao = {
     A: 'Ignora a segunda parcela.', C: 'Conta uma unidade extra.',
     D: 'Dobra ambas as parcelas.', E: 'Excede a soma.',
   } },
-  imagem: 'bucket-privado/questao.png',
+  imagem: null,
 }
 const historico = {
   id: 'decisao-teste', questao_versao: 1, revisor_id: 'revisor-teste', checklist_versao: 1,
@@ -83,6 +83,7 @@ function preencherChecklist() {
 it.each([
   { data: null },
   { error: { code: 'PGRST205' } },
+  { error: { code: '42P01', message: 'relation "public.papeis_equipe" does not exist' } },
 ])('mantém a área de estudos sem atribuição de equipe confirmada (%j)', async retorno => {
   db.equipe.mockResolvedValue(retorno)
   render(<AreaAutenticada usuario={usuario} />)
@@ -115,6 +116,7 @@ it('carrega pendentes e aplica filtros de disciplina, assunto e situação no se
 
 it('mostra questão, gabarito, explicações e histórico para administrador sem botões de decisão', async () => {
   db.equipe.mockResolvedValue({ data: { papel: 'administrador', ativo: true } })
+  db.questao.mockResolvedValue({ data: { ...questao, imagem: 'bucket-privado/questao.png' } })
   const interacao = await abrirDetalhe()
   expect(screen.getByText(questao.enunciado)).toBeTruthy()
   expect(screen.getByText('A soma resulta em dois.')).toBeTruthy()
@@ -175,4 +177,42 @@ it('remove os dados da versão quando a permissão é revogada no servidor', asy
   expect(await screen.findByText('Versão indisponível para esta conta.')).toBeTruthy()
   expect(screen.getByText('Sua conta não tem permissão para registrar esta decisão.')).toBeTruthy()
   expect(screen.queryByRole('heading', { name: 'Gabarito B' })).toBeNull()
+})
+
+
+it.each([
+  ['autorização', () => db.equipe.mockResolvedValueOnce({ error: { code: '42501' } })],
+  ['conexão', () => db.equipe.mockRejectedValueOnce(new Error('Conexão indisponível'))],
+  ['estrutura não relacionada', () => db.equipe.mockResolvedValueOnce({
+    error: { code: '42P01', message: 'relation "public.outra_tabela" does not exist' },
+  })],
+])('mantém a navegação bloqueada após falha de %s e permite nova tentativa', async (_caso, preparar) => {
+  preparar()
+  const interacao = userEvent.setup()
+  render(<AreaAutenticada usuario={usuario} />)
+  expect((await screen.findByRole('alert')).textContent).toContain('Não foi possível verificar')
+  expect(screen.queryByRole('heading', { name: 'Área de estudos existente' })).toBeNull()
+  expect(db.fila).not.toHaveBeenCalled()
+
+  await interacao.click(screen.getByRole('button', { name: 'Tentar novamente' }))
+  expect(await screen.findByRole('heading', { name: 'Fila de questões' })).toBeTruthy()
+  expect(db.equipe).toHaveBeenCalledTimes(2)
+})
+
+it('bloqueia aprovação com imagem privada e permite solicitar correção', async () => {
+  const comImagem = { ...questao, imagem: 'bucket-privado/questao.png' }
+  db.questao.mockResolvedValue({ data: comImagem })
+  const interacao = await abrirDetalhe()
+  preencherChecklist()
+  expect(screen.getByText(/A aprovação exige a visualização da imagem privada/)).toBeTruthy()
+  const aprovar = screen.getByRole('button', { name: 'Aprovar' })
+  expect(aprovar.disabled).toBe(true)
+  await interacao.click(aprovar)
+  expect(db.rpc).not.toHaveBeenCalled()
+
+  db.questao.mockResolvedValue({ data: { ...comImagem, status: 'rascunho' } })
+  await interacao.click(screen.getByRole('button', { name: 'Solicitar correção' }))
+  await screen.findByText('Decisão registrada.')
+  expect(db.rpc).toHaveBeenCalledExactlyOnceWith('ifpass_revisar_questao',
+    expect.objectContaining({ p_decisao: 'correcao_solicitada' }))
 })

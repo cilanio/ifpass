@@ -55,6 +55,9 @@ FROM (VALUES
   ('00000000-0000-4000-8000-000000000104',1,'Português')
 ) AS perguntas(id, versao, disciplina);
 
+UPDATE public.questoes_ia SET imagem = 'sintetico/figura.png'
+WHERE id IN ('00000000-0000-4000-8000-000000000103', '00000000-0000-4000-8000-000000000104');
+
 SET LOCAL ROLE authenticated;
 SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000001"}';
 SELECT pg_temp.negado(
@@ -124,6 +127,16 @@ SELECT pg_temp.negado(
     current_setting('ifpass.checklist')::jsonb || '{"gabarito_incorreto":true}')$$,
   '23514','critério eliminatório impede aprovação');
 SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,:'checklist');
+SELECT pg_temp.negado(
+  $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000103',1,'aprovada',1,
+    current_setting('ifpass.checklist')::jsonb)$$,
+  '23514','servidor impede aprovação com imagem privada');
+SELECT pg_temp.conferir(
+  (SELECT status = 'em_revisao' FROM public.questoes_ia
+    WHERE id='00000000-0000-4000-8000-000000000103' AND versao=1)
+  AND NOT EXISTS (SELECT FROM public.revisoes_questoes
+    WHERE questao_id='00000000-0000-4000-8000-000000000103'),
+  'aprovação bloqueada não muda o estado nem deixa registro de decisão');
 SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000103',1,'correcao_solicitada',1,:'checklist','Rever enunciado');
 SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000104',1,'rejeitada',1,:'checklist');
 SELECT pg_temp.conferir(

@@ -19,7 +19,8 @@ export const distribuicao = {
   problemas: [0, 0, 0, 2, 1, 1],
 }
 
-export const colunas = ['fundamentos', 'compreensao', 'aplicacao', 'analise', 'desafio', 'avaliacao']
+export const etapasCognitivas = ['fundamentos', 'compreensao', 'aplicacao', 'analise']
+export const colunas = [...etapasCognitivas, 'desafio', 'avaliacao']
 
 const posicoes = [
   ['linguagem-algebrica', 'fundamentos', 'facil', 'Reconhecer o coeficiente de um termo.'],
@@ -31,29 +32,29 @@ const posicoes = [
   ['conceito', 'compreensao', 'facil', 'Interpretar o significado de uma solução por substituição.'],
   ['simples', 'aplicacao', 'media', 'Isolar a incógnita usando operações inversas.'],
   ['dois-membros', 'aplicacao', 'media', 'Agrupar termos da incógnita antes de isolar.'],
-  ['dois-membros', 'avaliacao', 'media', 'Resolver uma equação com incógnita nos dois membros.'],
+  ['dois-membros', 'avaliacao', 'media', 'Resolver uma equação com incógnita nos dois membros.', 'aplicacao'],
   ['parenteses', 'aplicacao', 'media', 'Aplicar distributividade antes de simplificar.'],
-  ['parenteses', 'desafio', 'dificil', 'Combinar distributividade e cancelamento de termos sob restrições do problema.'],
+  ['parenteses', 'desafio', 'dificil', 'Combinar distributividade e cancelamento de termos sob restrições do problema.', 'analise'],
   ['fracoes', 'aplicacao', 'media', 'Resolver com denominadores numéricos distintos.'],
   ['casos-especiais', 'compreensao', 'media', 'Interpretar uma igualdade verdadeira para todo valor do domínio.'],
   ['casos-especiais', 'analise', 'dificil', 'Justificar a ausência de solução após o cancelamento da incógnita.'],
   ['modelagem', 'analise', 'media', 'Comparar modelos algébricos para uma situação.'],
   ['problemas', 'analise', 'media', 'Interpretar a solução em sua unidade original.'],
   ['problemas', 'analise', 'dificil', 'Avaliar se a solução algébrica respeita o domínio contextual.'],
-  ['problemas', 'desafio', 'dificil', 'Integrar restrições do contexto e conferir a resposta obtida.'],
-  ['problemas', 'avaliacao', 'media', 'Resolver e interpretar uma situação inédita em uma incógnita.'],
+  ['problemas', 'desafio', 'dificil', 'Integrar restrições do contexto e conferir a resposta obtida.', 'analise'],
+  ['problemas', 'avaliacao', 'media', 'Resolver e interpretar uma situação inédita em uma incógnita.', 'aplicacao'],
 ]
 
 export const manifesto = {
   id: 'equacoes-primeiro-grau',
-  versao: 1,
+  versao: 2,
   catalogoVersao: catalogo.versao,
-  itens: posicoes.map(([topicoId, coluna, dificuldade, objetivoEspecifico], indice) => {
-    const perfil = colunas.indexOf(coluna) < 4 ? 'aprendizagem' : coluna
+  itens: posicoes.map(([topicoId, coluna, dificuldade, objetivoEspecifico, etapa = coluna], indice) => {
+    const perfil = etapasCognitivas.includes(coluna) ? 'aprendizagem' : coluna
     return {
       id: `epg-${String(indice + 1).padStart(2, '0')}`,
       topicoId, objetivoId: `${topicoId}-01`, objetivoEspecifico, dificuldade,
-      etapa: perfil === 'aprendizagem' ? coluna : null,
+      etapa,
       perfil, perfilVersao: perfis[perfil].versao,
     }
   }),

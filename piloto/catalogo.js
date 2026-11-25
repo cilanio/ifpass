@@ -13,11 +13,11 @@ export const fontes = {
 }
 
 export const catalogo = {
-  versao: 1,
+  versao: 2,
   disciplina: 'Matemática',
   assuntoId: 'm_equacoes1',
   topicos: [
-    ['linguagem-algebrica', 'Linguagem algébrica', 6, [], [6, 8, 12],
+    ['linguagem-algebrica', 'Linguagem algébrica', 7, [], [6, 8, 12],
       [['EF07MA13', 'explicita']], 'Interpretar letras, termos e coeficientes e distinguir variável de incógnita.'],
     ['igualdade', 'Propriedades da igualdade', 6, [], [6],
       [['EF06MA14', 'explicita']], 'Preservar a igualdade ao aplicar operações aos dois membros.'],
@@ -41,6 +41,15 @@ export const catalogo = {
     id, nome, objetivoId: `${id}-01`, objetivo, anoIntroducao,
     anosRelacionados: anoIntroducao === 6 ? [7, 8, 9] : [8, 9],
     preRequisitos,
+    ...(id === 'linguagem-algebrica' ? {
+      preparacao: {
+        ano: 6,
+        objetivo: 'Interpretar símbolos e determinar valores desconhecidos em igualdades simples.',
+        relacao: 'desdobramento',
+        habilidadeDeApoio: 'EF06MA14',
+        revisaoEspecializadaPendente: true,
+      },
+    } : {}),
     edital: itens.map((item, indice) => ({
       item,
       relacao: indice > 0 || ['linguagem-algebrica', 'igualdade'].includes(id)
@@ -49,8 +58,7 @@ export const catalogo = {
     bncc: habilidades.map(([codigo, relacao]) => ({
       codigo, relacao,
       revisaoEspecializadaPendente: id === 'casos-especiais'
-        || (id === 'parenteses' && codigo === 'EF07MA16')
-        || (id === 'linguagem-algebrica' && anoIntroducao === 6),
+        || (id === 'parenteses' && codigo === 'EF07MA16'),
     })),
   })),
 }

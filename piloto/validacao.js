@@ -1,5 +1,5 @@
 import { catalogo, fontes } from './catalogo.js'
-import { colunas, distribuicao, manifesto, perfis } from './manifesto.js'
+import { colunas, distribuicao, etapasCognitivas, manifesto, perfis } from './manifesto.js'
 import { chaveSolucao, resolverEquacao } from './equacoes.js'
 
 const letras = ['A', 'B', 'C', 'D', 'E']
@@ -28,6 +28,15 @@ export function validarCatalogo(dados = catalogo) {
     if (![6, 7].includes(t.anoIntroducao) || !Array.isArray(t.anosRelacionados)
       || t.anosRelacionados.some(ano => ![7, 8, 9].includes(ano) || ano <= t.anoIntroducao)) {
       erros.push(`Anos escolares inválidos: ${t.id}`)
+    }
+    const preparacao = t.preparacao
+    if (t.id === 'linguagem-algebrica' && (
+      t.anoIntroducao !== 7 || preparacao?.ano !== 6 || !texto(preparacao.objetivo)
+      || preparacao.relacao !== 'desdobramento' || preparacao.habilidadeDeApoio !== 'EF06MA14'
+      || typeof preparacao.revisaoEspecializadaPendente !== 'boolean'
+      || !Array.isArray(t.bncc) || !t.bncc.some(ref => ref?.codigo === 'EF07MA13' && ref.relacao === 'explicita')
+    )) {
+      erros.push('Preparação ou introdução formal da linguagem algébrica inválida')
     }
     if (!Array.isArray(t.edital) || !t.edital.length
       || t.edital.some(ref => !fontes.edital.itens.includes(ref?.item) || !relacoes.includes(ref?.relacao))) {
@@ -77,7 +86,7 @@ export function validarManifesto(lote = manifesto, curriculo = catalogo) {
     if (!mapa(item) || !texto(item.id) || ids.has(item.id) || !topico || topico.objetivoId !== item.objetivoId
       || !texto(item.objetivoEspecifico) || !Object.hasOwn(contagem, item.topicoId)
       || !Object.hasOwn(perfis, item.perfil) || perfis[item.perfil].versao !== item.perfilVersao
-      || (item.perfil === 'aprendizagem' ? coluna < 0 || coluna > 3 : item.etapa !== null)
+      || !etapasCognitivas.includes(item.etapa)
       || !Object.hasOwn(dificuldade, item.dificuldade)) {
       erros.push('Posição inválida ou duplicada no manifesto')
       continue
@@ -129,7 +138,7 @@ export function validarSaida(saida, lote = manifesto, curriculo = catalogo) {
     || saida.loteId !== lote.id || saida.loteVersao !== lote.versao || saida.catalogoVersao !== curriculo.versao
     || saida.perfilVersao !== posicao.perfilVersao || saida.topico_id !== posicao.topicoId
     || saida.objetivoId !== posicao.objetivoId || saida.assunto_id !== curriculo.assuntoId
-    || saida.disciplina !== curriculo.disciplina || saida.etapa !== posicao.etapa
+    || saida.disciplina !== curriculo.disciplina || !etapasCognitivas.includes(saida.etapa) || saida.etapa !== posicao.etapa
     || saida.dificuldade !== posicao.dificuldade || saida.finalidade !== perfis[posicao.perfil]?.finalidade
     || saida.desafio_copeve !== (posicao.perfil === 'desafio')
     || proveniencia?.editalVersao !== fontes.edital.versao || proveniencia?.bnccVersao !== fontes.bncc.versao) {

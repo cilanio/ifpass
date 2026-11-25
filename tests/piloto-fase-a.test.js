@@ -40,6 +40,37 @@ describe('catálogo e manifesto', () => {
       .toEqual(['aprendizagem', 'aprendizagem'])
   })
 
+  it('distingue preparação no 6º da referência formal EF07MA13 no 7º', () => {
+    const topico = catalogo.topicos.find(t => t.id === 'linguagem-algebrica')
+    expect(topico).toMatchObject({
+      anoIntroducao: 7,
+      preparacao: { ano: 6, habilidadeDeApoio: 'EF06MA14', revisaoEspecializadaPendente: true },
+      bncc: [{ codigo: 'EF07MA13', relacao: 'explicita' }],
+    })
+    const invalido = structuredClone(catalogo)
+    invalido.topicos[0].anoIntroducao = 6
+    expect(validarCatalogo(invalido)).toContain('Preparação ou introdução formal da linguagem algébrica inválida')
+  })
+
+  it('valida etapa cognitiva de desafios e avaliações sem misturá-los à contagem da aprendizagem', () => {
+    const entradas = entradasDoLote().filter(e => e.posicao.perfil !== 'aprendizagem')
+    expect(entradas.map(e => [e.posicao.perfil, e.perfil.finalidade, e.posicao.etapa])).toEqual([
+      ['avaliacao', 'avaliacao', 'aplicacao'],
+      ['desafio', 'aprendizagem', 'analise'],
+      ['desafio', 'aprendizagem', 'analise'],
+      ['avaliacao', 'avaliacao', 'aplicacao'],
+    ])
+    for (const entrada of entradas) {
+      const saida = exemplo(entrada)
+      expect(verificacao(saida, 'curriculo').status).toBe('aprovada')
+      expect(verificacao({ ...saida, etapa: null }, 'curriculo').status).toBe('reprovada')
+      expect(verificacao({ ...saida, etapa: entrada.posicao.perfil }, 'curriculo').status).toBe('reprovada')
+    }
+    const invalido = structuredClone(manifesto)
+    invalido.itens.find(i => i.perfil === 'desafio').etapa = null
+    expect(validarManifesto(invalido)).toContain('Posição inválida ou duplicada no manifesto')
+  })
+
   it('identifica referências inexistentes e ciclo indireto', () => {
     const invalido = structuredClone(catalogo)
     invalido.topicos[0].preRequisitos.push('conceito', 'inexistente')

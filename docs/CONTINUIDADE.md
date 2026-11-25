@@ -97,9 +97,9 @@ Foco: diagnóstico relata até três assuntos abaixo de 100%, mínimo de cinco r
 
 ## 8. Questões autorais — roteiro aprovado
 
-1. Etapa 7.1: modelo comum e adaptadores documentados em [MODELO_QUESTAO.md](MODELO_QUESTAO.md). O treino atual usa o catálogo oficial durante a transição. Os simulados permanecem exclusivamente oficiais.
+1. Etapa 7.1: modelo comum e adaptadores documentados em [MODELO_QUESTAO.md](MODELO_QUESTAO.md). O treino atual usa o catálogo oficial durante a transição. O simulado vigente preserva a composição oficial original.
 2. Planejar questoes_ia e extensões de treino_sessoes/treino_respostas, preservando registros antigos; confirmar schema real primeiro.
-3. Integrar ao treino somente questões autorais aprovadas, com retomada, correção e finalização pelo servidor. O treino atual permanece disponível até a transição e os simulados permanecem exclusivamente oficiais.
+3. Integrar ao treino somente questões autorais aprovadas, com retomada, correção e finalização pelo servidor. O treino atual permanece disponível até a transição e a etapa 7.3 mantém o simulado oficial vigente.
 4. Definir geração, saída estruturada, validação independente, revisão humana e armazenamento; sem publicação automática.
 5. Testar regressões, compatibilidade histórica e contabilização das novas questões.
 
@@ -111,7 +111,9 @@ A publicação autoral exige revisão humana independente, ausência dos oito cr
 
 - O treino passa a usar exclusivamente questões autorais aprovadas quando o banco estiver operacional. Até o corte, o treino atual segue disponível. Depois do corte, oferta insuficiente de autorais reduz a disponibilidade de treino. Questões oficiais ficam reservadas aos simulados.
 - Preservar integralmente respostas, tentativas e resultados anteriores, inclusive treinos feitos com questões oficiais. A transição não altera a origem nem reclassifica os registros existentes.
-- Controlar a exposição oficial no fluxo de simulados, distinguir primeira tentativa de repetição e mostrar retomadas como continuação da mesma tentativa. Separar indicadores de treino e de simulados. Destacar eventual exposição anterior conhecida ao interpretar a primeira tentativa.
+- Em etapa posterior, oferecer três modalidades. **Oficial** preserva 100% das questões e a composição original da prova. **Híbrido** combina oficiais e autorais de avaliação com proporção configurável, tendo 50% como referência inicial. **Autoral** usa 100% de autorais de avaliação.
+- Separar os acervos autorais de aprendizagem e avaliação. No Híbrido, preservar provas oficiais ainda não realizadas e priorizar questões de provas já realizadas pelo aluno. Controlar a exposição por aluno e questão, distinguir primeiras tentativas de repetições e manter indicadores separados por modalidade. Gabaritos e explicações ficam indisponíveis durante os simulados.
+- Na etapa 7.4, preparar perfis de geração distintos e versionados para aprendizagem e avaliação, com controle de similaridade e revisão humana.
 - A [etapa 7.3](PLANO_ETAPA_7_3.md) prevê apenas novas sessões autorais, com itens ordenados e versionados, correção no servidor, anulação e acesso autorizado às imagens privadas. O desenho com composição por origem foi encerrado.
 
 ### Etapas futuras aprovadas
@@ -155,8 +157,8 @@ Os testes verificam renderização de questão oficial, correção e revisão de
 
 - Verificar que os adaptadores preservam textos, alternativas e gabaritos das oficiais e renderizam a resolução das autorais.
 - Verificar identificação por origem e versão, ausência de colisões e retomada de registros históricos sem campos autorais.
-- Verificar seleção exclusiva de autorais aprovadas no novo treino, preservação do histórico anterior e exclusividade oficial dos simulados.
-- Verificar gravação e leitura do novo contrato e agregação separada de treino e simulados, preservando totais históricos e evitando dupla contagem.
+- Verificar seleção exclusiva de autorais aprovadas no novo treino, preservação do histórico anterior e composição original do Oficial.
+- Verificar gravação e leitura do novo contrato e agregação separada de treino e de cada modalidade de simulado, preservando totais históricos e evitando dupla contagem.
 
 ## 10. Controle de versões e continuidade
 

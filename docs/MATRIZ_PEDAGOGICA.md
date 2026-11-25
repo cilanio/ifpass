@@ -106,6 +106,10 @@ Quando o banco autoral estiver operacional, o treino usará exclusivamente quest
 
 Mantenha independentes o objetivo cognitivo e a dificuldade. Use fundamentos, compreensão, aplicação e análise para organizar a progressão, com adequação do nível, cobertura por assunto e variedade de habilidades. A escassez de itens em uma etapa deve ficar visível para orientar a expansão do acervo.
 
+Separe as autorais aprovadas em dois acervos. **Aprendizagem** destina-se exclusivamente ao treino, com prática dirigida, explicação formativa e progressão por objetivo cognitivo e dificuldade. **Avaliação** destina-se aos simulados Híbrido e Autoral, com cobertura do edital, dificuldade adequada à avaliação e exposição individual controlada. A IA deve usar instruções, exemplos e validações distintos por finalidade. Os dois acervos exigem aprovação humana.
+
+O **Oficial** mantém 100% de oficiais e a composição original. O **Híbrido** combina oficiais e autorais de avaliação com proporção configurável, usando 50% como referência inicial. O **Autoral** usa 100% de autorais de avaliação. Preserve provas oficiais ainda não realizadas e priorize, no Híbrido, itens de provas já realizadas pelo aluno. Separe primeiras tentativas de repetições e indicadores por modalidade. Gabaritos e explicações ficam indisponíveis durante os simulados. As novas modalidades serão desenvolvidas depois do treino autoral.
+
 Na etapa 7.4, use as provas oficiais como referência de características observáveis da banca, com limites de evidência explícitos. Compare candidatas autorais com o catálogo oficial para sinalizar cópias e paráfrases próximas, incluindo enunciado, alternativas e estrutura de resolução. Registre as referências comparadas, a versão do método e a decisão humana. A semelhança de assunto ou habilidade, por si só, é esperada. A regra de triagem e seus limites ainda precisam ser validados.
 
 ## 10. Pendências documentais

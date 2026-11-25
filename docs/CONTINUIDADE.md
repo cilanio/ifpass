@@ -118,6 +118,15 @@ A publicação autoral exige revisão humana independente, ausência dos oito cr
 - Os mínimos provisórios por etapa condicionam a abertura da rodada e informam o diagnóstico de cobertura, com rodada padrão de 10. O Desafio no padrão COPEVE é complementar. A etapa 7.4 definirá limites e os critérios definitivos de quantidade, cobertura curricular e diversidade.
 - A imagem privada do item atribuído é autorizada pela sessão e assinada por cinco minutos, com renovação. A implantação exige validação isolada do Storage e autorização expressa da transição. A operação e os bloqueios estão no [guia da etapa 7.3](../supabase/ETAPA_7_3.md).
 
+### Situação da etapa 7.3
+
+A implementação do treino autoral foi concluída no [PR #16](https://github.com/cilanio/ifpass/pull/16). A implantação no Supabase de produção e a ativação para alunos seguem pendentes. O treino atual continua ativo até autorização expressa da transição.
+
+- Validar de ponta a ponta o Storage privado e a execução da Edge Function em ambiente isolado, incluindo assinatura e renovação de URLs.
+- Validar a visualização privada na revisão pedagógica. A aprovação de questões com imagens continua bloqueada até essa validação.
+- Definir como encerrar as sessões legadas ainda abertas, preservando seus registros.
+- Aguardar as definições pedagógicas da etapa 7.4 antes de iniciar novas implementações.
+
 ### Etapas futuras aprovadas
 
 - **8.1 — Importação de provas oficiais.** Inclusão de provas, gabaritos, imagens e classificações por interface administrativa, com validação antes da publicação e preservação dos identificadores históricos.

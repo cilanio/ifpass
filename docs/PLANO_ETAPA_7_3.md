@@ -1,28 +1,46 @@
-# Etapa 7.3 — Integração ao treino e aos indicadores
+# Etapa 7.3 — Treino autoral e indicadores separados
 
-Esta proposta depende de revisão e validação em Supabase isolado antes de qualquer aplicação no ambiente real. A [continuidade](CONTINUIDADE.md), a [matriz pedagógica](MATRIZ_PEDAGOGICA.md) e o [banco da etapa 7.2](../supabase/ETAPA_7_2.md) são as referências. O catálogo, a correção e o histórico dos simulados oficiais permanecem exclusivos de questões oficiais.
+Plano revisado para aprovação antes da implementação. Referências: [continuidade](CONTINUIDADE.md), [matriz pedagógica](MATRIZ_PEDAGOGICA.md) e [banco da etapa 7.2](../supabase/ETAPA_7_2.md).
 
-## Seleção, retomada e correção
+## Transição aprovada
 
-1. Reutilizar `Treino`, `Questao` e o modelo unificado. Identificar a origem na roda de treino e usar o contrato histórico das questões oficiais. Manter o treino oficial disponível durante a implantação.
-2. Introduzir seleção autoral no servidor, por sessão e assunto. Considerar somente versões correntes aprovadas, com autorização da sessão, limite de rodada e deduplicação. Reutilizar a atribuição versionada e suas restrições. Persistir a composição e a ordem da rodada mista para que a retomada preserve o conjunto original, inclusive a posição e o vínculo exato de cada item oficial ou autoral.
-3. Entregar somente dados de apresentação. Autorais usam UUID, versão e item atribuído. Enviar a alternativa pela RPC de resposta e exibir gabarito, explicação e justificativas somente após a confirmação da gravação. Ao repetir a mesma requisição, recuperar a resposta canônica. Restringir escritas e cálculos de novos fluxos mistos ao servidor.
-4. Se a versão foi substituída normalmente, preservar a versão original dos itens já atribuídos. Se foi retirada por erro, a resposta pendente retorna `item_anulado`. Sinalizar a anulação, permitir avançar e excluir itens anulados dos totais e indicadores aplicáveis, sem contar acerto, erro ou resposta em branco. Preservar o registro histórico de respostas anteriores à retirada enquanto a política de reprocessamento estiver pendente.
-5. Integrar o acesso temporário às imagens privadas por operação autorizada. Verificar propriedade e vínculo na sessão, ou a autorização do revisor, e emitir acesso de curta duração apenas ao objeto da versão correta. Tratar expiração e falhas. O bloqueio provisório de aprovação de questões com imagem continua até a validação da visualização privada.
+O destino da etapa é treino exclusivamente autoral com questões aprovadas e simulados exclusivamente oficiais. O treino atual permanece disponível até que o banco autoral esteja operacional e o corte seja aprovado. Após o corte, se houver poucos itens elegíveis, a proposta é oferecer uma rodada mais curta. Sem itens elegíveis, mostrar a indisponibilidade do assunto. O catálogo oficial permanece reservado aos simulados.
 
-## Sessões mistas e desempenho
+Preservar integralmente tentativas, sessões, respostas, classificações e resultados existentes, inclusive os treinos feitos com oficiais. Manter `prova_id` e `n` e interpretar campos novos nulos pelo contrato legado. Propor a conclusão, antes do corte, das rodadas iniciadas no fluxo anterior. Sessões antigas que fiquem em aberto devem conservar seus registros, com regra de encerramento a aprovar.
 
-- Finalizar no servidor em uma transação que confira o dono, bloqueie a sessão, leia a composição persistida e consolide respostas canônicas e itens anulados. Recusar novas respostas após a finalização e retornar o mesmo resultado em novas tentativas de finalização. Preservar o contrato das sessões oficiais atuais.
-- Amarrar a unicidade de resposta ao item atribuído. Usar uma resposta canônica por item elegível na rodada, com origem registrada, evitando contabilizar o feedback como outro evento. As janelas, regras de respostas em branco e critérios atuais dos indicadores seguem vigentes.
-- Reutilizar indicadores por assunto e manter `prova_id` e `n` em registros históricos, inclusive quando campos recentes estão nulos. Testar o isolamento dos dados por conta e disciplina.
-- Implantar em etapas com sessão mista desativada até passar pela validação de ponta a ponta. Confirmar compatibilidade com alunos e responsáveis, latência, tamanho de rodada, recuperação de falhas e ausência de gabarito antecipado. Exercitar também expiração de URL, concorrência entre resposta, retirada e finalização, reenvios, registros legados e invariância dos simulados oficiais.
+## Sessões exclusivamente autorais
 
-## Interface com as etapas 7.4 e 8
+| Fluxo | Arquitetura proposta |
+|---|---|
+| Seleção e início | Reutilizar `treino_sessoes`, `treino_itens_autorais`, `Questao` e o modelo da 7.1. O servidor valida a conta, escolhe versões correntes aprovadas por assunto e persiste, na mesma operação de início, a ordem da rodada e o UUID e a versão de cada item. A escolha considera a progressão aprovada por objetivo cognitivo e dificuldade. As regras de acesso permanecem no banco. |
+| Retomada | Recuperar a sessão pelo dono e pelos itens persistidos, na ordem original, com respostas já registradas. Em uma substituição normal, manter a versão originalmente atribuída. Retomada é continuação da mesma sessão. |
+| Correção | Entregar inicialmente somente dados de apresentação. Reutilizar `ifpass_responder_autoral` para gravar e corrigir no servidor. Só após confirmação, exibir gabarito e explicações. Repetir o mesmo envio recupera a resposta canônica. Preservar a unicidade por item e bloquear escritas diretas que contornem a correção. |
+| Anulação | Uma retirada por erro sinaliza `item_anulado` para o item pendente. Mostrar o motivo geral, permitir avançar e excluir o item dos totais e dos indicadores como acerto, erro ou branco. Manter vínculo e trilha. Propor que respostas já gravadas permaneçam como histórico, com eventual exclusão apenas das métricas derivadas conforme decisão aprovada. |
+| Imagens privadas | Emitir acesso temporário somente para o objeto associado à versão, após verificar a sessão e seu dono ou a autorização do revisor. Tratar expiração e falhas sem expor o caminho interno como link público. Manter o bloqueio de aprovação com imagem até validar a visualização privada. |
+| Finalização | Consolidar itens e respostas canônicas em uma transação que bloqueie a sessão, confira a propriedade e calcule totais no servidor. Deduplicar novos envios de finalização e devolver o resultado já persistido. Preservar o histórico inclusive quando a rodada não for concluída. |
 
-A etapa 7.4 deve consumir um perfil de geração versionado que vincule instruções, exemplos, fonte curricular, evidências e validação humana à versão gerada. Dados importados na 8.1 e evidências avaliadas na 8.2 podem compor perfis novos na 8.3. A atualização dessas entradas deve preservar a progressão pedagógica, a atribuição de origem e a reprodução do histórico, sem retreinamento obrigatório da IA. Nenhuma etapa 8 faz parte da entrega atual.
+A identificação de sessão autoral deve ser explícita no caminho novo. O catálogo JSON e as regras atuais de correção dos simulados oficiais permanecem em seus fluxos.
 
-## Decisões para aprovação antes da implementação
+## Exposição e indicadores
 
-1. Definir a composição da rodada mista, o limite por origem, a regra quando faltarem autorais e quando o aluno poderá retomar uma rodada interrompida.
-2. Aprovar a política de substituição de item anulado durante a rodada e decidir se a retirada por erro deve excluir retroativamente respostas já registradas dos indicadores derivados, preservando os registros.
-3. Definir validade do acesso temporário às imagens e os critérios de encerramento e contabilização de sessões mistas incompletas.
+- **Exposição oficial.** Reservar as questões oficiais ao fluxo de simulados após o corte. Registrar início, retomada e finalização por aluno e prova, e usar as tentativas existentes quando houver evidência suficiente. Exibir e distinguir primeira tentativa registrada, repetição e retomada. A retomada mantém o identificador da tentativa. Indicar exposição anterior conhecida, por exemplo quando um treino histórico identifica questões da mesma prova. A ausência de evidência no histórico não comprova ausência de exposição. A referência proposta para primeira tentativa é a primeira abertura registrada da prova pela conta, inclusive quando não concluída. A forma de registrar abertura e o momento de liberar revisão oficial ainda precisam de aprovação.
+- **Indicador de treino.** Usar respostas canônicas autorais por assunto e janela, excluindo itens anulados conforme a política aprovada. Preservar e disponibilizar os dados de treino anteriores como histórico legado. A correção no servidor e a unicidade por item evitam contar a confirmação do feedback como outra resposta.
+- **Indicador de simulados.** Usar as tentativas oficiais finalizadas e mostrar primeira tentativa e repetições separadamente. Preservar notas, brancos e correção de anuladas conforme as regras oficiais atuais. Retomar uma tentativa não cria um resultado adicional. Manter a classificação histórica quando houver dados compatíveis e sinalizar exposição desconhecida quando não for possível inferi-la.
+- **Limites do controle.** Hoje as provas e gabaritos oficiais são incluídos no cliente. Reservar o catálogo à navegação de simulados controla a exposição pela interface. Uma garantia de acesso ao conteúdo e gabarito exigiria entrega controlada no servidor e fica fora do escopo deste plano até decisão explícita.
+
+## Simplificações em relação ao desenho anterior
+
+Remover do plano a proporção e o embaralhamento entre origens, a substituição por oficiais em treino com oferta baixa, a persistência de itens oficiais em novas rodadas autorais e a finalização que unificaria dois caminhos de correção. Eliminar o indicador combinado de treino e simulados. A separação reduz a necessidade de conciliar regras de pontuação e exposição. Conservar identidade oficial, modelo unificado e estruturas existentes para renderização e leitura do histórico.
+
+## Etapa 7.4 e aceite
+
+A configuração de geração deve ser versionada e carregar as fontes curriculares, instruções e exemplos validados. Incluir triagem de similaridade das candidatas com oficiais, por sinais textuais e semânticos, com revisão humana dos casos sinalizados. Guardar referências e versão da triagem. Preservar a progressão pedagógica e separar características observáveis da banca de reprodução do conteúdo. As futuras etapas 8 podem atualizar as evidências e a configuração sem retreinamento obrigatório. Não há implementação da etapa 8 nesta entrega.
+
+Antes do corte, validar em Supabase isolado os fluxos de Auth, PostgREST, RLS e Storage, a seleção de aprovadas, a retomada versionada, a falta de itens sem fallback oficial, a ausência de gabarito antecipado, os reenvios, a anulação, a finalização concorrente, a distinção das tentativas oficiais e a leitura íntegra do histórico. A implementação funcional e a implantação aguardam aprovação.
+
+## Decisões ainda pendentes
+
+1. Fixar o critério operacional para o corte, o tamanho mínimo da rodada curta, a política de substituição de itens anulados e o destino de sessões legadas pendentes.
+2. Aprovar a política de exposição oficial e revisão de gabarito, inclusive o tratamento de abertura sem finalização e o limite entre controle pela interface e controle pelo servidor.
+3. Aprovar a contabilização de rodadas incompletas e o efeito de retiradas por erro sobre indicadores de respostas já gravadas. Definir duração do acesso temporário às imagens.
+4. Na etapa 7.4, validar o método, as referências e os limites da triagem de similaridade, com critérios de encaminhamento à revisão humana.

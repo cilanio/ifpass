@@ -97,15 +97,22 @@ Foco: diagnóstico relata até três assuntos abaixo de 100%, mínimo de cinco r
 
 ## 8. Questões autorais — roteiro aprovado
 
-1. Etapa 7.1: modelo comum e adaptadores documentados em [MODELO_QUESTAO.md](MODELO_QUESTAO.md). O treino e os simulados continuam usando o catálogo oficial.
+1. Etapa 7.1: modelo comum e adaptadores documentados em [MODELO_QUESTAO.md](MODELO_QUESTAO.md). O treino atual usa o catálogo oficial durante a transição. Os simulados permanecem exclusivamente oficiais.
 2. Planejar questoes_ia e extensões de treino_sessoes/treino_respostas, preservando registros antigos; confirmar schema real primeiro.
-3. Integrar ao mesmo fluxo de treino com identificação de origem; simulados oficiais intactos.
+3. Integrar ao treino somente questões autorais aprovadas, com retomada, correção e finalização pelo servidor. O treino atual permanece disponível até a transição e os simulados permanecem exclusivamente oficiais.
 4. Definir geração, saída estruturada, validação independente, revisão humana e armazenamento; sem publicação automática.
 5. Testar regressões, compatibilidade histórica e contabilização das novas questões.
 
-Metadados propostos, rubrica e piloto em MATRIZ_PEDAGOGICA.md. Escassez de exemplos de Ciências não garante fidelidade à banca; avaliar cobertura e qualidade, não apenas volume.
+Metadados, critérios de aprovação e piloto em MATRIZ_PEDAGOGICA.md. Escassez de exemplos de Ciências não garante fidelidade à banca; avaliar cobertura e qualidade, não apenas volume.
 
 A publicação autoral exige revisão humana independente, ausência dos oito critérios eliminatórios e adequação dos sete critérios qualitativos. A interface e o servidor validam a regra, sem pesos ou pontuações. Consulte a [matriz pedagógica](MATRIZ_PEDAGOGICA.md) e o [plano técnico da etapa 7.3](PLANO_ETAPA_7_3.md).
+
+### Diretriz aprovada para treino e simulados
+
+- O treino passa a usar exclusivamente questões autorais aprovadas quando o banco estiver operacional. Até o corte, o treino atual segue disponível. Depois do corte, oferta insuficiente de autorais reduz a disponibilidade de treino. Questões oficiais ficam reservadas aos simulados.
+- Preservar integralmente respostas, tentativas e resultados anteriores, inclusive treinos feitos com questões oficiais. A transição não altera a origem nem reclassifica os registros existentes.
+- Controlar a exposição oficial no fluxo de simulados, distinguir primeira tentativa de repetição e mostrar retomadas como continuação da mesma tentativa. Separar indicadores de treino e de simulados. Destacar eventual exposição anterior conhecida ao interpretar a primeira tentativa.
+- A [etapa 7.3](PLANO_ETAPA_7_3.md) prevê apenas novas sessões autorais, com itens ordenados e versionados, correção no servidor, anulação e acesso autorizado às imagens privadas. O desenho com composição por origem foi encerrado.
 
 ### Etapas futuras aprovadas
 
@@ -148,8 +155,8 @@ Os testes verificam renderização de questão oficial, correção e revisão de
 
 - Verificar que os adaptadores preservam textos, alternativas e gabaritos das oficiais e renderizam a resolução das autorais.
 - Verificar identificação por origem e versão, ausência de colisões e retomada de registros históricos sem campos autorais.
-- Verificar seleção mista no treino, exclusão de autorais sem aprovação e separação do catálogo de simulados oficiais.
-- Verificar gravação e leitura do novo contrato e agregação dos registros oficiais e autorais sem alterar totais históricos ou contar uma resposta duas vezes.
+- Verificar seleção exclusiva de autorais aprovadas no novo treino, preservação do histórico anterior e exclusividade oficial dos simulados.
+- Verificar gravação e leitura do novo contrato e agregação separada de treino e simulados, preservando totais históricos e evitando dupla contagem.
 
 ## 10. Controle de versões e continuidade
 

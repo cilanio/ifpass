@@ -125,7 +125,13 @@ A implementação do treino autoral foi concluída no [PR #16](https://github.co
 - Validar de ponta a ponta o Storage privado e a execução da Edge Function em ambiente isolado, incluindo assinatura e renovação de URLs.
 - Validar a visualização privada na revisão pedagógica. A aprovação de questões com imagens continua bloqueada até essa validação.
 - Definir como encerrar as sessões legadas ainda abertas, preservando seus registros.
-- Aguardar as definições pedagógicas da etapa 7.4 antes de iniciar novas implementações.
+- Conduzir a próxima atividade da etapa 7.4 pelo plano experimental da Fase A.
+
+### Situação da etapa 7.4
+
+As decisões de [7.4.1 a 7.4.6](MATRIZ_PEDAGOGICA.md#11-decisões-aprovadas-da-etapa-74) consolidam o roteiro curricular compartilhado, o alinhamento IFAL e BNCC, o dimensionamento por tópico e etapa, os perfis de geração, as seis camadas de validação, a revisão humana individual e o piloto experimental.
+
+A Fase A já tem catálogo curricular, manifesto e validadores locais para um piloto de 20 questões de Equações do Primeiro Grau, com dez tópicos e sem contratação de APIs. O dimensionamento de 305 questões de aprendizagem, 20 desafios e 40 itens de avaliação é uma referência futura. As faixas provisórias de desempenho orientam a aprendizagem com navegação livre. A Fase B depende dos resultados do piloto. Consulte o [plano técnico e o mapeamento curricular](PLANO_ETAPA_7_4_FASE_A.md).
 
 ### Visão futura da aprendizagem
 

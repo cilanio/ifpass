@@ -135,3 +135,52 @@ Na etapa 7.4, use as provas oficiais como referência de características observ
 ## 10. Pendências documentais
 
 Conferir redação e numeração individual dos 8/29/19 itens com fonte oficial retificada; recuperar IDs aprovados ou propor novos sem quebrar históricos; aprovar piloto e critérios de cobertura; definir modelo de questão e integração técnica conforme CONTINUIDADE.md. Não confundir matriz curricular, classificação histórica, objetivo cognitivo, dificuldade e origem.
+
+## 11. Decisões aprovadas da etapa 7.4
+
+### 7.4.1 — Roteiros de aprendizagem
+
+O roteiro compartilhado entre Estudar, Treinar e Fazer Simulado segue a hierarquia disciplina → assunto → tópico → objetivo de aprendizagem → etapa cognitiva → questões. A sequência recomendada e os pré-requisitos orientam a navegação livre. A dificuldade é independente da etapa cognitiva; cada tópico usa as etapas pertinentes aos seus objetivos.
+
+O edital IFAL e a BNCC são referências complementares. Registrar o ano de introdução, os anos relacionados, as habilidades da BNCC, a versão curricular e a relevância para o edital, distinguindo exigências diretas de pré-requisitos. Oferecer progressivamente do 6º ao 9º ano os recortes **Meu ano escolar**, **Revisão acumulada** e **Preparação integral**, com banco único, histórico contínuo e acesso livre a conteúdos de outros anos.
+
+### 7.4.2 — Dimensionamento
+
+A referência experimental é individualizada por tópico e etapa. A tabela também define a sequência do roteiro piloto de Equações do Primeiro Grau.
+
+| Ordem e tópico | Fundamentos | Compreensão | Aplicação | Análise |
+|---|---:|---:|---:|---:|
+| 1. Linguagem algébrica | 10 | 10 | 5 | 0 |
+| 2. Propriedades da igualdade | 10 | 10 | 5 | 0 |
+| 3. Conceito de equação | 10 | 10 | 5 | 0 |
+| 4. Equações simples | 5 | 5 | 15 | 5 |
+| 5. Incógnitas nos dois membros | 5 | 5 | 15 | 5 |
+| 6. Equações com parênteses | 5 | 5 | 15 | 5 |
+| 7. Equações com frações | 5 | 5 | 15 | 5 |
+| 8. Casos especiais | 5 | 10 | 10 | 5 |
+| 9. Modelagem matemática | 5 | 10 | 15 | 10 |
+| 10. Problemas contextualizados | 0 | 5 | 15 | 20 |
+
+A referência futura soma 305 questões de aprendizagem, 20 desafios COPEVE e 40 questões reservadas à avaliação. O piloto usa apenas a amostra da seção 7.4.6.
+
+Faixas provisórias: abaixo de 50%, insuficiente; de 50% a menos de 70%, em desenvolvimento; de 70% a menos de 85%, satisfatório; a partir de 85%, indícios de domínio. Interpretar junto com a quantidade de questões distintas, a dificuldade, a cobertura dos objetivos e a evolução. As faixas orientam o estudante, com navegação livre.
+
+### 7.4.3 — Perfis de geração
+
+Manter três perfis versionados: aprendizagem estruturada, desafio COPEVE complementar e avaliação exclusiva para simulados. Rastrear modelo, instruções, edital, referências e data da geração. Preparar lotes antecipadamente, reutilizar questões aprovadas e manter independência de fornecedor. Durante o treinamento, selecionar questões já aprovadas do acervo.
+
+### 7.4.4 — Validação automatizada
+
+Aplicar seis camadas: estrutural, curricular, resolução independente inicialmente sem acesso ao gabarito, duplicidade e similaridade, qualidade pela matriz existente, e cobertura e diversidade do lote. Priorizar verificações determinísticas e usar cálculo simbólico quando aplicável. Distinguir duplicidade indevida de variação pedagógica legítima e exigir maior diversidade nos simulados. Limitar inicialmente a duas tentativas automáticas de correção, registrar resultados e revalidar cada revisão. Preservar os oito critérios eliminatórios e os sete qualitativos. A publicação exige aprovação humana.
+
+### 7.4.5 — Revisão humana
+
+Reutilizar a infraestrutura existente. Apresentar referências curriculares, objetivos, resolução independente, relatório de validação, questões similares e histórico de correções. Permitir que o revisor resolva o item antes de ver o gabarito e o parecer da IA. Aprovar individualmente e registrar custos, tempo de revisão, motivos de rejeição e indicadores dos lotes.
+
+### 7.4.6 — Piloto experimental
+
+Avaliar 20 questões de Equações do Primeiro Grau, cobrindo os dez tópicos e sem imagens no lote inicial. O manifesto local fixa objetivos por posição e mantém casos especiais exclusivamente na aprendizagem. Distribuir 4 questões de fundamentos, 4 de compreensão, 4 de aplicação, 4 de análise, 2 desafios COPEVE e 2 de avaliação. Usar 6 fáceis, 10 médias e 4 difíceis.
+
+Metas experimentais: 100% de validade estrutural e rastreabilidade curricular, ao menos 80% de aprovação humana inicial e 90% após correções, e zero erro crítico ou duplicidade indevida identificados entre as questões aprovadas. Medir custo por questão aprovada e tempo de revisão. A amostra serve para avaliação operacional e ajuste do processo.
+
+A **Fase A** é uma validação experimental sem contratação de APIs. A **Fase B** é a automação definitiva, condicionada aos resultados do piloto. Consulte o [plano técnico da Fase A](PLANO_ETAPA_7_4_FASE_A.md).

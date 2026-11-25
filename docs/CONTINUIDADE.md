@@ -133,6 +133,8 @@ As decisões de [7.4.1 a 7.4.6](MATRIZ_PEDAGOGICA.md#11-decisões-aprovadas-da-e
 
 A Fase A já tem catálogo curricular, manifesto e validadores locais para um piloto de 20 questões de Equações do Primeiro Grau, com dez tópicos e sem contratação de APIs. O dimensionamento de 305 questões de aprendizagem, 20 desafios e 40 itens de avaliação é uma referência futura. As faixas provisórias de desempenho orientam a aprendizagem com navegação livre. A Fase B depende dos resultados do piloto. Consulte o [plano técnico e o mapeamento curricular](PLANO_ETAPA_7_4_FASE_A.md).
 
+O lote de 20 posições do manifesto v2 tem versões, validações determinísticas, pacote cego e dossiês registrados localmente. A resolução independente e a revisão pedagógica aguardam execução. Consulte o [lote experimental](../piloto/lote-equacoes-v2/README.md).
+
 ### Visão futura da aprendizagem
 
 O modelo de aprendizagem será híbrido, com sequência recomendada, pré-requisitos usados como orientação e liberdade para navegar entre os conteúdos, sem bloqueios obrigatórios. A interface inicial terá três funcionalidades principais: **Estudar**, **Treinar** e **Fazer Simulado**.

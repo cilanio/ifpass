@@ -1,6 +1,6 @@
 # Etapa 7.4 — Plano técnico da Fase A
 
-O piloto avalia o processo de geração, validação e revisão de Equações do Primeiro Grau. O catálogo, o manifesto e a infraestrutura local estão implementados. O lote de questões continua por gerar. A execução futura usa arquivos locais e, se necessário, uma instância isolada para ensaiar a revisão. A amostra e as metas constam na [Matriz Pedagógica](MATRIZ_PEDAGOGICA.md#746--piloto-experimental).
+O piloto avalia o processo de geração, validação e revisão de Equações do Primeiro Grau. O catálogo, o manifesto e a infraestrutura local estão implementados. O lote de 20 questões foi gerado e aguarda resolução independente e revisão pedagógica. Consulte os [artefatos e resultados](../piloto/lote-equacoes-v2/README.md). A execução futura usa arquivos locais e, se necessário, uma instância isolada para ensaiar a revisão. A amostra e as metas constam na [Matriz Pedagógica](MATRIZ_PEDAGOGICA.md#746--piloto-experimental).
 
 ## Fontes e escopo curricular
 

@@ -1,0 +1,1288 @@
+{
+  "metodo": "Jaccard de conjuntos de tokens alfanuméricos do enunciado, sem acentos e em minúsculas; três maiores por origem.",
+  "escopo": "120 questões oficiais e 190 pares internos por versão do lote; sem interpretação de imagens ou equivalência semântica.",
+  "antes": [
+    {
+      "posicaoId": "epg-01",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:34",
+          "indice": 0.1842
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:37",
+          "indice": 0.1765
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:7",
+          "indice": 0.1667
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-06",
+          "indice": 0.16
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.15
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.15
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-02",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:7",
+          "indice": 0.1333
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:8",
+          "indice": 0.125
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:40",
+          "indice": 0.1111
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-10",
+          "indice": 0.0556
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.0476
+        },
+        {
+          "ref": "epg-14",
+          "indice": 0.0455
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-03",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1154
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:5",
+          "indice": 0.1087
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.1087
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-17",
+          "indice": 0.1321
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-04",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1429
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:16",
+          "indice": 0.1304
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:1",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-10",
+          "indice": 0.1667
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1111
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.1071
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-05",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:13",
+          "indice": 0.1304
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:13",
+          "indice": 0.125
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1364
+        },
+        {
+          "ref": "epg-14",
+          "indice": 0.12
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-06",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:4",
+          "indice": 0.1379
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:25",
+          "indice": 0.1351
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.1351
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-11",
+          "indice": 0.2414
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1818
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.16
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-07",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:36",
+          "indice": 0.25
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:37",
+          "indice": 0.2
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:11",
+          "indice": 0.1875
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2353
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1667
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.1429
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-08",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.2188
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.2174
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.2
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.6667
+        },
+        {
+          "ref": "epg-17",
+          "indice": 0.2059
+        },
+        {
+          "ref": "epg-10",
+          "indice": 0.1765
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-09",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.1034
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1026
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:34",
+          "indice": 0.0952
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2
+        },
+        {
+          "ref": "epg-15",
+          "indice": 0.1786
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1429
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-10",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:33",
+          "indice": 0.1034
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:27",
+          "indice": 0.1
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:26",
+          "indice": 0.0909
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1765
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1765
+        },
+        {
+          "ref": "epg-04",
+          "indice": 0.1667
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-11",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:30",
+          "indice": 0.2222
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:4",
+          "indice": 0.1935
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1667
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.25
+        },
+        {
+          "ref": "epg-06",
+          "indice": 0.2414
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1538
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-12",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1765
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:22",
+          "indice": 0.15
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:19",
+          "indice": 0.1429
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-19",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-18",
+          "indice": 0.1404
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1356
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-13",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.2727
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:25",
+          "indice": 0.2
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.2
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.6667
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.25
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.2353
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-14",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:23",
+          "indice": 0.2222
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:1",
+          "indice": 0.1905
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:19",
+          "indice": 0.1852
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1364
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1316
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-15",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:30",
+          "indice": 0.1852
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:22",
+          "indice": 0.1231
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:19",
+          "indice": 0.122
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2083
+        },
+        {
+          "ref": "epg-09",
+          "indice": 0.1786
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.1471
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-16",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.234
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:24",
+          "indice": 0.2055
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.186
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-19",
+          "indice": 0.1452
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-17",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.2245
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.2045
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:5",
+          "indice": 0.1778
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.2059
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1714
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1351
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-18",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:33",
+          "indice": 0.1522
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1311
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1935
+        },
+        {
+          "ref": "epg-12",
+          "indice": 0.1404
+        },
+        {
+          "ref": "epg-15",
+          "indice": 0.122
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-19",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.1429
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:19",
+          "indice": 0.1321
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:33",
+          "indice": 0.1316
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-16",
+          "indice": 0.1452
+        },
+        {
+          "ref": "epg-12",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1304
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-20",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1379
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.1351
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:3",
+          "indice": 0.122
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1333
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1333
+        },
+        {
+          "ref": "epg-03",
+          "indice": 0.1277
+        }
+      ]
+    }
+  ],
+  "depois": [
+    {
+      "posicaoId": "epg-01",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:34",
+          "indice": 0.1842
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:37",
+          "indice": 0.1765
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:7",
+          "indice": 0.1667
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-06",
+          "indice": 0.16
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.15
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.15
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-02",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:7",
+          "indice": 0.1333
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:8",
+          "indice": 0.125
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:40",
+          "indice": 0.1111
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-10",
+          "indice": 0.0556
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.0476
+        },
+        {
+          "ref": "epg-14",
+          "indice": 0.0455
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-03",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1154
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:5",
+          "indice": 0.1087
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.1087
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-19",
+          "indice": 0.1356
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-04",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1429
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:16",
+          "indice": 0.1304
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:1",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-10",
+          "indice": 0.1667
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1111
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.1071
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-05",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:13",
+          "indice": 0.1304
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:13",
+          "indice": 0.125
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1364
+        },
+        {
+          "ref": "epg-14",
+          "indice": 0.12
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-06",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:4",
+          "indice": 0.1379
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:25",
+          "indice": 0.1351
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.1351
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-11",
+          "indice": 0.2414
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1818
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.16
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-07",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:36",
+          "indice": 0.25
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:37",
+          "indice": 0.2
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:11",
+          "indice": 0.1875
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2353
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1667
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.1429
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-08",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.2188
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.2174
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.2
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.6667
+        },
+        {
+          "ref": "epg-17",
+          "indice": 0.2059
+        },
+        {
+          "ref": "epg-10",
+          "indice": 0.1765
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-09",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.1034
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1026
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:34",
+          "indice": 0.0952
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2
+        },
+        {
+          "ref": "epg-15",
+          "indice": 0.1786
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1429
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-10",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:33",
+          "indice": 0.1034
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:27",
+          "indice": 0.1
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:26",
+          "indice": 0.0909
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1765
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1765
+        },
+        {
+          "ref": "epg-04",
+          "indice": 0.1667
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-11",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:30",
+          "indice": 0.2222
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:4",
+          "indice": 0.1935
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1667
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.25
+        },
+        {
+          "ref": "epg-06",
+          "indice": 0.2414
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1538
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-12",
+      "revisao": 2,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1765
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:22",
+          "indice": 0.15
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:19",
+          "indice": 0.1429
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-18",
+          "indice": 0.1404
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1356
+        },
+        {
+          "ref": "epg-20",
+          "indice": 0.1273
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-13",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.2727
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:25",
+          "indice": 0.2
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.2
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.6667
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.25
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.2353
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-14",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:23",
+          "indice": 0.2222
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:1",
+          "indice": 0.1905
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:19",
+          "indice": 0.1852
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1364
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1316
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-15",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:30",
+          "indice": 0.1852
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:22",
+          "indice": 0.1231
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:19",
+          "indice": 0.122
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2083
+        },
+        {
+          "ref": "epg-09",
+          "indice": 0.1786
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.1471
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-16",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.234
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:24",
+          "indice": 0.2055
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.186
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-12",
+          "indice": 0.1356
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-17",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.2245
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.2045
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:5",
+          "indice": 0.1778
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.2059
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1714
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1351
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-18",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:33",
+          "indice": 0.1522
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1311
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1935
+        },
+        {
+          "ref": "epg-12",
+          "indice": 0.1404
+        },
+        {
+          "ref": "epg-15",
+          "indice": 0.122
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-19",
+      "revisao": 2,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:40",
+          "indice": 0.1324
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1167
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:34",
+          "indice": 0.1136
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-03",
+          "indice": 0.1356
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-20",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1379
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.1351
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:3",
+          "indice": 0.122
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1333
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1333
+        },
+        {
+          "ref": "epg-03",
+          "indice": 0.1277
+        }
+      ]
+    }
+  ]
+}

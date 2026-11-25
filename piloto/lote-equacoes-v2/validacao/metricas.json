@@ -1,0 +1,17 @@
+{
+  "posicoes": 20,
+  "originais": 20,
+  "revisoes": 2,
+  "maximoTentativasObservado": 1,
+  "protocolosIndependentesPreparados": 20,
+  "resolucoesIndependentesExecutadas": 0,
+  "revisoesHumanasExecutadas": 0,
+  "questoesPublicadas": 0,
+  "oficiaisComparadas": 120,
+  "paresInternosPorRodada": 190,
+  "custoDiretoAPIsContratadasCentavos": 0,
+  "custoTotalCentavos": null,
+  "tempoRevisaoHumanaSegundos": null,
+  "custoPorQuestaoAprovada": null,
+  "tokensGeracao": null
+}

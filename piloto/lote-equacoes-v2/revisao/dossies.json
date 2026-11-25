@@ -1,0 +1,3657 @@
+[
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-01",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-01",
+      "topicoId": "linguagem-algebrica",
+      "objetivoId": "linguagem-algebrica-01",
+      "objetivoEspecifico": "Reconhecer o coeficiente de um termo.",
+      "dificuldade": "facil",
+      "etapa": "fundamentos",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "linguagem-algebrica",
+      "nome": "Linguagem algébrica",
+      "objetivoId": "linguagem-algebrica-01",
+      "objetivo": "Interpretar letras, termos e coeficientes e distinguir variável de incógnita.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [],
+      "preparacao": {
+        "ano": 6,
+        "objetivo": "Interpretar símbolos e determinar valores desconhecidos em igualdades simples.",
+        "relacao": "desdobramento",
+        "habilidadeDeApoio": "EF06MA14",
+        "revisaoEspecializadaPendente": true
+      },
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "apoio"
+        },
+        {
+          "item": 8,
+          "relacao": "apoio"
+        },
+        {
+          "item": 12,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA13",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Na expressão 12 − 7t, qual é o coeficiente do termo que contém t?",
+      "alternativas": {
+        "A": "12",
+        "B": "−7",
+        "C": "7",
+        "D": "t",
+        "E": "−12"
+      },
+      "resposta_correta": "B",
+      "explicacao": {
+        "correta": "O número que multiplica t, com o sinal, é −7.",
+        "distratores": {
+          "A": "É o termo constante.",
+          "C": "Perde o sinal negativo.",
+          "D": "É a letra, não seu multiplicador.",
+          "E": "Troca o sinal do termo constante."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-01",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:34",
+          "indice": 0.1842
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:37",
+          "indice": 0.1765
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:7",
+          "indice": 0.1667
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-06",
+          "indice": 0.16
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.15
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-02",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-02",
+      "topicoId": "linguagem-algebrica",
+      "objetivoId": "linguagem-algebrica-01",
+      "objetivoEspecifico": "Identificar termos em uma expressão.",
+      "dificuldade": "facil",
+      "etapa": "fundamentos",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "linguagem-algebrica",
+      "nome": "Linguagem algébrica",
+      "objetivoId": "linguagem-algebrica-01",
+      "objetivo": "Interpretar letras, termos e coeficientes e distinguir variável de incógnita.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [],
+      "preparacao": {
+        "ano": 6,
+        "objetivo": "Interpretar símbolos e determinar valores desconhecidos em igualdades simples.",
+        "relacao": "desdobramento",
+        "habilidadeDeApoio": "EF06MA14",
+        "revisaoEspecializadaPendente": true
+      },
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "apoio"
+        },
+        {
+          "item": 8,
+          "relacao": "apoio"
+        },
+        {
+          "item": 12,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA13",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Quais são os termos da expressão 4m − 9 + 2n?",
+      "alternativas": {
+        "A": "4, −9 e 2",
+        "B": "m, n e 9",
+        "C": "4m, 9 e 2n",
+        "D": "4m, −9 e 2n",
+        "E": "4mn e −9"
+      },
+      "resposta_correta": "D",
+      "explicacao": {
+        "correta": "Separar a soma em parcelas, levando o sinal junto, dá 4m, −9 e 2n.",
+        "distratores": {
+          "A": "Omite as letras dos termos literais.",
+          "B": "Lista letras e um número em vez dos termos.",
+          "C": "Troca o sinal da constante.",
+          "E": "Combina termos diferentes indevidamente."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-02",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:7",
+          "indice": 0.1333
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:8",
+          "indice": 0.125
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:40",
+          "indice": 0.1111
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-10",
+          "indice": 0.0556
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.0476
+        },
+        {
+          "ref": "epg-14",
+          "indice": 0.0455
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-03",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-03",
+      "topicoId": "linguagem-algebrica",
+      "objetivoId": "linguagem-algebrica-01",
+      "objetivoEspecifico": "Distinguir variável de incógnita conforme o contexto.",
+      "dificuldade": "media",
+      "etapa": "compreensao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "linguagem-algebrica",
+      "nome": "Linguagem algébrica",
+      "objetivoId": "linguagem-algebrica-01",
+      "objetivo": "Interpretar letras, termos e coeficientes e distinguir variável de incógnita.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [],
+      "preparacao": {
+        "ano": 6,
+        "objetivo": "Interpretar símbolos e determinar valores desconhecidos em igualdades simples.",
+        "relacao": "desdobramento",
+        "habilidadeDeApoio": "EF06MA14",
+        "revisaoEspecializadaPendente": true
+      },
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "apoio"
+        },
+        {
+          "item": 8,
+          "relacao": "apoio"
+        },
+        {
+          "item": 12,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA13",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Uma gráfica usa C = 8 + 3p para indicar o custo C de imprimir p páginas. Em outro atendimento, o custo foi 38 reais e o atendente escreveu 8 + 3q = 38. Qual comparação descreve o papel de p e q?",
+      "alternativas": {
+        "A": "p varia com a quantidade de páginas escolhida; q é a quantidade desconhecida daquele atendimento.",
+        "B": "p e q são custos em reais.",
+        "C": "p é fixado em 38; q pode assumir qualquer valor.",
+        "D": "p e q são coeficientes.",
+        "E": "p e q são valores já conhecidos."
+      },
+      "resposta_correta": "A",
+      "explicacao": {
+        "correta": "A fórmula aceita diferentes quantidades p. Na segunda situação, q precisa satisfazer uma condição de custo fixo.",
+        "distratores": {
+          "B": "As letras representam quantidades de páginas.",
+          "C": "38 é custo, e q está sujeito à igualdade.",
+          "D": "O coeficiente é 3.",
+          "E": "Nenhuma das quantidades é previamente informada."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-03",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1154
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:5",
+          "indice": 0.1087
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.1087
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-19",
+          "indice": 0.1356
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-04",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-04",
+      "topicoId": "igualdade",
+      "objetivoId": "igualdade-01",
+      "objetivoEspecifico": "Reconhecer uma operação que conserva a igualdade.",
+      "dificuldade": "facil",
+      "etapa": "fundamentos",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "igualdade",
+      "nome": "Propriedades da igualdade",
+      "objetivoId": "igualdade-01",
+      "objetivo": "Preservar a igualdade ao aplicar operações aos dois membros.",
+      "anoIntroducao": 6,
+      "anosRelacionados": [
+        7,
+        8,
+        9
+      ],
+      "preRequisitos": [],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF06MA14",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Sabe-se que P = Q. Qual transformação sempre preserva a igualdade?",
+      "alternativas": {
+        "A": "P + 6 = Q − 6",
+        "B": "2P = Q",
+        "C": "P − 6 = Q + 6",
+        "D": "P + 6 = Q",
+        "E": "P − 6 = Q − 6"
+      },
+      "resposta_correta": "E",
+      "explicacao": {
+        "correta": "Subtrair o mesmo número dos dois membros preserva a igualdade.",
+        "distratores": {
+          "A": "Soma em um lado e subtrai no outro.",
+          "B": "Multiplica apenas o primeiro membro.",
+          "C": "Aplica operações diferentes entre membros.",
+          "D": "Altera apenas o primeiro membro."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-04",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1429
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:16",
+          "indice": 0.1304
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:1",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-10",
+          "indice": 0.1667
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1111
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.1071
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-05",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-05",
+      "topicoId": "igualdade",
+      "objetivoId": "igualdade-01",
+      "objetivoEspecifico": "Explicar por que a mesma operação deve incidir nos dois membros.",
+      "dificuldade": "facil",
+      "etapa": "compreensao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "igualdade",
+      "nome": "Propriedades da igualdade",
+      "objetivoId": "igualdade-01",
+      "objetivo": "Preservar a igualdade ao aplicar operações aos dois membros.",
+      "anoIntroducao": 6,
+      "anosRelacionados": [
+        7,
+        8,
+        9
+      ],
+      "preRequisitos": [],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF06MA14",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Para tirar 4 do lado esquerdo de x + 4 = 11, por que subtrair 4 também do lado direito?",
+      "alternativas": {
+        "A": "Porque os dois membros precisam ficar iguais a zero.",
+        "B": "Porque subtrair a mesma quantidade de valores iguais mantém a igualdade.",
+        "C": "Porque toda equação tem solução 4.",
+        "D": "Porque só assim o coeficiente de x vira zero.",
+        "E": "Porque o lado direito deve continuar com o número 11."
+      },
+      "resposta_correta": "B",
+      "explicacao": {
+        "correta": "Os membros têm o mesmo valor. Aplicar a mesma subtração aos dois mantém seus valores iguais e isola x.",
+        "distratores": {
+          "A": "A igualdade pode ter membros não nulos.",
+          "C": "O 4 é uma parcela conhecida.",
+          "D": "O coeficiente continua sendo 1.",
+          "E": "O lado direito passa a valer 7."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-05",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:13",
+          "indice": 0.1304
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:13",
+          "indice": 0.125
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1364
+        },
+        {
+          "ref": "epg-14",
+          "indice": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-06",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-06",
+      "topicoId": "conceito",
+      "objetivoId": "conceito-01",
+      "objetivoEspecifico": "Localizar os membros e a incógnita.",
+      "dificuldade": "facil",
+      "etapa": "fundamentos",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "conceito",
+      "nome": "Conceito de equação",
+      "objetivoId": "conceito-01",
+      "objetivo": "Identificar membros, incógnita e solução.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "linguagem-algebrica",
+        "igualdade"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        },
+        {
+          "codigo": "EF06MA14",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Na equação 3z + 5 = 17, qual alternativa identifica o primeiro membro e a incógnita, nessa ordem?",
+      "alternativas": {
+        "A": "17 e z",
+        "B": "3z e 5",
+        "C": "3z + 5 e z",
+        "D": "5 e 17",
+        "E": "3z + 5 e 3"
+      },
+      "resposta_correta": "C",
+      "explicacao": {
+        "correta": "O primeiro membro é toda a expressão à esquerda do sinal de igualdade, e z é o valor desconhecido.",
+        "distratores": {
+          "A": "17 é o segundo membro.",
+          "B": "3z é só parte do membro e 5 é conhecido.",
+          "D": "5 e 17 são números conhecidos.",
+          "E": "3 é o coeficiente."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-06",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:4",
+          "indice": 0.1379
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:25",
+          "indice": 0.1351
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.1351
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-11",
+          "indice": 0.2414
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1818
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.16
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-07",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-07",
+      "topicoId": "conceito",
+      "objetivoId": "conceito-01",
+      "objetivoEspecifico": "Interpretar o significado de uma solução por substituição.",
+      "dificuldade": "facil",
+      "etapa": "compreensao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "conceito",
+      "nome": "Conceito de equação",
+      "objetivoId": "conceito-01",
+      "objetivo": "Identificar membros, incógnita e solução.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "linguagem-algebrica",
+        "igualdade"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        },
+        {
+          "codigo": "EF06MA14",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "O que permite afirmar que 5 é solução de 2y + 1 = 11?",
+      "alternativas": {
+        "A": "5 já aparece escrito em um membro.",
+        "B": "Trocar y por 5 faz o membro esquerdo valer 10.",
+        "C": "Dividir 11 por 2 dá exatamente 5.",
+        "D": "Trocar y por 5 faz os dois membros valerem 11.",
+        "E": "O membro esquerdo vale 11 para qualquer y."
+      },
+      "resposta_correta": "D",
+      "explicacao": {
+        "correta": "Com y = 5, o lado esquerdo vale 2 × 5 + 1 = 11, igual ao lado direito.",
+        "distratores": {
+          "A": "Uma solução pode não aparecer escrita no enunciado.",
+          "B": "Desconsidera a soma de 1.",
+          "C": "11 dividido por 2 vale 5,5.",
+          "E": "A expressão depende de y."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-07",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:36",
+          "indice": 0.25
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:37",
+          "indice": 0.2
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:11",
+          "indice": 0.1875
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2353
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1667
+        },
+        {
+          "ref": "epg-01",
+          "indice": 0.1429
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-08",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-08",
+      "topicoId": "simples",
+      "objetivoId": "simples-01",
+      "objetivoEspecifico": "Isolar a incógnita usando operações inversas.",
+      "dificuldade": "media",
+      "etapa": "aplicacao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "simples",
+      "nome": "Equações simples",
+      "objetivoId": "simples-01",
+      "objetivo": "Isolar a incógnita e conferir a solução por substituição.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "conceito"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Qual é o valor de x em 18 − 4x = 6?",
+      "alternativas": {
+        "A": "−3",
+        "B": "6",
+        "C": "12",
+        "D": "−6",
+        "E": "3"
+      },
+      "resposta_correta": "E",
+      "explicacao": {
+        "correta": "Subtraindo 18 dos dois lados, −4x = −12. A divisão por −4 dá x = 3.",
+        "distratores": {
+          "A": "Erra o sinal da divisão.",
+          "B": "É o valor do segundo membro.",
+          "C": "É a magnitude da diferença antes da divisão.",
+          "D": "Corresponde a uma divisão por 2 com sinal trocado."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      },
+      "representacao": {
+        "equacao": {
+          "a": "-4",
+          "b": "18",
+          "c": "0",
+          "d": "6",
+          "dominio": "Q"
+        },
+        "solucoes": {
+          "A": {
+            "tipo": "unica",
+            "valor": "-3"
+          },
+          "B": {
+            "tipo": "unica",
+            "valor": "6"
+          },
+          "C": {
+            "tipo": "unica",
+            "valor": "12"
+          },
+          "D": {
+            "tipo": "unica",
+            "valor": "-6"
+          },
+          "E": {
+            "tipo": "unica",
+            "valor": "3"
+          }
+        }
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-08",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.2188
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.2174
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.2
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.6667
+        },
+        {
+          "ref": "epg-17",
+          "indice": 0.2059
+        },
+        {
+          "ref": "epg-10",
+          "indice": 0.1765
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-09",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-09",
+      "topicoId": "dois-membros",
+      "objetivoId": "dois-membros-01",
+      "objetivoEspecifico": "Agrupar termos da incógnita antes de isolar.",
+      "dificuldade": "media",
+      "etapa": "aplicacao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "dois-membros",
+      "nome": "Incógnitas nos dois membros",
+      "objetivoId": "dois-membros-01",
+      "objetivo": "Reunir termos da incógnita preservando equivalência.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "simples"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Qual igualdade resulta de subtrair 2x e somar 5 aos dois membros de 7x − 5 = 2x + 20?",
+      "alternativas": {
+        "A": "5x = 25",
+        "B": "9x = 25",
+        "C": "5x = 15",
+        "D": "7x = 25",
+        "E": "5x = 20"
+      },
+      "resposta_correta": "A",
+      "explicacao": {
+        "correta": "À esquerda, 7x − 2x = 5x e −5 + 5 = 0. À direita, restam 20 + 5 = 25.",
+        "distratores": {
+          "B": "Soma os coeficientes em vez de subtrair.",
+          "C": "Subtrai 5 de 20.",
+          "D": "Mantém 7x em vez de retirar 2x.",
+          "E": "Esquece de somar 5."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-09",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.1034
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1026
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:34",
+          "indice": 0.0952
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2
+        },
+        {
+          "ref": "epg-15",
+          "indice": 0.1786
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1429
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-10",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-10",
+      "topicoId": "dois-membros",
+      "objetivoId": "dois-membros-01",
+      "objetivoEspecifico": "Resolver uma equação com incógnita nos dois membros.",
+      "dificuldade": "media",
+      "etapa": "aplicacao",
+      "perfil": "avaliacao",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "avaliacao",
+      "instrucoes": "Avaliar de forma autônoma, priorizando diversidade e escopo do edital."
+    },
+    "topico": {
+      "id": "dois-membros",
+      "nome": "Incógnitas nos dois membros",
+      "objetivoId": "dois-membros-01",
+      "objetivo": "Reunir termos da incógnita preservando equivalência.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "simples"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Em 5r + 9 = 8r − 12, qual valor satisfaz a igualdade?",
+      "alternativas": {
+        "A": "−7",
+        "B": "3",
+        "C": "7",
+        "D": "21",
+        "E": "4"
+      },
+      "resposta_correta": "C",
+      "explicacao": {
+        "correta": "Subtraindo 5r e somando 12, obtemos 21 = 3r, então r = 7.",
+        "distratores": {
+          "A": "Erra o sinal.",
+          "B": "É o coeficiente 8 − 5.",
+          "D": "É a diferença das constantes antes da divisão.",
+          "E": "É obtido por uma diferença inadequada entre constantes e coeficientes."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      },
+      "representacao": {
+        "equacao": {
+          "a": "5",
+          "b": "9",
+          "c": "8",
+          "d": "-12",
+          "dominio": "Q"
+        },
+        "solucoes": {
+          "A": {
+            "tipo": "unica",
+            "valor": "-7"
+          },
+          "B": {
+            "tipo": "unica",
+            "valor": "3"
+          },
+          "C": {
+            "tipo": "unica",
+            "valor": "7"
+          },
+          "D": {
+            "tipo": "unica",
+            "valor": "21"
+          },
+          "E": {
+            "tipo": "unica",
+            "valor": "4"
+          }
+        }
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-10",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:33",
+          "indice": 0.1034
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:27",
+          "indice": 0.1
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:26",
+          "indice": 0.0909
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1765
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1765
+        },
+        {
+          "ref": "epg-04",
+          "indice": 0.1667
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-11",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-11",
+      "topicoId": "parenteses",
+      "objetivoId": "parenteses-01",
+      "objetivoEspecifico": "Aplicar distributividade antes de simplificar.",
+      "dificuldade": "media",
+      "etapa": "aplicacao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "parenteses",
+      "nome": "Equações com parênteses",
+      "objetivoId": "parenteses-01",
+      "objetivo": "Aplicar distributividade e reduzir a equação.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "simples"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        },
+        {
+          "item": 13,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        },
+        {
+          "codigo": "EF07MA16",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": true
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Ao aplicar a distributividade em 4(2x − 3) + 5 = 25 e simplificar o primeiro membro, qual forma equivalente se obtém?",
+      "alternativas": {
+        "A": "8x + 2 = 25",
+        "B": "8x − 7 = 25",
+        "C": "8x − 17 = 25",
+        "D": "6x − 7 = 25",
+        "E": "8x + 7 = 25"
+      },
+      "resposta_correta": "B",
+      "explicacao": {
+        "correta": "Distribuindo o 4, temos 8x − 12 + 5, que se reduz a 8x − 7.",
+        "distratores": {
+          "A": "Multiplica apenas o termo em x.",
+          "C": "Subtrai 5 em vez de somar.",
+          "D": "Soma os coeficientes 4 e 2 em vez de multiplicá-los.",
+          "E": "Inverte o sinal da constante final."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-11",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:30",
+          "indice": 0.2222
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:4",
+          "indice": 0.1935
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1667
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.25
+        },
+        {
+          "ref": "epg-06",
+          "indice": 0.2414
+        },
+        {
+          "ref": "epg-08",
+          "indice": 0.1538
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-12",
+    "revisao": 2,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": "A equação inicial forçava n = 1, incompatível com a restrição n − 1 > 0. Nenhuma opção atendia a todas as condições.",
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-12",
+      "topicoId": "parenteses",
+      "objetivoId": "parenteses-01",
+      "objetivoEspecifico": "Combinar distributividade e cancelamento de termos sob restrições do problema.",
+      "dificuldade": "dificil",
+      "etapa": "analise",
+      "perfil": "desafio",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Aplicar o objetivo em desafio complementar inspirado em características verificáveis da COPEVE."
+    },
+    "topico": {
+      "id": "parenteses",
+      "nome": "Equações com parênteses",
+      "objetivoId": "parenteses-01",
+      "objetivo": "Aplicar distributividade e reduzir a equação.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "simples"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        },
+        {
+          "item": 13,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        },
+        {
+          "codigo": "EF07MA16",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": true
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Uma caixa contém 44 fichas. Dois grupos serão montados: o primeiro com 3 sacos de n + 2 fichas e o segundo com 2 sacos de n − 1 fichas e mais 13 fichas soltas. Os dois grupos devem ter o mesmo total, e n − 1 deve ser positivo. Qual conclusão atende a todas as condições?",
+      "alternativas": {
+        "A": "n = 5 e sobram 2 fichas.",
+        "B": "n = 3 e sobram 5 fichas.",
+        "C": "n = 7 e sobram 3 fichas.",
+        "D": "n = 1 e sobram 6 fichas.",
+        "E": "n = 5 e não sobra ficha."
+      },
+      "resposta_correta": "A",
+      "explicacao": {
+        "correta": "Da igualdade 3(n + 2) = 2(n − 1) + 13 vem 3n + 6 = 2n + 11, logo n = 5. Cada grupo recebe 21 fichas, n − 1 = 4 e sobram 44 − 42 = 2 fichas.",
+        "distratores": {
+          "B": "Com n = 3, os grupos teriam 15 e 17 fichas.",
+          "C": "Com n = 7, os grupos teriam 27 e 25 fichas.",
+          "D": "n = 1 torna n − 1 igual a zero.",
+          "E": "Com n = 5, os grupos usam 42 das 44 fichas."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-12",
+      "revisao": 2,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1765
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:22",
+          "indice": 0.15
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:19",
+          "indice": 0.1429
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-18",
+          "indice": 0.1404
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1356
+        },
+        {
+          "ref": "epg-20",
+          "indice": 0.1273
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-13",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-13",
+      "topicoId": "fracoes",
+      "objetivoId": "fracoes-01",
+      "objetivoEspecifico": "Resolver com denominadores numéricos distintos.",
+      "dificuldade": "media",
+      "etapa": "aplicacao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "fracoes",
+      "nome": "Equações com frações",
+      "objetivoId": "fracoes-01",
+      "objetivo": "Operar com coeficientes racionais e denominadores numéricos não nulos.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "simples"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        },
+        {
+          "item": 1,
+          "relacao": "apoio"
+        },
+        {
+          "item": 2,
+          "relacao": "apoio"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "desdobramento",
+          "revisaoEspecializadaPendente": false
+        },
+        {
+          "codigo": "EF07MA12",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Qual é o valor de x em x/6 + x/4 = 5?",
+      "alternativas": {
+        "A": "6",
+        "B": "10",
+        "C": "15",
+        "D": "12",
+        "E": "20"
+      },
+      "resposta_correta": "D",
+      "explicacao": {
+        "correta": "Multiplicando por 12, obtemos 2x + 3x = 60, então x = 12.",
+        "distratores": {
+          "A": "É um dos denominadores.",
+          "B": "Resulta de somar parcelas sem usar o denominador comum.",
+          "C": "Divide 60 por 4 em vez de 5.",
+          "E": "Considera apenas a parcela x/4."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      },
+      "representacao": {
+        "equacao": {
+          "a": "5/12",
+          "b": "0",
+          "c": "0",
+          "d": "5",
+          "dominio": "Q"
+        },
+        "solucoes": {
+          "A": {
+            "tipo": "unica",
+            "valor": "6"
+          },
+          "B": {
+            "tipo": "unica",
+            "valor": "10"
+          },
+          "C": {
+            "tipo": "unica",
+            "valor": "15"
+          },
+          "D": {
+            "tipo": "unica",
+            "valor": "12"
+          },
+          "E": {
+            "tipo": "unica",
+            "valor": "20"
+          }
+        }
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-13",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.2727
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:25",
+          "indice": 0.2
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:29",
+          "indice": 0.2
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.6667
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.25
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.2353
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-14",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-14",
+      "topicoId": "casos-especiais",
+      "objetivoId": "casos-especiais-01",
+      "objetivoEspecifico": "Interpretar uma igualdade verdadeira para todo valor do domínio.",
+      "dificuldade": "media",
+      "etapa": "compreensao",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "casos-especiais",
+      "nome": "Casos especiais",
+      "objetivoId": "casos-especiais-01",
+      "objetivo": "Distinguir identidade de contradição no domínio declarado.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "dois-membros"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": true
+        },
+        {
+          "codigo": "EF06MA14",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": true
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Considerando os números reais, o que se conclui de 2(u + 4) = 2u + 8?",
+      "alternativas": {
+        "A": "Só u = 8 satisfaz.",
+        "B": "Todo valor real de u satisfaz.",
+        "C": "Nenhum valor real satisfaz.",
+        "D": "Só os valores positivos satisfazem.",
+        "E": "Só u = 0 satisfaz."
+      },
+      "resposta_correta": "B",
+      "explicacao": {
+        "correta": "A distributividade transforma o primeiro membro em 2u + 8. Os membros coincidem para todo u real.",
+        "distratores": {
+          "A": "8 é apenas a constante.",
+          "C": "A igualdade é verdadeira.",
+          "D": "O sinal de u não altera a equivalência.",
+          "E": "Zero é apenas um exemplo."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-14",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:23",
+          "indice": 0.2222
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:1",
+          "indice": 0.1905
+        },
+        {
+          "ref": "oficial:ifal-2025-t1:19",
+          "indice": 0.1852
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1364
+        },
+        {
+          "ref": "epg-16",
+          "indice": 0.1316
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-15",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-15",
+      "topicoId": "casos-especiais",
+      "objetivoId": "casos-especiais-01",
+      "objetivoEspecifico": "Justificar a ausência de solução após o cancelamento da incógnita.",
+      "dificuldade": "dificil",
+      "etapa": "analise",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "casos-especiais",
+      "nome": "Casos especiais",
+      "objetivoId": "casos-especiais-01",
+      "objetivo": "Distinguir identidade de contradição no domínio declarado.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "dois-membros"
+      ],
+      "edital": [
+        {
+          "item": 6,
+          "relacao": "desdobramento"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": true
+        },
+        {
+          "codigo": "EF06MA14",
+          "relacao": "apoio",
+          "revisaoEspecializadaPendente": true
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "No conjunto dos racionais, qual argumento classifica corretamente as soluções de 5(2x − 1) − 3(x + 4) = 7x − 16?",
+      "alternativas": {
+        "A": "Há infinitas soluções porque os termos em x se cancelam.",
+        "B": "A solução é x = 1, a diferença entre as constantes.",
+        "C": "A solução é x = 0 porque os coeficientes são iguais.",
+        "D": "Há uma solução porque os dois membros são lineares.",
+        "E": "Não há solução porque o cancelamento deixa −17 = −16."
+      },
+      "resposta_correta": "E",
+      "explicacao": {
+        "correta": "Expandindo o lado esquerdo, temos 10x − 5 − 3x − 12 = 7x − 17. Retirar 7x de ambos os lados deixa uma contradição.",
+        "distratores": {
+          "A": "O cancelamento exige analisar as constantes restantes.",
+          "B": "A diferença entre constantes não é um valor para x neste caso.",
+          "C": "Substituir zero mantém constantes diferentes.",
+          "D": "A linearidade não garante solução única quando o coeficiente efetivo é zero."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-15",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:30",
+          "indice": 0.1852
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:22",
+          "indice": 0.1231
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:19",
+          "indice": 0.122
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.2083
+        },
+        {
+          "ref": "epg-09",
+          "indice": 0.1786
+        },
+        {
+          "ref": "epg-11",
+          "indice": 0.1471
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-16",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-16",
+      "topicoId": "modelagem",
+      "objetivoId": "modelagem-01",
+      "objetivoEspecifico": "Comparar modelos algébricos para uma situação.",
+      "dificuldade": "media",
+      "etapa": "analise",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "modelagem",
+      "nome": "Modelagem matemática",
+      "objetivoId": "modelagem-01",
+      "objetivo": "Escolher a incógnita e representar relações por uma equação.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "linguagem-algebrica",
+        "simples"
+      ],
+      "edital": [
+        {
+          "item": 8,
+          "relacao": "explicita"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Uma turma separou 46 livros em duas caixas. A maior recebeu 8 a mais que o dobro da quantidade da menor. Se x for a quantidade de livros da caixa menor, qual modelo representa as duas informações?",
+      "alternativas": {
+        "A": "x + 2x + 8 = 46",
+        "B": "2(x + 8) = 46",
+        "C": "x + 2(x + 8) = 46",
+        "D": "x + (x + 8) = 46",
+        "E": "x + 2x = 46 + 8"
+      },
+      "resposta_correta": "A",
+      "explicacao": {
+        "correta": "A caixa maior tem 2x + 8 livros. Somar x e 2x + 8 dá o total de 46.",
+        "distratores": {
+          "B": "Dobra também o acréscimo e não soma a caixa menor.",
+          "C": "Dobra o acréscimo de 8.",
+          "D": "Usa x em vez de 2x na caixa maior.",
+          "E": "Acrescenta os 8 ao lado que representa o total."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-16",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.234
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:24",
+          "indice": 0.2055
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.186
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1471
+        },
+        {
+          "ref": "epg-12",
+          "indice": 0.1356
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-17",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-17",
+      "topicoId": "problemas",
+      "objetivoId": "problemas-01",
+      "objetivoEspecifico": "Interpretar a solução em sua unidade original.",
+      "dificuldade": "media",
+      "etapa": "analise",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "problemas",
+      "nome": "Problemas contextualizados",
+      "objetivoId": "problemas-01",
+      "objetivo": "Resolver e interpretar a solução considerando domínio e unidade.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "modelagem"
+      ],
+      "edital": [
+        {
+          "item": 8,
+          "relacao": "explicita"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Uma equipe instalou quatro trechos iguais de cabo e reservou 6 metros para conexões. Ao todo, usou 38 metros. A equação 4x + 6 = 38 modela o comprimento x de um trecho, em metros. O que a solução expressa?",
+      "alternativas": {
+        "A": "8 metros correspondem ao total dos quatro trechos.",
+        "B": "32 metros correspondem a um trecho.",
+        "C": "8 metros correspondem a cada trecho, e 32 aos quatro trechos juntos.",
+        "D": "9,5 metros correspondem a cada trecho, já com as conexões descontadas.",
+        "E": "6 metros correspondem a cada trecho."
+      },
+      "resposta_correta": "C",
+      "explicacao": {
+        "correta": "Retirar a reserva deixa 32 metros para quatro trechos. A solução x = 8 é medida por trecho.",
+        "distratores": {
+          "A": "8 é a medida de um trecho.",
+          "B": "32 é a soma dos quatro trechos.",
+          "D": "38/4 inclui a reserva no rateio.",
+          "E": "6 é a reserva total."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-17",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.2245
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:24",
+          "indice": 0.2045
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:5",
+          "indice": 0.1778
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.2059
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1714
+        },
+        {
+          "ref": "epg-07",
+          "indice": 0.1351
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-18",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-18",
+      "topicoId": "problemas",
+      "objetivoId": "problemas-01",
+      "objetivoEspecifico": "Avaliar se a solução algébrica respeita o domínio contextual.",
+      "dificuldade": "dificil",
+      "etapa": "analise",
+      "perfil": "aprendizagem",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Avaliar um objetivo cognitivo com explicação formativa."
+    },
+    "topico": {
+      "id": "problemas",
+      "nome": "Problemas contextualizados",
+      "objetivoId": "problemas-01",
+      "objetivo": "Resolver e interpretar a solução considerando domínio e unidade.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "modelagem"
+      ],
+      "edital": [
+        {
+          "item": 8,
+          "relacao": "explicita"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Um clube quer guardar 47 medalhas em 5 caixas, deixando exatamente 4 medalhas para exposição. Todas as caixas devem conter o mesmo número inteiro de medalhas. Qual conclusão decorre de 5x + 4 = 47?",
+      "alternativas": {
+        "A": "É possível, com 8 medalhas em cada caixa e 4 em exposição.",
+        "B": "É possível, com 9 medalhas em cada caixa e 4 em exposição.",
+        "C": "É possível, com 8,6 medalhas em cada caixa.",
+        "D": "É inviável nessas condições, pois a solução é 43/5 e não é inteira.",
+        "E": "É inviável porque a equação não tem solução racional."
+      },
+      "resposta_correta": "D",
+      "explicacao": {
+        "correta": "Sobram 43 medalhas para as caixas. Como 43 não é múltiplo de 5, a solução racional não respeita o domínio das quantidades.",
+        "distratores": {
+          "A": "5 × 8 + 4 contabiliza apenas 44 medalhas.",
+          "B": "5 × 9 + 4 exige 49 medalhas.",
+          "C": "Medalhas não podem ser repartidas em frações.",
+          "E": "A solução racional existe; ela não atende à restrição de integralidade."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-18",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:33",
+          "indice": 0.1522
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1311
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.125
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-13",
+          "indice": 0.1935
+        },
+        {
+          "ref": "epg-12",
+          "indice": 0.1404
+        },
+        {
+          "ref": "epg-15",
+          "indice": 0.122
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-19",
+    "revisao": 2,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": "A primeira versão repetia a estrutura e parte do vocabulário do epg-12. A frase inicial também sugeria quantidades diferentes, em tensão com a exigência de igualdade.",
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-19",
+      "topicoId": "problemas",
+      "objetivoId": "problemas-01",
+      "objetivoEspecifico": "Integrar restrições do contexto e conferir a resposta obtida.",
+      "dificuldade": "dificil",
+      "etapa": "analise",
+      "perfil": "desafio",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "aprendizagem",
+      "instrucoes": "Aplicar o objetivo em desafio complementar inspirado em características verificáveis da COPEVE."
+    },
+    "topico": {
+      "id": "problemas",
+      "nome": "Problemas contextualizados",
+      "objetivoId": "problemas-01",
+      "objetivo": "Resolver e interpretar a solução considerando domínio e unidade.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "modelagem"
+      ],
+      "edital": [
+        {
+          "item": 8,
+          "relacao": "explicita"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Uma cooperativa vai colocar 62 litros de suco em recipientes idênticos, com o mesmo volume inteiro x por recipiente. Reservará 8 litros para degustação. Cada recipiente comporta até 12 litros e deve receber pelo menos 8. Para usar todo o volume restante, qual plano funciona?",
+      "alternativas": {
+        "A": "Usar 4 recipientes com 13,5 litros cada.",
+        "B": "Usar 5 recipientes com 10 litros cada.",
+        "C": "Usar 6 recipientes com 9 litros cada.",
+        "D": "Usar 7 recipientes com 8 litros cada.",
+        "E": "Usar 8 recipientes com 6,75 litros cada."
+      },
+      "resposta_correta": "C",
+      "explicacao": {
+        "correta": "Há 54 litros após a reserva. Com 6 recipientes, 6x = 54 dá x = 9, inteiro entre 8 e 12. O total usa os 54 litros.",
+        "distratores": {
+          "A": "O volume ultrapassa a capacidade e não é inteiro.",
+          "B": "Usa 50 litros e deixa 4 sem destino.",
+          "D": "Usa 56 litros, acima do disponível.",
+          "E": "O volume não é inteiro e fica abaixo de 8."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-19",
+      "revisao": 2,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2025-t1:40",
+          "indice": 0.1324
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:25",
+          "indice": 0.1167
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:34",
+          "indice": 0.1136
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1429
+        },
+        {
+          "ref": "epg-03",
+          "indice": 0.1356
+        }
+      ]
+    }
+  },
+  {
+    "formatoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-20",
+    "revisao": 1,
+    "verificacoes": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ],
+    "resolucaoIndependente": null,
+    "revisaoHumana": null,
+    "correcao": null,
+    "metricas": {
+      "custoDiretoCentavos": null,
+      "tempoRevisaoSegundos": null
+    },
+    "estadoEditorial": "aguardando_revisao",
+    "posicao": {
+      "id": "epg-20",
+      "topicoId": "problemas",
+      "objetivoId": "problemas-01",
+      "objetivoEspecifico": "Resolver e interpretar uma situação inédita em uma incógnita.",
+      "dificuldade": "media",
+      "etapa": "aplicacao",
+      "perfil": "avaliacao",
+      "perfilVersao": 1
+    },
+    "perfil": {
+      "versao": 1,
+      "finalidade": "avaliacao",
+      "instrucoes": "Avaliar de forma autônoma, priorizando diversidade e escopo do edital."
+    },
+    "topico": {
+      "id": "problemas",
+      "nome": "Problemas contextualizados",
+      "objetivoId": "problemas-01",
+      "objetivo": "Resolver e interpretar a solução considerando domínio e unidade.",
+      "anoIntroducao": 7,
+      "anosRelacionados": [
+        8,
+        9
+      ],
+      "preRequisitos": [
+        "modelagem"
+      ],
+      "edital": [
+        {
+          "item": 8,
+          "relacao": "explicita"
+        }
+      ],
+      "bncc": [
+        {
+          "codigo": "EF07MA18",
+          "relacao": "explicita",
+          "revisaoEspecializadaPendente": false
+        }
+      ]
+    },
+    "fontes": {
+      "edital": {
+        "versao": "IFAL-44-2026-2026-11-10",
+        "pagina": 18,
+        "itens": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          12,
+          13
+        ]
+      },
+      "bncc": {
+        "versao": "MEC-EI-EF-2018-05-11",
+        "habilidades": {
+          "EF06MA14": 303,
+          "EF07MA12": 307,
+          "EF07MA13": 307,
+          "EF07MA16": 307,
+          "EF07MA18": 307
+        }
+      }
+    },
+    "materialParaConferirAposResolver": {
+      "enunciado": "Uma oficina cobrou 24 reais pela preparação de um serviço, mais o mesmo valor por cada uma de sete peças. O total foi 101 reais. Qual foi o valor cobrado por peça?",
+      "alternativas": {
+        "A": "R$ 7",
+        "B": "R$ 14",
+        "C": "R$ 17",
+        "D": "R$ 77",
+        "E": "R$ 11"
+      },
+      "resposta_correta": "E",
+      "explicacao": {
+        "correta": "O valor das peças soma 101 − 24 = 77 reais. Dividir por 7 dá 11 reais por peça.",
+        "distratores": {
+          "A": "7 é a quantidade de peças.",
+          "B": "Esse preço daria um total de 122 reais.",
+          "C": "Esse preço daria um total de 143 reais.",
+          "D": "77 é o preço de todas as peças juntas."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      },
+      "representacao": {
+        "equacao": {
+          "a": "7",
+          "b": "24",
+          "c": "0",
+          "d": "101",
+          "dominio": "Q"
+        },
+        "solucoes": {
+          "A": {
+            "tipo": "unica",
+            "valor": "7"
+          },
+          "B": {
+            "tipo": "unica",
+            "valor": "14"
+          },
+          "C": {
+            "tipo": "unica",
+            "valor": "17"
+          },
+          "D": {
+            "tipo": "unica",
+            "valor": "77"
+          },
+          "E": {
+            "tipo": "unica",
+            "valor": "11"
+          }
+        }
+      }
+    },
+    "triagem": {
+      "posicaoId": "epg-20",
+      "revisao": 1,
+      "oficiais": [
+        {
+          "ref": "oficial:ifal-2024-t3:27",
+          "indice": 0.1379
+        },
+        {
+          "ref": "oficial:ifal-2026-t1:20",
+          "indice": 0.1351
+        },
+        {
+          "ref": "oficial:ifal-2024-t3:3",
+          "indice": 0.122
+        }
+      ],
+      "lote": [
+        {
+          "ref": "epg-08",
+          "indice": 0.1333
+        },
+        {
+          "ref": "epg-13",
+          "indice": 0.1333
+        },
+        {
+          "ref": "epg-03",
+          "indice": 0.1277
+        }
+      ]
+    }
+  }
+]

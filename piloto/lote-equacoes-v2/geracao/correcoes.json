@@ -1,0 +1,160 @@
+[
+  {
+    "posicaoId": "epg-12",
+    "revisaoAnterior": 1,
+    "tentativa": 1,
+    "motivo": "A equação inicial forçava n = 1, incompatível com a restrição n − 1 > 0. Nenhuma opção atendia a todas as condições.",
+    "item": {
+      "contratoVersao": 1,
+      "loteId": "equacoes-primeiro-grau",
+      "loteVersao": 2,
+      "posicaoId": "epg-12",
+      "revisao": 2,
+      "catalogoVersao": 2,
+      "perfilVersao": 1,
+      "objetivoId": "parenteses-01",
+      "disciplina": "Matemática",
+      "assunto_id": "m_equacoes1",
+      "topico_id": "parenteses",
+      "etapa": "analise",
+      "dificuldade": "dificil",
+      "finalidade": "aprendizagem",
+      "desafio_copeve": true,
+      "enunciado": "Uma caixa contém 44 fichas. Dois grupos serão montados: o primeiro com 3 sacos de n + 2 fichas e o segundo com 2 sacos de n − 1 fichas e mais 13 fichas soltas. Os dois grupos devem ter o mesmo total, e n − 1 deve ser positivo. Qual conclusão atende a todas as condições?",
+      "alternativas": {
+        "A": "n = 5 e sobram 2 fichas.",
+        "B": "n = 3 e sobram 5 fichas.",
+        "C": "n = 7 e sobram 3 fichas.",
+        "D": "n = 1 e sobram 6 fichas.",
+        "E": "n = 5 e não sobra ficha."
+      },
+      "resposta_correta": "A",
+      "explicacao": {
+        "correta": "Da igualdade 3(n + 2) = 2(n − 1) + 13 vem 3n + 6 = 2n + 11, logo n = 5. Cada grupo recebe 21 fichas, n − 1 = 4 e sobram 44 − 42 = 2 fichas.",
+        "distratores": {
+          "B": "Com n = 3, os grupos teriam 15 e 17 fichas.",
+          "C": "Com n = 7, os grupos teriam 27 e 25 fichas.",
+          "D": "n = 1 torna n − 1 igual a zero.",
+          "E": "Com n = 5, os grupos usam 42 das 44 fichas."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "revalidacao": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ]
+  },
+  {
+    "posicaoId": "epg-19",
+    "revisaoAnterior": 1,
+    "tentativa": 1,
+    "motivo": "A primeira versão repetia a estrutura e parte do vocabulário do epg-12. A frase inicial também sugeria quantidades diferentes, em tensão com a exigência de igualdade.",
+    "item": {
+      "contratoVersao": 1,
+      "loteId": "equacoes-primeiro-grau",
+      "loteVersao": 2,
+      "posicaoId": "epg-19",
+      "revisao": 2,
+      "catalogoVersao": 2,
+      "perfilVersao": 1,
+      "objetivoId": "problemas-01",
+      "disciplina": "Matemática",
+      "assunto_id": "m_equacoes1",
+      "topico_id": "problemas",
+      "etapa": "analise",
+      "dificuldade": "dificil",
+      "finalidade": "aprendizagem",
+      "desafio_copeve": true,
+      "enunciado": "Uma cooperativa vai colocar 62 litros de suco em recipientes idênticos, com o mesmo volume inteiro x por recipiente. Reservará 8 litros para degustação. Cada recipiente comporta até 12 litros e deve receber pelo menos 8. Para usar todo o volume restante, qual plano funciona?",
+      "alternativas": {
+        "A": "Usar 4 recipientes com 13,5 litros cada.",
+        "B": "Usar 5 recipientes com 10 litros cada.",
+        "C": "Usar 6 recipientes com 9 litros cada.",
+        "D": "Usar 7 recipientes com 8 litros cada.",
+        "E": "Usar 8 recipientes com 6,75 litros cada."
+      },
+      "resposta_correta": "C",
+      "explicacao": {
+        "correta": "Há 54 litros após a reserva. Com 6 recipientes, 6x = 54 dá x = 9, inteiro entre 8 e 12. O total usa os 54 litros.",
+        "distratores": {
+          "A": "O volume ultrapassa a capacidade e não é inteiro.",
+          "B": "Usa 50 litros e deixa 4 sem destino.",
+          "D": "Usa 56 litros, acima do disponível.",
+          "E": "O volume não é inteiro e fica abaixo de 8."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-experimental-1",
+        "geradoEm": "2026-11-25T18:42:06.517Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ]
+      }
+    },
+    "revalidacao": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ]
+  }
+]

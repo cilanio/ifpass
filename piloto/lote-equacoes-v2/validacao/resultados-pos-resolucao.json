@@ -1,0 +1,621 @@
+{
+  "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451",
+  "cobertura": {
+    "nome": "cobertura",
+    "status": "aprovada",
+    "erros": []
+  },
+  "duplicidade": {
+    "nome": "duplicidade-exata",
+    "status": "aprovada",
+    "erros": []
+  },
+  "oficiaisComparadas": 120,
+  "comparacaoComOficiais": "executada",
+  "similaridade": {
+    "status": "pendente",
+    "motivo": "Triagem de paráfrases e diversidade pedagógica"
+  },
+  "itens": [
+    {
+      "posicaoId": "epg-01",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-02",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-03",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-04",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-05",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-06",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-07",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-08",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-09",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-10",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-11",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-12",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-13",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-14",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-15",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-16",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-17",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-18",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-19",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "pendente",
+          "motivo": "Sem representação linear aplicável"
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    },
+    {
+      "posicaoId": "epg-20",
+      "verificacoes": [
+        {
+          "nome": "estrutura",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "curriculo",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "matematica-exata",
+          "status": "aprovada",
+          "erros": []
+        },
+        {
+          "nome": "fidelidade-ao-enunciado",
+          "status": "pendente",
+          "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+        },
+        {
+          "nome": "qualidade-pedagogica",
+          "status": "pendente",
+          "motivo": "Aplicar a matriz e obter revisão humana"
+        }
+      ]
+    }
+  ]
+}

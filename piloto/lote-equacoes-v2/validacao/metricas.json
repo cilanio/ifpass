@@ -1,0 +1,20 @@
+{
+  "posicoes": 20,
+  "originais": 20,
+  "revisoes": 5,
+  "maximoTentativasObservado": 1,
+  "protocolosIndependentesPreparados": 23,
+  "resolucoesIndependentesExecutadas": 20,
+  "revisoesHumanasExecutadas": 0,
+  "questoesPublicadas": 0,
+  "oficiaisComparadas": 120,
+  "paresInternosPorRodada": 190,
+  "custoDiretoAPIsContratadasCentavos": 0,
+  "custoTotalCentavos": null,
+  "tempoRevisaoHumanaSegundos": null,
+  "custoPorQuestaoAprovada": null,
+  "tokensGeracao": null,
+  "resolucoesIndependentesVigentes": 17,
+  "resolucoesIndependentesPendentes": 3,
+  "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451"
+}

@@ -97,7 +97,7 @@ Foco: diagnóstico relata até três assuntos abaixo de 100%, mínimo de cinco r
 
 ## 8. Questões autorais — roteiro aprovado
 
-1. Definir modelo comum para Questao.jsx, mantendo adaptadores das oficiais.
+1. Etapa 7.1: modelo comum e adaptadores documentados em [MODELO_QUESTAO.md](MODELO_QUESTAO.md). O treino e os simulados continuam usando o catálogo oficial.
 2. Planejar questoes_ia e extensões de treino_sessoes/treino_respostas, preservando registros antigos; confirmar schema real primeiro.
 3. Integrar ao mesmo fluxo de treino com identificação de origem; simulados oficiais intactos.
 4. Definir geração, saída estruturada, validação independente, revisão humana e armazenamento; sem publicação automática.

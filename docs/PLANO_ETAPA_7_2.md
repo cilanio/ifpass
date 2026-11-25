@@ -56,3 +56,15 @@ Execute o [diagnóstico somente leitura](../supabase/verificacoes/diagnostico-et
 A verificação de TRUNCATE já confirmada em produção, as cascatas existentes e os testes locais de RLS da etapa 6.7 ficam fora deste diagnóstico. As consultas de ACL focam o conteúdo autoral, a gestão de perfis e o caminho de escrita de respostas, cuja configuração real condiciona as mudanças desta etapa.
 
 As contagens de preflight podem exigir leitura das tabelas de questões e respostas. A execução depende de acesso administrativo de leitura e suporta catálogos em que as colunas autorais ainda estejam ausentes. O único SELECT retorna uma linha com a coluna JSON `diagnostico`. No SQL Editor, copie o objeto completo, incluindo `preflight`. Blocos sem as estruturas esperadas retornam um objeto com a chave `indisponivel`. Aguarde esses resultados antes de redigir as migrações definitivas.
+
+## Resultado do diagnóstico no Supabase real
+
+O resultado compartilhado contém os oito blocos esperados, incluindo as quatro verificações de preflight.
+
+- `questoes_ia` existe com RLS habilitada, chave primária validada `(id, versao)` e zero versões. O catálogo retornado não lista políticas para essa tabela nem privilégios de tabela ou coluna para `anon` e `authenticated`.
+- `treino_respostas` contém 18 registros legados com `prova_id` e `n`, zero respostas autorais e zero referências sem origem. A FK validada de sessão e usuário já existe. As colunas tipadas da questão e o vínculo com a versão ainda precisam ser definidos. Nenhum registro retornado pelo diagnóstico exige conversão para o formato autoral.
+- A consulta não encontrou as tabelas propostas de equipe, disciplinas de revisores, revisões e itens atribuídos. O filtro de buckets candidatos retornou vazio. Esses resultados se limitam aos nomes e ao filtro consultados.
+- Em `profiles`, `authenticated` não tem UPDATE no nível de tabela, mas tem UPDATE em pelo menos uma coluna. A coluna `papel` não é atualizável por esse papel. O diagnóstico não individualizou as demais colunas. Os grants efetivos de `anon` devem ser interpretados junto com RLS.
+- O catálogo informa EXECUTE em `handle_new_user()` para os dois papéis. A função é de trigger. Esse resultado não demonstra invocação pela API nem atribuição de privilégios.
+
+Esses resultados sustentam uma migração aditiva que mantenha os 18 registros oficiais e as políticas existentes enquanto introduz referências, revisão e atribuições protegidas. A validação funcional de Auth, PostgREST e Storage continua pendente.

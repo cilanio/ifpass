@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from './lib/supabase'
 import Login from './Login'
-import Home from './Home'
+import AreaAutenticada from './AreaAutenticada'
 
 export default function App() {
   const [sessao, setSessao] = useState(undefined)
@@ -13,5 +13,5 @@ export default function App() {
   }, [])
 
   if (sessao === undefined) return <p>Carregando...</p>
-  return sessao ? <Home usuario={sessao.user} /> : <Login />
+  return sessao ? <AreaAutenticada key={sessao.user.id} usuario={sessao.user} /> : <Login />
 }

@@ -6,6 +6,7 @@ As migrações seguem o [plano aprovado e o diagnóstico do banco real](https://
 | --- | --- |
 | [Estrutura](migrations/20261125120000_estrutura_revisao_autoral.sql) | Adiciona atribuições de equipe, disciplina, histórico de permissões, decisões versionadas e itens de treino. Adiciona UUID, versão e item opcionais ao histórico, com FKs compostas, unicidade e restrições de coerência. |
 | [Operações](migrations/20261125120100_operacoes_revisao_e_treino_autoral.sql) | Delimita a leitura por RLS, protege atribuições, registra decisões e oferece operações controladas de submissão, atribuição e resposta autoral. |
+| [Bloqueio provisório de imagem](migrations/20261125120200_bloqueia_aprovacao_imagem_privada.sql) | Impede novas aprovações de versões com imagem até a visualização privada estar disponível. Solicitação de correção e rejeição continuam permitidas. |
 
 A referência oficial continua `oficial:<prova_id>:<n>`. As linhas legadas mantêm `prova_id`, `n` e os campos históricos. Para respostas autorais, a referência `ia:<uuid>:<versao>` acompanha as colunas tipadas, e a FK do item vincula sessão, dono e versão. Uma repetição com a mesma alternativa retorna a resposta gravada. Uma escolha diferente para o mesmo item é recusada.
 
@@ -21,10 +22,10 @@ A referência oficial continua `oficial:<prova_id>:<n>`. As linhas legadas mant�
 ## Procedimento de implantação
 
 1. Confirme que as condições do diagnóstico se conservam, em especial ausência de respostas autorais e de versões aprovadas ou em revisão antes desta implantação. Se houver divergência, reavalie a migração e o histórico antes de executar.
-2. Faça backup e valide em ambiente Supabase isolado com Auth e PostgREST. Aplique as duas migrações em ordem, com a identidade administrativa usada para migrations e com controle transacional por arquivo. Confira o proprietário das rotinas `SECURITY DEFINER` e o conjunto efetivo de privilégios e políticas. Os testes locais usam claims sintéticas e PostgreSQL 17.
+2. Faça backup e valide em ambiente Supabase isolado com Auth e PostgREST. Aplique as três migrações em ordem, com a identidade administrativa usada para migrations e com controle transacional por arquivo. Confira o proprietário das rotinas `SECURITY DEFINER` e o conjunto efetivo de privilégios e políticas. Os testes locais usam claims sintéticas e PostgreSQL 17.
 3. Depois da aprovação de implantação, o operador do Supabase deve provisionar manualmente o primeiro administrador. Confirme a ausência de administrador ativo antes do provisionamento inicial. Use uma conta dedicada à equipe, confirme o UUID no Auth pelo painel administrativo e verifique que essa conta carece de histórico de aluno. Em uma transação administrativa, insira uma única atribuição ativa em `public.papeis_equipe` com `usuario_id` e `alterado_por` iguais ao UUID verificado e `papel = 'administrador'`. Registre a operação na trilha administrativa de implantação. Confira por leitura que há exatamente a atribuição esperada e mantenha as credenciais em canal privado. O cadastro público continua sem atribuir funções de equipe.
 4. Depois do provisionamento inicial, gerencie atribuições com `ifpass_gerir_equipe` sob a identidade de outro administrador ativo. Verifique qualificação antes de autorizar a disciplina de um revisor. Use contas distintas para equipe e aprendizagem.
-5. Preserve o snapshot até confirmar a aplicação real. Se a primeira migração passar e a segunda falhar, mantenha o fluxo autoral fora de uso e avalie a recuperação com a cópia de segurança. A reversão após entrada de dados precisa preservar versões, decisões e respostas.
+5. Preserve o snapshot até confirmar a aplicação real. Se a sequência de migrações falhar após aplicação parcial, mantenha o fluxo autoral fora de uso e avalie a recuperação com a cópia de segurança. A reversão após entrada de dados precisa preservar versões, decisões e respostas.
 
 ## Testes descartáveis
 
@@ -34,7 +35,7 @@ Ordem dos arquivos
 
 1. `supabase/schema.sql`
 2. `supabase/tests/etapa-7-2-fixture.sql` para registrar as 18 respostas históricas sintéticas antes das alterações
-3. As duas migrações da tabela acima
+3. As três migrações da tabela acima
 4. `supabase/tests/etapa-7-2.sql` com `-v ifpass_ambiente_descartavel=1`
 5. `supabase/tests/etapa-7-2-concorrencia.sql` com o mesmo parâmetro e a extensão `dblink` disponível. Esse teste abre duas conexões locais e grava sua própria fixture no contêiner descartável
 

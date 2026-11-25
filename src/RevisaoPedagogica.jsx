@@ -44,6 +44,8 @@ const QUALITATIVOS = {
   compatibilidade_copeve: 'Compatibilidade com características observáveis da COPEVE',
   qualidade_explicacao: 'Qualidade da explicação',
 }
+const CHAVES_CRITERIOS = [...Object.keys(ELIMINATORIOS), ...Object.keys(QUALITATIVOS)]
+const REGRA_APROVACAO = 'Para aprovar, marque os oito critérios eliminatórios como ausentes e os sete qualitativos como adequados.'
 const CAMPOS_QUESTAO = [
   'id', 'versao', 'disciplina', 'assunto_id', 'topico_id', 'etapa', 'habilidade_principal',
   'habilidades_secundarias', 'dificuldade', 'titulo_texto', 'texto', 'enunciado', 'imagem',
@@ -173,6 +175,8 @@ function Detalhe({ selecionada, papel, onVoltar }) {
   const [salvando, setSalvando] = useState(false)
   const { id, versao } = selecionada
   const imagemPendente = Boolean(resultado?.questao?.imagem?.trim())
+  const checklistAprovavel = Object.keys(ELIMINATORIOS).every(chave => valores[chave] === 'false')
+    && Object.keys(QUALITATIVOS).every(chave => valores[chave] === 'true')
 
   useEffect(() => {
     let atual = true
@@ -203,9 +207,8 @@ function Detalhe({ selecionada, papel, onVoltar }) {
   async function decidir(e) {
     e.preventDefault()
     const decisao = e.nativeEvent.submitter?.value
-    const chaves = [...Object.keys(ELIMINATORIOS), ...Object.keys(QUALITATIVOS)]
-    if (decisao === 'aprovada' && imagemPendente) return
-    if (!Object.hasOwn(DECISOES, decisao) || enviando.current || chaves.some(chave => !valores[chave])) return
+    if (decisao === 'aprovada' && (imagemPendente || !checklistAprovavel)) return
+    if (!Object.hasOwn(DECISOES, decisao) || enviando.current || CHAVES_CRITERIOS.some(chave => !valores[chave])) return
 
     enviando.current = true
     setSalvando(true)
@@ -213,7 +216,7 @@ function Detalhe({ selecionada, papel, onVoltar }) {
     try {
       const { error } = await supabase.rpc('ifpass_revisar_questao', {
         p_id: id, p_versao: versao, p_decisao: decisao, p_checklist_versao: CHECKLIST_VERSAO,
-        p_criterios: Object.fromEntries(chaves.map(chave => [chave, valores[chave] === 'true'])),
+        p_criterios: Object.fromEntries(CHAVES_CRITERIOS.map(chave => [chave, valores[chave] === 'true'])),
         p_observacoes: observacoes.trim(),
       })
       if (error) throw error
@@ -222,7 +225,9 @@ function Detalhe({ selecionada, papel, onVoltar }) {
     } catch (erro) {
       const conflito = erro?.code === '23514'
         && ['Versão fora da fila de revisão', 'Já existe uma versão aprovada mais recente'].includes(erro.message)
-      if (conflito || erroPermissao(erro)) {
+      if (erro?.code === '23514' && erro.message?.includes('revisoes_questoes_checklist_aprovacao_check')) {
+        setMensagem({ erro: true, texto: REGRA_APROVACAO })
+      } else if (conflito || erroPermissao(erro)) {
         setMensagem({ erro: true, texto: conflito
           ? 'A situação da questão mudou. A versão foi atualizada para consulta.'
           : 'Sua conta não tem permissão para registrar esta decisão.' })
@@ -275,6 +280,7 @@ function Detalhe({ selecionada, papel, onVoltar }) {
           {podeDecidir && (
             <form className="secao" onSubmit={decidir}>
               <h2>Checklist v{CHECKLIST_VERSAO}</h2>
+              <p className="dica">{REGRA_APROVACAO}</p>
               <fieldset disabled={salvando} className="revisao-formulario">
                 <Criterios titulo="Critérios eliminatórios" campos={ELIMINATORIOS} valores={valores}
                   onAlterar={(id, valor) => setValores(v => ({ ...v, [id]: valor }))} eliminatorio />
@@ -284,7 +290,7 @@ function Detalhe({ selecionada, papel, onVoltar }) {
                 <div className="linha">
                   {Object.entries(DECISOES).map(([id, rotulo]) => (
                     <button key={id} type="submit" className="pequeno" value={id}
-                      disabled={id === 'aprovada' && imagemPendente}>{rotulo}</button>
+                      disabled={id === 'aprovada' && (imagemPendente || !checklistAprovavel)}>{rotulo}</button>
                   ))}
                 </div>
               </fieldset>

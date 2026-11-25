@@ -77,7 +77,7 @@ function preencherChecklist() {
   expect(eliminatorios).toHaveLength(8)
   expect(qualitativos).toHaveLength(7)
   eliminatorios.forEach(campo => fireEvent.change(campo, { target: { value: 'false' } }))
-  qualitativos.forEach((campo, i) => fireEvent.change(campo, { target: { value: i ? 'true' : 'false' } }))
+  qualitativos.forEach(campo => fireEvent.change(campo, { target: { value: 'true' } }))
 }
 
 it.each([
@@ -148,7 +148,7 @@ it.each([
       gabarito_incorreto: false, alternativa_correta_nao_unica: false,
       erro_conceitual_ou_matematico: false, ambiguidade: false, informacoes_insuficientes: false,
       fora_do_edital_sem_justificativa: false, explicacao_incompativel: false, reproducao_indevida: false,
-      fidelidade_edital: false, correcao_cientifica_matematica_linguistica: true, clareza_precisao: true,
+      fidelidade_edital: true, correcao_cientifica_matematica_linguistica: true, clareza_precisao: true,
       qualidade_alternativas: true, adequacao_dificuldade: true, compatibilidade_copeve: true, qualidade_explicacao: true,
     },
   })
@@ -211,6 +211,26 @@ it('bloqueia aprovação com imagem privada e permite solicitar correção', asy
   expect(db.rpc).not.toHaveBeenCalled()
 
   db.questao.mockResolvedValue({ data: { ...comImagem, status: 'rascunho' } })
+  await interacao.click(screen.getByRole('button', { name: 'Solicitar correção' }))
+  await screen.findByText('Decisão registrada.')
+  expect(db.rpc).toHaveBeenCalledExactlyOnceWith('ifpass_revisar_questao',
+    expect.objectContaining({ p_decisao: 'correcao_solicitada' }))
+})
+
+
+it.each([
+  ['Gabarito incorreto', 'true'],
+  ['Fidelidade ao edital', 'false'],
+])('impede aprovação com avaliação impeditiva em %s e permite solicitar correção', async (criterio, valor) => {
+  const interacao = await abrirDetalhe()
+  preencherChecklist()
+  fireEvent.change(screen.getByLabelText(criterio), { target: { value: valor } })
+  const aprovar = screen.getByRole('button', { name: 'Aprovar' })
+  expect(aprovar.disabled).toBe(true)
+  await interacao.click(aprovar)
+  expect(db.rpc).not.toHaveBeenCalled()
+
+  db.questao.mockResolvedValue({ data: { ...questao, status: 'rascunho' } })
   await interacao.click(screen.getByRole('button', { name: 'Solicitar correção' }))
   await screen.findByText('Decisão registrada.')
   expect(db.rpc).toHaveBeenCalledExactlyOnceWith('ifpass_revisar_questao',

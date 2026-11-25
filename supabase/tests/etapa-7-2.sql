@@ -116,7 +116,7 @@ SELECT pg_temp.negado(
   $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,'{}')$$,
   '23514','checklist incompleto não aprova');
 
-\set checklist '{"gabarito_incorreto":false,"alternativa_correta_nao_unica":false,"erro_conceitual_ou_matematico":false,"ambiguidade":false,"informacoes_insuficientes":false,"fora_do_edital_sem_justificativa":false,"explicacao_incompativel":false,"reproducao_indevida":false,"fidelidade_edital":true,"correcao_cientifica_matematica_linguistica":true,"clareza_precisao":true,"qualidade_alternativas":true,"adequacao_dificuldade":true,"compatibilidade_copeve":false,"qualidade_explicacao":true}'
+\set checklist '{"gabarito_incorreto":false,"alternativa_correta_nao_unica":false,"erro_conceitual_ou_matematico":false,"ambiguidade":false,"informacoes_insuficientes":false,"fora_do_edital_sem_justificativa":false,"explicacao_incompativel":false,"reproducao_indevida":false,"fidelidade_edital":true,"correcao_cientifica_matematica_linguistica":true,"clareza_precisao":true,"qualidade_alternativas":true,"adequacao_dificuldade":true,"compatibilidade_copeve":true,"qualidade_explicacao":true}'
 SELECT set_config('ifpass.checklist', :'checklist', true);
 SELECT pg_temp.negado(
   $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,
@@ -126,6 +126,16 @@ SELECT pg_temp.negado(
   $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,
     current_setting('ifpass.checklist')::jsonb || '{"gabarito_incorreto":true}')$$,
   '23514','critério eliminatório impede aprovação');
+SELECT pg_temp.negado(
+  $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,
+    current_setting('ifpass.checklist')::jsonb || '{"compatibilidade_copeve":false}')$$,
+  '23514','critério qualitativo inadequado impede aprovação no servidor');
+SELECT pg_temp.conferir(
+  (SELECT status='em_revisao' FROM public.questoes_ia
+    WHERE id='00000000-0000-4000-8000-000000000101' AND versao=1)
+  AND NOT EXISTS (SELECT FROM public.revisoes_questoes
+    WHERE questao_id='00000000-0000-4000-8000-000000000101'),
+  'aprovação bloqueada pelo checklist não muda estado nem histórico');
 SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000101',1,'aprovada',1,:'checklist');
 SELECT pg_temp.negado(
   $$SELECT public.ifpass_revisar_questao('00000000-0000-4000-8000-000000000103',1,'aprovada',1,
@@ -146,9 +156,9 @@ SELECT pg_temp.conferir(
   'trilha registra revisor, checklist, observação e as três decisões');
 SELECT pg_temp.conferir(
   EXISTS (SELECT FROM public.revisoes_questoes WHERE decisao='aprovada'
-    AND criterios -> 'compatibilidade_copeve' = 'false'::jsonb
+    AND criterios -> 'compatibilidade_copeve' = 'true'::jsonb
     AND criterios -> 'qualidade_explicacao' = 'true'::jsonb),
-  'avaliação pedagógica registrada sem pontuação ou bloqueio adicional');
+  'aprovação registra adequação qualitativa sem pontuação');
 
 SET LOCAL request.jwt.claims = '{"sub":"00000000-0000-4000-8000-000000000003"}';
 SELECT public.ifpass_submeter_questao('00000000-0000-4000-8000-000000000101',2);

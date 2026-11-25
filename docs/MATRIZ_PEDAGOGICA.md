@@ -63,6 +63,16 @@ Questões conceituais e de definições básicas são necessárias na construç�
 
 Dificuldade (fácil, média, difícil) é independente do objetivo cognitivo. Uma questão conceitual também poderá ser difícil. Todas as combinações são válidas; contextualização não é condição de qualidade. Preservar habilidades de compreensão, aplicação, análise, síntese e avaliação referidas no edital, sem presumir que a taxonomia interna reproduz integralmente sua redação. Evitar um banco composto apenas por definições ou apenas por problemas complexos.
 
+| Cobertura provisória do acervo de aprendizagem | Mínimo de questões |
+|---|---:|
+| Fundamentos | 5 |
+| Compreensão | 5 |
+| Aplicação | 3 |
+| Análise | 3 |
+| Desafio no padrão COPEVE | 1 |
+
+O Desafio no padrão COPEVE é uma modalidade complementar. Suas questões mantêm a etapa cognitiva e a dificuldade próprias. Os mínimos informam o diagnóstico de cobertura e permitem ofertar rodadas menores. A rodada tem 10 questões por padrão. Os limites são configuráveis por etapa e serão extensíveis por tópico. Avaliar suficiência também pela cobertura curricular e pela diversidade dos itens. A etapa 7.4 estabelecerá os valores definitivos e detalhará os critérios. Após a transição, a falta de autorais elegíveis reduz a oferta de treino, mantendo as questões oficiais reservadas aos simulados.
+
 ## 6. Metadados — proposta técnica
 
 Identificador próprio, origem oficial/autoral, versão do edital, disciplina, assunto, subassunto, habilidade, objetivo cognitivo, dificuldade estimada, enunciado, cinco alternativas, gabarito único, explicação fundamentada, justificativa dos distratores, fontes quando aplicáveis, estado de validação. Nomes e tipos definitivos dependem do modelo comum e schema aprovado. Rastrear geração e revisão. Não publicar automaticamente. Questões autorais devem ser originais e nunca apresentadas como oficiais.

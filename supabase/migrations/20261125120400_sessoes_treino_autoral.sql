@@ -18,7 +18,7 @@ CREATE UNIQUE INDEX treino_autoral_aberto_por_aluno
 CREATE TABLE public.treino_configuracao_autoral (
   etapa text PRIMARY KEY CHECK (etapa IN ('fundamentos','compreensao','aplicacao','analise','desafio_copeve')),
   minimo integer NOT NULL CHECK (minimo > 0),
-  tamanho integer NOT NULL DEFAULT 10 CHECK (tamanho > 0),
+  tamanho integer NOT NULL DEFAULT 10 CHECK (tamanho >= minimo),
   habilitado boolean NOT NULL DEFAULT false
 );
 ALTER TABLE public.treino_configuracao_autoral ENABLE ROW LEVEL SECURITY;
@@ -148,9 +148,10 @@ BEGIN
     VALUES (ator,p_assunto,true,1,jsonb_build_object('etapa',p_etapa,'tamanho',configuracao.tamanho))
     RETURNING id INTO sessao;
   quantidade := public.ifpass_treino_selecionar(sessao,configuracao.tamanho,1);
-  IF quantidade = 0 THEN
+  IF quantidade < configuracao.minimo THEN
     DELETE FROM public.treino_sessoes WHERE id = sessao;
-    RETURN jsonb_build_object('status','sem_questoes');
+    RETURN jsonb_build_object('status','questoes_insuficientes',
+      'disponiveis',quantidade,'minimo',configuracao.minimo);
   END IF;
   UPDATE public.treino_sessoes SET filtros = filtros || jsonb_build_object('total_inicial',quantidade)
     WHERE id = sessao;
@@ -229,7 +230,7 @@ BEGIN
         SELECT count(*), count(*) FILTER (WHERE r.acertou)
         FROM public.treino_itens_autorais i
         JOIN public.questoes_ia q ON (q.id,q.versao) = (i.questao_id,i.questao_versao)
-        LEFT JOIN public.treino_respostas r ON r.item_id = i.id
+        JOIN public.treino_respostas r ON r.item_id = i.id
         WHERE i.sessao_id = p_sessao AND q.motivo_inativacao IS DISTINCT FROM 'erro')
       WHERE id = p_sessao;
   END IF;
@@ -289,7 +290,7 @@ REVOKE ALL ON FUNCTION public.ifpass_treino_objeto_imagem(uuid,uuid)
   FROM PUBLIC, anon, authenticated, service_role;
 GRANT EXECUTE ON FUNCTION public.ifpass_treino_objeto_imagem(uuid,uuid) TO service_role;
 
--- Preserva a RPC anterior em sessões legadas. A composição nova é exclusiva do servidor.
+-- A RPC legada só recupera itens de aprendizagem já atribuídos.
 ALTER FUNCTION public.ifpass_atribuir_autoral(uuid,uuid) RENAME TO ifpass_atribuir_autoral_legado;
 REVOKE ALL ON FUNCTION public.ifpass_atribuir_autoral_legado(uuid,uuid) FROM authenticated;
 CREATE FUNCTION public.ifpass_atribuir_autoral(p_sessao uuid, p_questao uuid) RETURNS jsonb
@@ -298,7 +299,12 @@ AS $$
 DECLARE
   ator uuid := public.ifpass_treino_aluno();
 BEGIN
-  PERFORM 1 FROM public.treino_sessoes WHERE id = p_sessao AND user_id = ator AND NOT autoral;
+  PERFORM 1 FROM public.treino_sessoes s
+  JOIN public.treino_itens_autorais i ON (i.user_id,i.sessao_id) = (s.user_id,s.id)
+  JOIN public.questoes_ia q ON (q.id,q.versao) = (i.questao_id,i.questao_versao)
+  WHERE s.id = p_sessao AND s.user_id = ator AND NOT s.autoral
+    AND s.status = 'em_andamento' AND i.questao_id = p_questao
+    AND q.finalidade = 'aprendizagem' FOR UPDATE OF s FOR SHARE OF i;
   IF NOT FOUND THEN
     RAISE EXCEPTION 'Atribuição manual indisponível' USING ERRCODE = '42501';
   END IF;

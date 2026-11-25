@@ -116,7 +116,9 @@ export default function TreinoAutoral({ assuntoInicial }) {
       {erro && sessao && <button disabled={ocupado} onClick={() =>
         executar(() => rpc('ifpass_treino_retomar', args))
       }>Atualizar rodada</button>}
-      {status === 'sem_questoes' && <p role="status">Nenhuma questão autoral disponível para esta seleção.</p>}
+      {status === 'questoes_insuficientes' && (
+        <p role="status">Questões autorais insuficientes para esta seleção. Disponíveis: {rodada.disponiveis}. Mínimo: {rodada.minimo}.</p>
+      )}
       {status === 'treino_indisponivel' && <p role="status">Esta modalidade ainda está indisponível.</p>}
       {!sessao && (
         <form onSubmit={evento => {

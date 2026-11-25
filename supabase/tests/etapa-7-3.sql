@@ -70,8 +70,35 @@ RESET ROLE;
 UPDATE public.treino_configuracao_autoral SET habilitado = true WHERE etapa = 'fundamentos';
 SET LOCAL ROLE authenticated;
 
-SELECT pg_temp.conferir(public.ifpass_treino_iniciar('assunto-vazio','fundamentos')->>'status' = 'sem_questoes',
-  'acervo vazio não inicia rodada nem usa oficiais');
+SELECT pg_temp.conferir(public.ifpass_treino_iniciar('assunto-vazio','fundamentos')
+  = '{"status":"questoes_insuficientes","disponiveis":0,"minimo":5}'::jsonb,
+  'acervo vazio retorna insuficiência sem recorrer ao oficial');
+SELECT pg_temp.conferir(public.ifpass_treino_iniciar('p_texto','fundamentos')
+  = '{"status":"questoes_insuficientes","disponiveis":2,"minimo":5}'::jsonb,
+  'acervo parcialmente preenchido respeita o mínimo configurado');
+SELECT pg_temp.conferir(NOT EXISTS (SELECT FROM public.treino_sessoes WHERE autoral),
+  'tentativas abaixo do mínimo não deixam sessão persistente');
+RESET ROLE;
+SELECT pg_temp.conferir(NOT EXISTS (SELECT FROM public.treino_itens_autorais),
+  'tentativas abaixo do mínimo não deixam itens persistentes');
+UPDATE public.treino_configuracao_autoral SET minimo = 2 WHERE etapa = 'fundamentos';
+
+INSERT INTO public.treino_sessoes (id,user_id,assunto) VALUES
+  ('00000000-0000-4000-8000-000000000200','00000000-0000-4000-8000-000000000001','p_texto');
+INSERT INTO public.treino_itens_autorais (user_id,sessao_id,questao_id,questao_versao)
+SELECT '00000000-0000-4000-8000-000000000001','00000000-0000-4000-8000-000000000200',id,versao
+FROM public.questoes_ia WHERE id IN ('00000000-0000-4000-8000-000000000101','00000000-0000-4000-8000-000000000104');
+
+SET LOCAL ROLE authenticated;
+SELECT pg_temp.conferir(NOT has_function_privilege(current_user,
+    'public.ifpass_atribuir_autoral_legado(uuid,uuid)', 'EXECUTE'),
+  'aluno não pode chamar diretamente a implementação legada');
+SELECT pg_temp.negado($$SELECT public.ifpass_atribuir_autoral('00000000-0000-4000-8000-000000000200',
+  '00000000-0000-4000-8000-000000000104')$$, '42501', 'RPC legada não revela avaliação mesmo se já atribuída');
+SELECT pg_temp.negado($$SELECT public.ifpass_atribuir_autoral('00000000-0000-4000-8000-000000000200',
+  '00000000-0000-4000-8000-000000000102')$$, '42501', 'RPC legada não cria nova atribuição');
+SELECT pg_temp.conferir(public.ifpass_atribuir_autoral('00000000-0000-4000-8000-000000000200',
+  '00000000-0000-4000-8000-000000000101') ? 'item_id', 'RPC legada recupera item de aprendizagem já atribuído');
 SELECT public.ifpass_treino_iniciar('p_texto','fundamentos') AS rodada \gset
 SELECT (:'rodada'::jsonb #>> '{sessao,id}') AS sessao,
   (:'rodada'::jsonb #>> '{itens,0,item_id}') AS item1,
@@ -143,9 +170,9 @@ SELECT pg_temp.conferir(:'apos_anular'::jsonb #>> '{sessao,posicao}' = '3'
 SELECT public.ifpass_treino_finalizar(:'sessao',true) AS resultado \gset
 SELECT pg_temp.conferir(:'resultado'::jsonb #>> '{sessao,status}' = 'interrompida'
   AND :'resultado'::jsonb #>> '{sessao,acertos}' = '1'
-  AND :'resultado'::jsonb #>> '{sessao,total_questoes}' = '2'
+  AND :'resultado'::jsonb #>> '{sessao,total_questoes}' = '1'
   AND public.ifpass_treino_finalizar(:'sessao',false) = :'resultado'::jsonb,
-  'interrupção consolida no servidor e não pode ser regravada');
+  'interrupção conta apenas a resposta válida e preserva a finalização no reenvio');
 
 RESET ROLE;
 UPDATE public.questoes_ia SET motivo_inativacao = 'erro',
@@ -156,4 +183,12 @@ SELECT pg_temp.conferir((SELECT respondidas = 18 AND acertos = 9
   FROM public.ifpass_treino_indicadores('-infinity') WHERE assunto = 'p_texto')
   AND (SELECT count(*) = 1 FROM public.treino_respostas WHERE item_id = :'item1'),
   'retirada por erro exclui resposta dos indicadores e conserva histórico bruto');
+RESET ROLE;
+UPDATE public.treino_configuracao_autoral SET minimo = 1 WHERE etapa = 'fundamentos';
+SET LOCAL ROLE authenticated;
+SELECT public.ifpass_treino_iniciar('p_texto','fundamentos') #>> '{sessao,id}' AS nova_sessao \gset
+SELECT public.ifpass_treino_finalizar(:'nova_sessao',true) AS sem_respostas \gset
+SELECT pg_temp.conferir(:'sem_respostas'::jsonb #>> '{sessao,total_questoes}' = '0'
+  AND :'sem_respostas'::jsonb #>> '{sessao,acertos}' = '0',
+  'interrupção antes da primeira resposta retorna zero de zero');
 ROLLBACK;

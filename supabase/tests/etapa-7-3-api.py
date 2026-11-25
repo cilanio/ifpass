@@ -59,7 +59,7 @@ VALUES ('{q}','Língua Portuguesa','p_texto','fundamentos','compreensao','facil'
  '{{"A":"Um","B":"Dois","C":"Três","D":"Quatro","E":"Cinco"}}','A',
  '{{"correta":"Explicação fictícia","distratores":{{"B":"B","C":"C","D":"D","E":"E"}}}}',
  'em_revisao','{outro}','aprendizagem');
-UPDATE public.treino_configuracao_autoral SET habilitado = true WHERE etapa = 'fundamentos';
+UPDATE public.treino_configuracao_autoral SET habilitado = true, minimo = 1 WHERE etapa = 'fundamentos';
 """)
 
 checklist = dict.fromkeys((
@@ -73,7 +73,7 @@ checklist.update(dict.fromkeys((
 ).split(), True))
 
 args = {'p_assunto': 'p_texto', 'p_etapa': 'fundamentos'}
-check(rpc('treino_iniciar', args, jwt) == {'status': 'sem_questoes'}, 'Questão em revisão é inelegível')
+check(rpc('treino_iniciar', args, jwt) == {'status': 'questoes_insuficientes', 'disponiveis': 0, 'minimo': 1}, 'Questão em revisão é inelegível')
 rpc('revisar_questao', {
     'p_id': q, 'p_versao': 1, 'p_decisao': 'aprovada', 'p_checklist_versao': 1,
     'p_criterios': checklist,

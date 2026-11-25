@@ -4,7 +4,7 @@ Diretrizes aprovadas para implementação. Referências: [continuidade](CONTINUI
 
 ## Transição aprovada
 
-A etapa 7.3 integra o treino exclusivamente com questões autorais aprovadas do acervo de aprendizagem. Mantém o simulado Oficial vigente. Híbrido e Autoral, bem como a evolução do fluxo de exposição e entrega de gabaritos dos simulados, ficam para uma etapa posterior. O treino atual permanece disponível até que o banco autoral esteja operacional e o corte seja aprovado. Após o corte, se houver poucos itens elegíveis, oferecer uma rodada mais curta. Sem itens elegíveis, mostrar a indisponibilidade do assunto. O catálogo oficial permanece reservado aos simulados.
+A etapa 7.3 integra o treino exclusivamente com questões autorais aprovadas do acervo de aprendizagem. Mantém o simulado Oficial vigente. Híbrido e Autoral, bem como a evolução do fluxo de exposição e entrega de gabaritos dos simulados, ficam para uma etapa posterior. O treino atual permanece disponível até que o banco autoral esteja operacional e o corte seja aprovado. Após o corte, oferecer uma rodada mais curta se houver itens elegíveis suficientes para o mínimo da etapa. Abaixo do mínimo, informar a insuficiência sem persistir uma sessão. O catálogo oficial permanece reservado aos simulados.
 
 Preservar integralmente tentativas, sessões, respostas, classificações e resultados existentes, inclusive os treinos feitos com oficiais. Manter `prova_id` e `n` e interpretar campos novos nulos pelo contrato legado. Propor a conclusão, antes do corte, das rodadas iniciadas no fluxo anterior. Sessões antigas que fiquem em aberto devem conservar seus registros, com regra de encerramento a aprovar.
 
@@ -23,7 +23,7 @@ A identificação de sessão autoral deve ser explícita no caminho novo. O cat�
 
 ## Progressão e diagnóstico de cobertura
 
-A configuração inicial usa 10 itens por rodada e mínimos de 5 em Fundamentos, 5 em Compreensão, 3 em Aplicação, 3 em Análise e 1 em Desafio no padrão COPEVE. Os mínimos são diagnósticos do acervo, sem bloqueio de abertura. O Desafio é complementar e independente da etapa cognitiva. A dificuldade segue independente e a análise de suficiência considera quantidade, cobertura curricular e diversidade. Os valores definitivos e os critérios de diversidade ficam para a etapa 7.4. A configuração persistida é por etapa, com extensão futura por tópico.
+A configuração inicial usa 10 itens por rodada e mínimos de 5 em Fundamentos, 5 em Compreensão, 3 em Aplicação, 3 em Análise e 1 em Desafio no padrão COPEVE. Os mínimos informam o diagnóstico do acervo e condicionam a abertura de novas rodadas. O Desafio é complementar e independente da etapa cognitiva. A dificuldade segue independente e a análise de suficiência considera quantidade, cobertura curricular e diversidade. Os valores definitivos e os critérios de diversidade ficam para a etapa 7.4. A configuração persistida é por etapa, com extensão futura por tópico.
 
 ## Indicadores da etapa 7.3
 

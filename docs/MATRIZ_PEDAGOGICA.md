@@ -71,7 +71,7 @@ Dificuldade (fácil, média, difícil) é independente do objetivo cognitivo. Um
 | Análise | 3 |
 | Desafio no padrão COPEVE | 1 |
 
-O Desafio no padrão COPEVE é uma modalidade complementar. Suas questões mantêm a etapa cognitiva e a dificuldade próprias. Os mínimos informam o diagnóstico de cobertura e permitem ofertar rodadas menores. A rodada tem 10 questões por padrão. Os limites são configuráveis por etapa e serão extensíveis por tópico. Avaliar suficiência também pela cobertura curricular e pela diversidade dos itens. A etapa 7.4 estabelecerá os valores definitivos e detalhará os critérios. Após a transição, a falta de autorais elegíveis reduz a oferta de treino, mantendo as questões oficiais reservadas aos simulados.
+O Desafio no padrão COPEVE é uma modalidade complementar. Suas questões mantêm a etapa cognitiva e a dificuldade próprias. Os mínimos informam o diagnóstico de cobertura e determinam a abertura da rodada. Uma rodada pode ser menor que o tamanho padrão se atingir o mínimo da etapa. A rodada tem 10 questões por padrão. Os limites são configuráveis por etapa e serão extensíveis por tópico. Avaliar suficiência também pela cobertura curricular e pela diversidade dos itens. A etapa 7.4 estabelecerá os valores definitivos e detalhará os critérios. Após a transição, a falta de autorais elegíveis reduz a oferta de treino, mantendo as questões oficiais reservadas aos simulados.
 
 ## 6. Metadados — proposta técnica
 

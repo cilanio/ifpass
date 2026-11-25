@@ -58,9 +58,9 @@ it('mantém o erro recuperável e permite retomar uma questão retirada', async 
 
 it('comunica falta de itens sem recorrer a oficiais', async () => {
   const usuario = userEvent.setup()
-  rpc.mockResolvedValueOnce(sucesso(null)).mockResolvedValueOnce(sucesso({ status: 'sem_questoes' }))
+  rpc.mockResolvedValueOnce(sucesso(null)).mockResolvedValueOnce(sucesso({ status: 'questoes_insuficientes', disponiveis: 2, minimo: 5 }))
   render(<TreinoAutoral assuntoInicial="p_texto" />)
   await usuario.click(await screen.findByRole('button', { name: 'Iniciar treino' }))
-  expect(await screen.findByText(/Nenhuma questão autoral/)).toBeTruthy()
+  expect(await screen.findByText(/Disponíveis: 2. Mínimo: 5/)).toBeTruthy()
   expect(rpc.mock.calls.map(([nome]) => nome)).toEqual(['ifpass_treino_retomar', 'ifpass_treino_iniciar'])
 })

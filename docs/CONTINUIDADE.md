@@ -105,6 +105,16 @@ Foco: diagnóstico relata até três assuntos abaixo de 100%, mínimo de cinco r
 
 Metadados propostos, rubrica e piloto em MATRIZ_PEDAGOGICA.md. Escassez de exemplos de Ciências não garante fidelidade à banca; avaliar cobertura e qualidade, não apenas volume.
 
+A publicação autoral exige revisão humana independente, ausência dos oito critérios eliminatórios e adequação dos sete critérios qualitativos. A interface e o servidor validam a regra, sem pesos ou pontuações. Consulte a [matriz pedagógica](MATRIZ_PEDAGOGICA.md) e o [plano técnico da etapa 7.3](PLANO_ETAPA_7_3.md).
+
+### Etapas futuras aprovadas
+
+- **8.1 — Importação de provas oficiais.** Inclusão de provas, gabaritos, imagens e classificações por interface administrativa, com validação antes da publicação e preservação dos identificadores históricos.
+- **8.2 — Análise evolutiva da banca.** Comparação histórica de provas e editais, identificação de tendências e avaliação da confiabilidade das evidências.
+- **8.3 — Adaptação do perfil de geração.** Atualização versionada das instruções e exemplos usados pela IA, validada por pessoas e alinhada à progressão pedagógica.
+
+Na etapa 7.4, separar evidências, configuração de geração e modelo utilizado. O perfil deve registrar a versão, as referências e os exemplos que o fundamentam, de modo que instruções e exemplos possam evoluir sem exigir retreinamento da IA. As etapas 8.1 a 8.3 permanecem planejadas.
+
 ## 9. Backlog priorizado
 
 - [x] Conectar Codex e obter diagnóstico estático.
@@ -113,7 +123,7 @@ Metadados propostos, rubrica e piloto em MATRIZ_PEDAGOGICA.md. Escassez de exemp
 - [ ] Recuperar/conferir relação individual dos itens curriculares e IDs de subtópicos.
 - [ ] Versionar estrutura efetiva do Supabase após consulta somente leitura.
 - [ ] Estabelecer testes automatizados de correção, classificação, indicadores e persistência.
-- [ ] Retomar roteiro de integração autoral; aprovar rubrica e piloto antes da publicação.
+- [ ] Retomar roteiro de integração autoral; aprovar o piloto antes da publicação.
 - [ ] Ajustar prioridade visual do treino sem apagar Atualidades ou Ciências.
 - [ ] Avaliar recuperação de treino, autosave, paginação e indicadores de repetição.
 - [ ] Melhorar README e avaliar bundle quando necessário.

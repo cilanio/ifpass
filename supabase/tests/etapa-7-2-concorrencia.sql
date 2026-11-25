@@ -33,7 +33,7 @@ INSERT INTO public.questoes_ia (
 
 DO $teste$
 DECLARE
-  checklist constant text := '{"gabarito_incorreto":false,"alternativa_correta_nao_unica":false,"erro_conceitual_ou_matematico":false,"ambiguidade":false,"informacoes_insuficientes":false,"fora_do_edital_sem_justificativa":false,"explicacao_incompativel":false,"reproducao_indevida":false,"fidelidade_edital":true,"correcao_cientifica_matematica_linguistica":true,"clareza_precisao":true,"qualidade_alternativas":true,"adequacao_dificuldade":true,"compatibilidade_copeve":false,"qualidade_explicacao":true}';
+  checklist constant text := '{"gabarito_incorreto":false,"alternativa_correta_nao_unica":false,"erro_conceitual_ou_matematico":false,"ambiguidade":false,"informacoes_insuficientes":false,"fora_do_edital_sem_justificativa":false,"explicacao_incompativel":false,"reproducao_indevida":false,"fidelidade_edital":true,"correcao_cientifica_matematica_linguistica":true,"clareza_precisao":true,"qualidade_alternativas":true,"adequacao_dificuldade":true,"compatibilidade_copeve":true,"qualidade_explicacao":true}';
   pergunta constant text := '00000000-0000-4000-8000-000000000110';
   conn text := format('dbname=%s application_name=ifpass_revisao_concorrente', current_database());
   chave uuid;

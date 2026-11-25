@@ -67,31 +67,39 @@ Dificuldade (fácil, média, difícil) é independente do objetivo cognitivo. Um
 
 Identificador próprio, origem oficial/autoral, versão do edital, disciplina, assunto, subassunto, habilidade, objetivo cognitivo, dificuldade estimada, enunciado, cinco alternativas, gabarito único, explicação fundamentada, justificativa dos distratores, fontes quando aplicáveis, estado de validação. Nomes e tipos definitivos dependem do modelo comum e schema aprovado. Rastrear geração e revisão. Não publicar automaticamente. Questões autorais devem ser originais e nunca apresentadas como oficiais.
 
-## 7. Rubrica interna — proposta ainda não aprovada definitivamente
+## 7. Regra de aprovação pedagógica
 
-| Critério | Peso |
-|---|---:|
-| Fidelidade ao edital | 20 |
-| Correção científica, matemática ou linguística | 25 |
-| Clareza e precisão | 15 |
-| Qualidade das alternativas | 15 |
-| Adequação da dificuldade | 10 |
-| Compatibilidade com características observáveis da COPEVE | 10 |
-| Qualidade da explicação | 5 |
-| Total | 100 |
+Uma questão autoral só pode ser aprovada por um revisor humano independente, qualificado e autorizado na disciplina. O checklist versionado exige que os oito critérios eliminatórios estejam ausentes e que os sete critérios qualitativos estejam adequados. A interface e o servidor verificam essa condição. Nesta fase a avaliação é qualitativa, sem pesos, notas ou limiares numéricos.
 
-85–100: candidata à aprovação; 70–84: revisar e reavaliar; abaixo de 70: rejeitar ou reconstruir. Não são critérios oficiais da COPEVE. Avaliar adequação ao objetivo cognitivo sem penalizar questões conceituais por falta de contextualização.
+| Critério qualitativo | O que verificar |
+|---|---|
+| Fidelidade ao edital | Adequação do conteúdo à referência oficial e justificativa pedagógica para exceções. |
+| Correção científica, matemática ou linguística | Coerência conceitual, linguística e dos cálculos. |
+| Clareza e precisão | Comando compreensível e informações suficientes. |
+| Qualidade das alternativas | Uma única correta e distratores plausíveis. |
+| Adequação da dificuldade | Coerência com o nível pretendido e o objetivo cognitivo, que são dimensões independentes. |
+| Compatibilidade com características observáveis da COPEVE | Coerência com evidências disponíveis sobre a banca, considerando os limites da amostra. |
+| Qualidade da explicação | Fundamentação da alternativa correta e justificativa individual dos distratores. |
 
-Falhas eliminatórias: gabarito incorreto; mais de uma ou nenhuma alternativa correta; conteúdo fora do edital sem justificativa; dados/cálculos incorretos; ambiguidade impeditiva; informação ausente; explicação contraditória; reprodução indevida de questão protegida. Prevalecem sobre pontuação.
+Critérios eliminatórios
 
-Validação independente: resolver novamente, recalcular, verificar fontes científicas, revisar linguagem, verificar distratores e submeter à revisão humana antes da publicação. Um segundo modelo auxilia, mas não garante correção. Avaliar cada questão individualmente.
+- Gabarito incorreto.
+- Mais de uma alternativa correta ou nenhuma correta.
+- Erro conceitual ou matemático.
+- Ambiguidade que comprometa a resolução.
+- Informações insuficientes.
+- Conteúdo fora do edital sem justificativa pedagógica.
+- Explicação incompatível com a resposta.
+- Reprodução indevida de conteúdo de terceiros.
+
+Validação independente: resolver novamente, recalcular, verificar fontes científicas, revisar linguagem e verificar distratores antes da publicação. Um segundo modelo pode auxiliar a revisão humana. Avaliar cada versão individualmente e preservar o registro da decisão.
 
 ## 8. Piloto — proposta não executada
 
 10 questões de Português e 10 de Matemática. Por disciplina: 3 fáceis, 5 médias, 2 difíceis. Distribuição cognitiva experimental registrada na v1.2: fundamentos 25%, compreensão 25%, aplicação 30%, análise 20% (no lote total de 20: 5, 5, 6, 4). Não vincular automaticamente dificuldade ao objetivo cognitivo.
 
-Critérios: alinhamento ao edital, cinco alternativas, uma correta, explicação, rubrica, ausência de falhas eliminatórias, diversidade de habilidades e revisão humana obrigatória. Avaliar qualidade, ajustar geração e validação antes de ampliar. Piloto posterior de Ciências deve cobrir eixos curriculares, não apenas os quatro assuntos com questões históricas. Poucos exemplos oficiais não permitem garantir reprodução do estilo da banca.
+Critérios: alinhamento ao edital, cinco alternativas, uma correta, explicação, adequação dos critérios qualitativos, ausência de falhas eliminatórias, diversidade de habilidades e revisão humana obrigatória. Avaliar qualidade, ajustar geração e validação antes de ampliar. Piloto posterior de Ciências deve cobrir eixos curriculares, não apenas os quatro assuntos com questões históricas. Poucos exemplos oficiais não permitem garantir reprodução do estilo da banca.
 
 ## 9. Pendências documentais
 
-Conferir redação e numeração individual dos 8/29/19 itens com fonte oficial retificada; recuperar IDs aprovados ou propor novos sem quebrar históricos; aprovar rubrica, piloto e critérios de cobertura; definir modelo de questão e integração técnica conforme CONTINUIDADE.md. Não confundir matriz curricular, classificação histórica, objetivo cognitivo, dificuldade e origem.
+Conferir redação e numeração individual dos 8/29/19 itens com fonte oficial retificada; recuperar IDs aprovados ou propor novos sem quebrar históricos; aprovar piloto e critérios de cobertura; definir modelo de questão e integração técnica conforme CONTINUIDADE.md. Não confundir matriz curricular, classificação histórica, objetivo cognitivo, dificuldade e origem.

@@ -65,6 +65,8 @@ CROSS JOIN unnest(ARRAY[
   'public.profiles', 'public.materias', 'public.plano_blocos', 'public.estudos_feitos'
 ]) AS tabela;
 
+SELECT to_regclass('public.papeis_equipe') IS NOT NULL AS etapa_7_2 \gset
+
 -- Compara ACL separadamente da visibilidade de linhas controlada por RLS.
 WITH permissoes(papel, tabela, esperadas) AS (
   VALUES
@@ -75,7 +77,8 @@ WITH permissoes(papel, tabela, esperadas) AS (
     ('anon', 'simulados', ''), ('authenticated', 'simulados', 'I,S,U'),
     ('anon', 'treino_sessoes', ''), ('authenticated', 'treino_sessoes', 'I,S,U'),
     ('anon', 'treino_respostas', ''), ('authenticated', 'treino_respostas', 'I,S'),
-    ('anon', 'questoes_ia', ''), ('authenticated', 'questoes_ia', '')
+    ('anon', 'questoes_ia', ''),
+    ('authenticated', 'questoes_ia', CASE WHEN :'etapa_7_2'::boolean THEN 'S' ELSE '' END)
 )
 SELECT pg_temp.conferir(
   concat_ws(',',
@@ -130,7 +133,11 @@ SELECT pg_temp.erro_esperado($sql$DELETE FROM simulados$sql$, '42501', 'authenti
 SELECT pg_temp.erro_esperado($sql$DELETE FROM treino_sessoes$sql$, '42501', 'authenticated não exclui sessões');
 SELECT pg_temp.erro_esperado($sql$UPDATE treino_respostas SET acertou = false$sql$,
   '42501', 'authenticated não atualiza respostas de treino');
+\if :etapa_7_2
+SELECT pg_temp.conferir(NOT EXISTS (SELECT FROM questoes_ia), 'RLS oculta questões autorais da conta de aluno');
+\else
 SELECT pg_temp.erro_esperado($sql$SELECT id FROM questoes_ia$sql$, '42501', 'authenticated não lê questões autorais');
+\endif
 SELECT pg_temp.erro_esperado($sql$INSERT INTO questoes_ia DEFAULT VALUES$sql$,
   '42501', 'authenticated não insere questões autorais');
 

@@ -1,6 +1,6 @@
 # Etapa 6.7 — Segurança e integridade do Supabase
 
-A suíte [seguranca-integridade.sql](seguranca-integridade.sql) verifica o comportamento do [snapshot estrutural](../schema.sql) com a migração de TRUNCATE aplicada em PostgreSQL descartável. Os cenários usam dois usuários fictícios, os papéis `authenticated` e `anon`, e o contexto de identidade consumido por `auth.uid()`. A suíte exige confirmação explícita de uso descartável, conexão por socket local e tabela de usuários vazia. As operações com dados de teste ficam em uma transação revertida ao final. As permissões de `TRUNCATE` são lidas do catálogo.
+A suíte [seguranca-integridade.sql](seguranca-integridade.sql) verifica o comportamento do [snapshot estrutural](../schema.sql) em PostgreSQL descartável, incluindo a revogação de `TRUNCATE` incorporada em 24/11/2026. Os cenários usam dois usuários fictícios, os papéis `authenticated` e `anon`, e o contexto de identidade consumido por `auth.uid()`. A suíte exige confirmação explícita de uso descartável, conexão por socket local e tabela de usuários vazia. As operações com dados de teste ficam em uma transação revertida ao final. As permissões de `TRUNCATE` são lidas do catálogo.
 
 ## Execução no Supabase local
 
@@ -12,12 +12,10 @@ A suíte [seguranca-integridade.sql](seguranca-integridade.sql) verifica o compo
 docker exec -i CONTAINER_LOCAL_DESCARTAVEL psql -X -U postgres -d postgres \
   -v ON_ERROR_STOP=1 --single-transaction -f - < supabase/schema.sql
 docker exec -i CONTAINER_LOCAL_DESCARTAVEL psql -X -U postgres -d postgres \
-  -v ON_ERROR_STOP=1 --single-transaction -f - < supabase/migrations/20261124230000_revoga_truncate_anon_authenticated.sql
-docker exec -i CONTAINER_LOCAL_DESCARTAVEL psql -X -U postgres -d postgres \
   -v ifpass_ambiente_descartavel=1 -f - < supabase/tests/seguranca-integridade.sql
 ```
 
-Carregue o snapshot uma vez por instância nova. As asserções imprimem `OK` ou interrompem a execução com o cenário que falhou. Exclua a instância de teste após a validação. O repositório não precisa de chaves, tokens ou dados reais para essa execução.
+Carregue o snapshot uma vez por instância nova. A migração permanece versionada no histórico e já está refletida no snapshot atual. As asserções imprimem `OK` ou interrompem a execução com o cenário que falhou. Exclua a instância de teste após a validação. O repositório não precisa de chaves, tokens ou dados reais para essa execução.
 
 ## Conferência de privilégios antes e depois
 
@@ -35,4 +33,4 @@ A pilha completa do Supabase não iniciou. O armazenamento do Docker retornou `n
 
 **Vulnerabilidades confirmadas.** Nenhuma exposição entre usuários foi observada nos cenários executados. A existência do privilégio `TRUNCATE` foi confirmada na réplica do snapshot. A possibilidade de acioná-lo por uma interface acessível externamente permanece um risco potencial. A ausência de `UPDATE` em `profiles` e o bloqueio de exclusão de usuários com sessões são comportamentos confirmados nessa réplica.
 
-**Verificações não executadas.** Falta rodar a suíte no Supabase completo e verificar cadastro e emissão de JWT pelo serviço Auth, encaminhamento de papéis pelo PostgREST, respostas HTTP e privilégios adicionais ausentes do snapshot. Para essa extensão, é necessária uma instância Supabase local com espaço para as imagens ou uma instância descartável com estrutura equivalente, Auth, PostgREST e acesso administrativo exclusivo para preparação. A produção ficou fora do escopo.
+**Verificações não executadas.** Falta rodar a suíte no Supabase completo e verificar cadastro e emissão de JWT pelo serviço Auth, encaminhamento de papéis pelo PostgREST, respostas HTTP e privilégios adicionais ausentes do snapshot. Para essa extensão, é necessária uma instância Supabase local com espaço para as imagens ou uma instância descartável com estrutura equivalente, Auth, PostgREST e acesso administrativo exclusivo para preparação. A produção ficou fora do escopo desses testes. Em 24/11/2026, o usuário confirmou separadamente os oito resultados `pode_truncar = false` após aplicar a migração no Supabase real. As demais permissões efetivas e o Supabase completo seguem pendentes de validação.

@@ -124,7 +124,7 @@ Para cada implementação, aplicar as verificações previstas na seção 7 do A
 
 A suíte SQL passou com 70 asserções em PostgreSQL descartável com o snapshot do Supabase e identidade de teste. A validação de ponta a ponta com Supabase Auth e PostgREST permanece pendente. Consulte o [relatório da etapa 6.7](../supabase/tests/README.md).
 
-- **Prioridade de segurança:** confirmar os privilégios efetivos e preparar a revogação dos privilégios `TRUNCATE` desnecessários concedidos a `anon` e `authenticated`. A execução da revogação depende de alteração aprovada separadamente.
+- **TRUNCATE:** migração aplicada no Supabase real em 24/11/2026, conforme confirmação do usuário. A consulta posterior retornou `pode_truncar = false` nas oito combinações de papéis e tabelas abrangidas. O snapshot incorpora essa revogação. A validação das demais permissões efetivas e do Supabase completo permanece pendente.
 - Verificar permissões efetivas de atualização de `profiles`, incluindo privilégios de tabela, de coluna e herdados. Na réplica, a atualização pelo próprio usuário foi negada.
 - Verificar a integridade dos registros finalizados de simulados e treinos, incluindo a proteção contra alterações posteriores e a consistência dos resultados persistidos.
 - Avaliar o bloqueio de exclusão de usuários com sessões vinculadas, observado na réplica, e definir como tratar o histórico.

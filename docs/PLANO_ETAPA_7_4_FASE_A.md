@@ -1,6 +1,6 @@
 # Etapa 7.4 — Plano técnico da Fase A
 
-O piloto avalia o processo de geração, validação e revisão de Equações do Primeiro Grau. O planejamento desta entrega termina no mapa curricular e no desenho do experimento. A execução futura usa arquivos locais e, se necessário, uma instância isolada para ensaiar a revisão. A amostra e as metas constam na [Matriz Pedagógica](MATRIZ_PEDAGOGICA.md#746--piloto-experimental).
+O piloto avalia o processo de geração, validação e revisão de Equações do Primeiro Grau. O catálogo, o manifesto e a infraestrutura local estão implementados. O lote de questões continua por gerar. A execução futura usa arquivos locais e, se necessário, uma instância isolada para ensaiar a revisão. A amostra e as metas constam na [Matriz Pedagógica](MATRIZ_PEDAGOGICA.md#746--piloto-experimental).
 
 ## Fontes e escopo curricular
 
@@ -11,7 +11,7 @@ Na tabela, os anos indicam a introdução proposta no roteiro e os anos relacion
 
 | Tópico | Introdução e anos relacionados | Habilidades e relação com o edital | Pré-requisitos recomendados | Objetivo de aprendizagem |
 |---|---|---|---|---|
-| 1. Linguagem algébrica | 7º; 6º como preparação, 8º–9º como revisão | EF07MA13. Apoio aos itens 6 e 8. O item 12 é relacionado, com escopo próprio. | Operações básicas e leitura de expressões | Interpretar letras, coeficientes e termos e distinguir incógnita de variável. |
+| 1. Linguagem algébrica | 6º como preparação; 7º para formalizar, 8º–9º como revisão | EF07MA13. Apoio aos itens 6 e 8. O item 12 é relacionado, com escopo próprio. | Operações básicas e leitura de expressões | Interpretar letras, coeficientes e termos e distinguir incógnita de variável. |
 | 2. Propriedades da igualdade | 6º; 7º–9º como retomada | EF06MA14. Pré-requisito para o item 6. | Operações inversas e significado de igualdade | Justificar operações equivalentes nos dois membros, respeitando as condições de divisão. |
 | 3. Conceito de equação | 7º; 6º como preparação, 8º–9º como revisão | EF07MA18, com apoio de EF07MA13 e EF06MA14. Desdobramento do item 6. | Tópicos 1 e 2 | Identificar membros, incógnita e solução, e verificar uma solução por substituição. |
 | 4. Equações simples | 7º; 6º como preparação, 8º–9º como revisão | EF07MA18, com base em EF06MA14. Desdobramento do item 6. | Tópico 3 e operações inversas | Isolar a incógnita em uma equação redutível a `ax + b = c` e verificar o resultado. |
@@ -25,8 +25,8 @@ Na tabela, os anos indicam a introdução proposta no roteiro e os anos relacion
 ### Ambiguidades a validar antes do lote
 
 - A separação entre modelagem e problemas contextualizados é didática. O primeiro enfatiza formular a equação e o segundo cobre o ciclo até interpretar a resposta.
-- O edital e a BNCC descrevem o conteúdo geral. A associação de parênteses, coeficientes fracionários e casos degenerados ao roteiro é um desdobramento local. Confirmar o enquadramento dos casos degenerados antes de incluí-los como avaliação; denominadores com incógnita ficam fora do escopo inicial.
-- Confirmar com revisão pedagógica os anos sugeridos, a cobertura por objetivo e o uso dos tópicos relacionados no 8º e 9º anos. A distribuição experimental por tópico e dificuldade será definida no manifesto do lote.
+- O edital e a BNCC descrevem o conteúdo geral. A associação de parênteses, coeficientes fracionários e casos degenerados ao roteiro é um desdobramento local. Casos degenerados ficam exclusivamente no perfil de aprendizagem durante o piloto; denominadores com incógnita ficam fora do escopo inicial.
+- O 6º ano contempla igualdade e preparação algébrica, o 7º introduz formalmente equações e o 8º e 9º retomam o assunto para revisão, consolidação e aprofundamento. O catálogo sinaliza correspondências indiretas ou que exigem revisão especializada, incluindo a associação da preparação algébrica do 6º ano à habilidade EF07MA13 do 7º.
 
 ## Execução proposta
 
@@ -46,3 +46,11 @@ Na tabela, os anos indicam a introdução proposta no roteiro e os anos relacion
 | Vitest e testes de modelo, catálogo oficial, revisão e treino | Planejar casos de manifesto com vínculo inválido, alternativa duplicada, solução incorreta, revisão após correção e cobertura incompleta. Rodar regressões ao implementar o piloto. |
 
 O piloto pode usar revisão local e dados isolados. Migrações de produção, integração ao treino, contratação de APIs e automação da Fase B ficam fora dessa entrega.
+
+## Contratos locais da Fase A
+
+- [Catálogo](../piloto/catalogo.js) e [manifesto](../piloto/manifesto.js) versionados. `entradasDoLote()` produz 20 entradas JSON de versão 1 com referência ao lote, tópico, objetivo específico, perfil, dificuldade, critérios curriculares e versões das fontes. A posição tem ID estável dentro do lote. Revisões de questões preservam a posição.
+- A saída JSON, versão 1, inclui `loteId`, `loteVersao`, `posicaoId`, `revisao`, `catalogoVersao`, `perfilVersao`, `objetivoId`, `disciplina`, `assunto_id`, `topico_id`, `etapa`, `dificuldade`, `finalidade` e `desafio_copeve`. O conteúdo aproveita os campos autorais `enunciado`, `texto` opcional, `alternativas` A–E, `resposta_correta` e `explicacao` com `correta` e justificativas dos quatro `distratores`. A proveniência contém modelo, versão das instruções, data de geração, referências e versões da BNCC e do edital.
+- A saída pode declarar `matematica: { equacao, solucoes }`. A equação usa `a`, `b`, `c`, `d` como strings inteiras ou frações para representar `ax+b=cx+d`, com domínio `Q` ou `R`. Cada letra recebe `{ tipo: 'unica', valor }`, `{ tipo: 'todas' }` ou `{ tipo: 'nenhuma' }`. A verificação trabalha com racionais exatos, compara o gabarito e detecta alternativas equivalentes. A representação é declarada pelo gerador. A correspondência com o enunciado e as restrições do contexto permanecem pendentes de resolução independente. Desafios e avaliação usam `etapa: null` no manifesto experimental e não são registros prontos para persistir em `questoes_ia`.
+- [Validadores](../piloto/validacao.js) conferem estrutura, versões e vínculos, cinco alternativas, duplicidade exata após normalização de texto e ordenação das alternativas, e cobertura por posição. A comparação com oficiais depende do conjunto fornecido ao validador. Paráfrases próximas, diversidade qualitativa, correspondência matemática com o enunciado e aprovação pedagógica permanecem para avaliação especializada.
+- O [registro local](../piloto/registro.js) tem versão de formato e chave lote/posição/revisão. Cada verificação guarda nome, estado (`aprovada`, `reprovada` ou `pendente`) e erros ou motivo. Para execução, preencher `resolucaoIndependente` com resposta, raciocínio e data; `correcao` com revisão anterior, tentativa (1 ou 2), motivos e resultado da revalidação; `revisaoHumana` com referência do revisor, data, versão da matriz, critérios, decisão e motivos. Manter um registro por revisão e preencher as métricas de custo direto em centavos e tempo de revisão em segundos. Campos nulos indicam etapas não executadas. Usar `entradaResolucaoIndependente()` para entregar apenas a identificação e os campos visíveis da questão, sem gabarito ou parecer.

@@ -179,7 +179,7 @@ Reutilizar a infraestrutura existente. Apresentar referências curriculares, obj
 
 ### 7.4.6 — Piloto experimental
 
-Avaliar 20 questões de Equações do Primeiro Grau, cobrindo os dez tópicos e sem imagens no lote inicial. Distribuir 4 questões de fundamentos, 4 de compreensão, 4 de aplicação, 4 de análise, 2 desafios COPEVE e 2 de avaliação. Usar 6 fáceis, 10 médias e 4 difíceis.
+Avaliar 20 questões de Equações do Primeiro Grau, cobrindo os dez tópicos e sem imagens no lote inicial. O manifesto local fixa objetivos por posição e mantém casos especiais exclusivamente na aprendizagem. Distribuir 4 questões de fundamentos, 4 de compreensão, 4 de aplicação, 4 de análise, 2 desafios COPEVE e 2 de avaliação. Usar 6 fáceis, 10 médias e 4 difíceis.
 
 Metas experimentais: 100% de validade estrutural e rastreabilidade curricular, ao menos 80% de aprovação humana inicial e 90% após correções, e zero erro crítico ou duplicidade indevida identificados entre as questões aprovadas. Medir custo por questão aprovada e tempo de revisão. A amostra serve para avaliação operacional e ajuste do processo.
 

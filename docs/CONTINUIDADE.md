@@ -131,7 +131,7 @@ A implementação do treino autoral foi concluída no [PR #16](https://github.co
 
 As decisões de [7.4.1 a 7.4.6](MATRIZ_PEDAGOGICA.md#11-decisões-aprovadas-da-etapa-74) consolidam o roteiro curricular compartilhado, o alinhamento IFAL e BNCC, o dimensionamento por tópico e etapa, os perfis de geração, as seis camadas de validação, a revisão humana individual e o piloto experimental.
 
-A Fase A planeja a validação de 20 questões de Equações do Primeiro Grau, com dez tópicos e sem contratação de APIs. O dimensionamento de 305 questões de aprendizagem, 20 desafios e 40 itens de avaliação é uma referência futura. As faixas provisórias de desempenho orientam a aprendizagem com navegação livre. A Fase B depende dos resultados do piloto. Consulte o [plano técnico e o mapeamento curricular](PLANO_ETAPA_7_4_FASE_A.md).
+A Fase A já tem catálogo curricular, manifesto e validadores locais para um piloto de 20 questões de Equações do Primeiro Grau, com dez tópicos e sem contratação de APIs. O dimensionamento de 305 questões de aprendizagem, 20 desafios e 40 itens de avaliação é uma referência futura. As faixas provisórias de desempenho orientam a aprendizagem com navegação livre. A Fase B depende dos resultados do piloto. Consulte o [plano técnico e o mapeamento curricular](PLANO_ETAPA_7_4_FASE_A.md).
 
 ### Visão futura da aprendizagem
 

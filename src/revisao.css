@@ -1,0 +1,59 @@
+.revisao-filtros {
+  align-items: end;
+}
+
+.revisao-filtros label,
+.revisao-formulario label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.revisao-fila {
+  list-style: none;
+  padding: 0;
+}
+
+.revisao-fila li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.revisao-fila li > div {
+  flex: 1 1 15rem;
+  min-width: 0;
+}
+
+.revisao-enunciado {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.revisao-formulario,
+.revisao-formulario fieldset {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.revisao-formulario {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.revisao-formulario textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.revisao-pedagogica summary {
+  cursor: pointer;
+}
+
+.revisao-pedagogica dd {
+  margin-left: 1rem;
+}

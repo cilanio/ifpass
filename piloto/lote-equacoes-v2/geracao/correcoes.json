@@ -156,5 +156,310 @@
         "motivo": "Aplicar a matriz e obter revisão humana"
       }
     ]
+  },
+  {
+    "posicaoId": "epg-08",
+    "revisaoAnterior": 1,
+    "tentativa": 1,
+    "motivo": "Corrigir a atribuição de um erro adicional de sinal no distrator D.",
+    "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451",
+    "item": {
+      "contratoVersao": 1,
+      "loteId": "equacoes-primeiro-grau",
+      "loteVersao": 2,
+      "posicaoId": "epg-08",
+      "revisao": 2,
+      "catalogoVersao": 2,
+      "perfilVersao": 1,
+      "objetivoId": "simples-01",
+      "disciplina": "Matemática",
+      "assunto_id": "m_equacoes1",
+      "topico_id": "simples",
+      "etapa": "aplicacao",
+      "dificuldade": "media",
+      "finalidade": "aprendizagem",
+      "desafio_copeve": false,
+      "enunciado": "Qual é o valor de x em 18 − 4x = 6?",
+      "alternativas": {
+        "A": "−3",
+        "B": "6",
+        "C": "12",
+        "D": "−6",
+        "E": "3"
+      },
+      "resposta_correta": "E",
+      "explicacao": {
+        "correta": "Subtraindo 18 dos dois lados, −4x = −12. A divisão por −4 dá x = 3.",
+        "distratores": {
+          "A": "Erra o sinal da divisão.",
+          "B": "É o valor do segundo membro.",
+          "C": "É a magnitude da diferença antes da divisão.",
+          "D": "Divide −12 por 2, obtendo −6, em vez de dividir pelo coeficiente −4."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-correcao-pos-resolucao-1",
+        "geradoEm": "2026-11-25T18:57:38.049Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ],
+        "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451"
+      },
+      "matematica": {
+        "equacao": {
+          "a": "-4",
+          "b": "18",
+          "c": "0",
+          "d": "6",
+          "dominio": "Q"
+        },
+        "solucoes": {
+          "A": {
+            "tipo": "unica",
+            "valor": "-3"
+          },
+          "B": {
+            "tipo": "unica",
+            "valor": "6"
+          },
+          "C": {
+            "tipo": "unica",
+            "valor": "12"
+          },
+          "D": {
+            "tipo": "unica",
+            "valor": "-6"
+          },
+          "E": {
+            "tipo": "unica",
+            "valor": "3"
+          }
+        }
+      }
+    },
+    "revalidacao": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ]
+  },
+  {
+    "posicaoId": "epg-10",
+    "revisaoAnterior": 1,
+    "tentativa": 1,
+    "motivo": "Explicitar a origem do 21 no distrator D e por que o 4 do distrator E não satisfaz a igualdade.",
+    "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451",
+    "item": {
+      "contratoVersao": 1,
+      "loteId": "equacoes-primeiro-grau",
+      "loteVersao": 2,
+      "posicaoId": "epg-10",
+      "revisao": 2,
+      "catalogoVersao": 2,
+      "perfilVersao": 1,
+      "objetivoId": "dois-membros-01",
+      "disciplina": "Matemática",
+      "assunto_id": "m_equacoes1",
+      "topico_id": "dois-membros",
+      "etapa": "aplicacao",
+      "dificuldade": "media",
+      "finalidade": "avaliacao",
+      "desafio_copeve": false,
+      "enunciado": "Em 5r + 9 = 8r − 12, qual valor satisfaz a igualdade?",
+      "alternativas": {
+        "A": "−7",
+        "B": "3",
+        "C": "7",
+        "D": "21",
+        "E": "4"
+      },
+      "resposta_correta": "C",
+      "explicacao": {
+        "correta": "Subtraindo 5r e somando 12, obtemos 21 = 3r, então r = 7.",
+        "distratores": {
+          "A": "Erra o sinal.",
+          "B": "É o coeficiente 8 − 5.",
+          "D": "A diferença 9 − (−12) é 21, mas ela corresponde a 3r. Falta dividir por 3.",
+          "E": "Com r = 4, o primeiro membro vale 29 e o segundo vale 20. Os valores são diferentes."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-correcao-pos-resolucao-1",
+        "geradoEm": "2026-11-25T18:57:38.050Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ],
+        "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451"
+      },
+      "matematica": {
+        "equacao": {
+          "a": "5",
+          "b": "9",
+          "c": "8",
+          "d": "-12",
+          "dominio": "Q"
+        },
+        "solucoes": {
+          "A": {
+            "tipo": "unica",
+            "valor": "-7"
+          },
+          "B": {
+            "tipo": "unica",
+            "valor": "3"
+          },
+          "C": {
+            "tipo": "unica",
+            "valor": "7"
+          },
+          "D": {
+            "tipo": "unica",
+            "valor": "21"
+          },
+          "E": {
+            "tipo": "unica",
+            "valor": "4"
+          }
+        }
+      }
+    },
+    "revalidacao": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ]
+  },
+  {
+    "posicaoId": "epg-16",
+    "revisaoAnterior": 1,
+    "tentativa": 1,
+    "motivo": "Ajustar o total para que as quantidades narradas sejam inteiras, mantendo a seleção do modelo como objetivo.",
+    "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451",
+    "item": {
+      "contratoVersao": 1,
+      "loteId": "equacoes-primeiro-grau",
+      "loteVersao": 2,
+      "posicaoId": "epg-16",
+      "revisao": 2,
+      "catalogoVersao": 2,
+      "perfilVersao": 1,
+      "objetivoId": "modelagem-01",
+      "disciplina": "Matemática",
+      "assunto_id": "m_equacoes1",
+      "topico_id": "modelagem",
+      "etapa": "analise",
+      "dificuldade": "media",
+      "finalidade": "aprendizagem",
+      "desafio_copeve": false,
+      "enunciado": "Uma turma separou 47 livros em duas caixas. A maior recebeu 8 a mais que o dobro da quantidade da menor. Se x for a quantidade de livros da caixa menor, qual modelo representa as duas informações?",
+      "alternativas": {
+        "A": "x + 2x + 8 = 47",
+        "B": "2(x + 8) = 47",
+        "C": "x + 2(x + 8) = 47",
+        "D": "x + (x + 8) = 47",
+        "E": "x + 2x = 47 + 8"
+      },
+      "resposta_correta": "A",
+      "explicacao": {
+        "correta": "A caixa maior tem 2x + 8 livros. Somar as duas quantidades dá x + 2x + 8 = 47. O modelo é viável: a caixa menor tem 13 livros e a maior tem 34.",
+        "distratores": {
+          "B": "Dobra também o acréscimo e não soma a caixa menor.",
+          "C": "Dobra o acréscimo de 8.",
+          "D": "Usa x em vez de 2x na caixa maior.",
+          "E": "Acrescenta os 8 ao lado que representa o total."
+        }
+      },
+      "proveniencia": {
+        "modelo": "Codex (família GPT-6; variante exata indisponível no registro)",
+        "instrucoesVersao": "epg-v2-correcao-pos-resolucao-1",
+        "geradoEm": "2026-11-25T18:57:38.051Z",
+        "editalVersao": "IFAL-44-2026-2026-11-10",
+        "bnccVersao": "MEC-EI-EF-2018-05-11",
+        "referencias": [
+          "https://copeve.ufal.br/sistema/anexos/Instituto%20Federal%20de%20Alagoas%20-%20Exame%20de%20Selecao%202027.1.1%20-%20Tecnico%20Integrado%20ao%20Ensino%20Medio/Edital%20N%2044.2026%20Abertura%20Do%20Exame%20De%20Selecao%20Ifal%202027%20-%20Retificado%20em%2010.11.2026.pdf#page=18",
+          "https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+        ],
+        "relatorioBase": "0580c23b095dd2da44dba7068bc3027f2ecb2451"
+      }
+    },
+    "revalidacao": [
+      {
+        "nome": "estrutura",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "curriculo",
+        "status": "aprovada",
+        "erros": []
+      },
+      {
+        "nome": "matematica-exata",
+        "status": "pendente",
+        "motivo": "Sem representação linear aplicável"
+      },
+      {
+        "nome": "fidelidade-ao-enunciado",
+        "status": "pendente",
+        "motivo": "Conferir texto, domínio e alternativas por resolução independente"
+      },
+      {
+        "nome": "qualidade-pedagogica",
+        "status": "pendente",
+        "motivo": "Aplicar a matriz e obter revisão humana"
+      }
+    ]
   }
 ]

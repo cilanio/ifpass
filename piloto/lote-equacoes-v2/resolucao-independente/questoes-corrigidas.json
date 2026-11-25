@@ -1,0 +1,47 @@
+[
+  {
+    "contratoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-08",
+    "revisao": 2,
+    "enunciado": "Qual é o valor de x em 18 − 4x = 6?",
+    "alternativas": {
+      "A": "−3",
+      "B": "6",
+      "C": "12",
+      "D": "−6",
+      "E": "3"
+    }
+  },
+  {
+    "contratoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-10",
+    "revisao": 2,
+    "enunciado": "Em 5r + 9 = 8r − 12, qual valor satisfaz a igualdade?",
+    "alternativas": {
+      "A": "−7",
+      "B": "3",
+      "C": "7",
+      "D": "21",
+      "E": "4"
+    }
+  },
+  {
+    "contratoVersao": 1,
+    "loteId": "equacoes-primeiro-grau",
+    "loteVersao": 2,
+    "posicaoId": "epg-16",
+    "revisao": 2,
+    "enunciado": "Uma turma separou 47 livros em duas caixas. A maior recebeu 8 a mais que o dobro da quantidade da menor. Se x for a quantidade de livros da caixa menor, qual modelo representa as duas informações?",
+    "alternativas": {
+      "A": "x + 2x + 8 = 47",
+      "B": "2(x + 8) = 47",
+      "C": "x + 2(x + 8) = 47",
+      "D": "x + (x + 8) = 47",
+      "E": "x + 2x = 47 + 8"
+    }
+  }
+]

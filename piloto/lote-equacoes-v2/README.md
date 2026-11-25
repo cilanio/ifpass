@@ -18,3 +18,11 @@ Foram comparados 120 itens oficiais e 190 pares internos em cada rodada de verif
 Na primeira versão de epg-12, nenhuma alternativa atendia à restrição de quantidade positiva. A geração corrigiu os dados e o gabarito. A primeira versão de epg-19 repetia a estrutura de epg-12 e sugeria uma condição inicial ambígua. A geração diferenciou o cenário e as restrições. As correções foram revalidadas pelo mesmo processo determinístico. A identificação desses problemas faz parte da revisão da própria geração.
 
 As despesas diretas com APIs contratadas foram zero. Custo total, custo por questão aprovada, tokens e tempo de revisão humana permanecem indisponíveis. As metas de aprovação humana só poderão ser avaliadas após a revisão. Nenhum item recebeu aprovação editorial.
+
+## Correções após resolução independente
+
+Os [relatórios independentes](revisao/comparacao-independente.md) permanecem vinculados às versões avaliadas. A revisão 2 de epg-16 usa 47 livros, com 13 na caixa menor e 34 na maior, e preserva a seleção do modelo algébrico como objetivo. As revisões 2 de epg-08 e epg-10 corrigem somente as explicações dos distratores. Cada questão recebeu uma tentativa de correção, registrada com seu motivo.
+
+O [novo pacote cego](resolucao-independente/questoes-corrigidas.json) contém as três revisões. Os [novos dossiês](revisao/dossies-pos-resolucao.json) complementam os anteriores e aguardam nova resolução independente e avaliação humana. As ressalvas de dificuldade, em especial para epg-17, epg-18 e epg-19, permanecem registradas para aferição pedagógica.
+
+Os [validadores](validacao/resultados-pos-resolucao.json) passaram para as 20 posições vigentes, incluindo quatro verificações matemáticas exatas. A [comparação atualizada](validacao/comparacao-pos-resolucao.json) abrangeu 120 itens oficiais e 190 pares internos. Foram encontradas zero duplicatas exatas. A comparação lexical indica aproximações para inspeção humana. Das 20 versões já submetidas à resolução independente, 17 correspondem à versão vigente. Três revisões aguardam nova resolução. Nenhuma versão recebeu aprovação editorial.
